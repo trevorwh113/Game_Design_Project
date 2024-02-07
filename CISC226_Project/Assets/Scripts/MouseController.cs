@@ -13,18 +13,33 @@ public class MouseController : MonoBehaviour
 
     private PathFinder pathFinder;
     private List<OverlayTile> path = new List<OverlayTile>();
+    private OverlayTile spawnTile;
 
 
     // Start is called before the first frame update
     void Start()
     {
         pathFinder = new PathFinder();
+    
+        
     }
 
     // usinh late update so it occurs after overlay update but this is a lazy way
     // so we might need to make an event handler system in the future
     void LateUpdate()
     {
+        
+        if (character == null){
+            var hit = GetTileAtPos(new Vector2(-0.5f, -4.5f));
+            spawnTile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
+            character = Instantiate(characterPrefab).GetComponent<CharacterInfo>();
+            //character.transform.position = new Vector3(-0.5f, -4.5f, 0);
+            PositionCharacterOnTile(spawnTile);
+            character.onTile = spawnTile;
+        }
+        character.onTile.showTile();
+
+
         var focusedTileHit = GetFocusedOnTile();
 
         if(focusedTileHit.HasValue){
@@ -37,19 +52,15 @@ public class MouseController : MonoBehaviour
                 // just copied and pasted code from the function here lol
                 tile.hideTile();
 
-                if (character == null)
-                    {
-                        character = Instantiate(characterPrefab).GetComponent<CharacterInfo>();
-                        PositionCharacterOnTile(tile);
-                        character.standingOnTile = tile;
-                    } else{
-                        path = pathFinder.FindPath(character.standingOnTile, tile);
-                    }
+                if (character != null){
+                    path = pathFinder.FindPath(character.onTile, tile);
+                }
             }
         }
         if(path.Count>0){
             MoveAlongPath();
         }
+           
         
     }
 
@@ -68,7 +79,7 @@ public class MouseController : MonoBehaviour
     {
         character.transform.position = new Vector3(tile.transform.position.x, tile.transform.position.y, tile.transform.position.z);
         character.GetComponent<SpriteRenderer>().sortingOrder = tile.GetComponent<SpriteRenderer>().sortingOrder;
-        character.standingOnTile = tile;
+        character.onTile = tile;
     }
 
     public RaycastHit2D? GetFocusedOnTile(){
@@ -78,6 +89,17 @@ public class MouseController : MonoBehaviour
         Vector2 mousePos2d = new Vector2(mousePos.x, mousePos.y);
         // list of objects in raycast
         RaycastHit2D[] hits = Physics2D.RaycastAll(mousePos2d, Vector2.zero);
+
+        if(hits.Length > 0){
+            return hits.OrderByDescending( i => i.collider.transform.position.z).First();
+        }
+
+        return null;
+    }
+
+    public RaycastHit2D? GetTileAtPos(Vector2 pos){
+        // list of objects in raycast
+        RaycastHit2D[] hits = Physics2D.RaycastAll(pos, Vector2.zero);
 
         if(hits.Length > 0){
             return hits.OrderByDescending( i => i.collider.transform.position.z).First();
