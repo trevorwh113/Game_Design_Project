@@ -47,3 +47,9 @@ TagManager:
   - name: select
     uniqueID: 487398233
     locked: 0
+  - name: cursor
+    uniqueID: 2644281137
+    locked: 0
+  - name: character
+    uniqueID: 3624687363
+    locked: 0

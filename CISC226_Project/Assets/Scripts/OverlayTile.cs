@@ -2,17 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class OverlayTile : MonoBehaviour
 {
+    public int G;
+    public int H;
+
+    public int F {get { return G+H;}}
+
+    public bool isBlocked;
+    public OverlayTile previous;
+    public Vector3Int gridLocation; 
+
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)){
-            hideTile();
-        }
+        
     }
     public void showTile(){
         // sets transparency to full
-        gameObject.GetComponent<SpriteRenderer>().color =new Color(1,1,1,1);
+        gameObject.GetComponent<SpriteRenderer>().color = Color.black;
     }
     public void hideTile(){
         // sets transparency to none; invisible
