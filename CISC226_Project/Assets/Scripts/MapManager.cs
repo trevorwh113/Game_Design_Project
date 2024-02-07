@@ -10,7 +10,7 @@ public class MapManager : MonoBehaviour
     // immutable instance; cant be changed?
     public static MapManager Instance{ get {return _instance;}}
 
-    public OverlayTile overlayTilePrefab;
+    public GameObject overlayTilePrefab;
     public GameObject overlayContainer;
 
     private void Awake(){
@@ -31,12 +31,18 @@ public class MapManager : MonoBehaviour
 
         BoundsInt bounds = tileMap.cellBounds;
 
-        for(int z = bounds.max.z; z > bounds.min.z; z--){
+        for (int z = bounds.max.z; z >= bounds.min.z; z--){
             for(int y = bounds.min.y; y < bounds.max.y; y++){ 
                 for(int x = bounds.min.x; x < bounds.max.x; x++){ 
                     var tileLocation = new Vector3Int(x, y, z);
 
+                    // makes a bunch of tile objects in the overlay manager
                     if(tileMap.HasTile(tileLocation)){
+                        
+                        var overlayTile = Instantiate(overlayTilePrefab, overlayContainer.transform);
+                        var cellWorldPosition = tileMap.GetCellCenterWorld(tileLocation);
+                        overlayTile.transform.position = cellWorldPosition;
+                        overlayTile.GetComponent<SpriteRenderer>().sortingOrder = tileMap.GetComponent<TilemapRenderer>().sortingOrder;
 
                     }
                 }

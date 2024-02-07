@@ -6,7 +6,9 @@ public class NewBehaviourScript : MonoBehaviour
 {
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0)){
+            hideTile();
+        }
     }
     public void showTile(){
         // sets transparency to full
