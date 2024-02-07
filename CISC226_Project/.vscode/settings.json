@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "CISC226_Project.sln"
+    "dotnet.defaultSolution": "CISC226_Project.sln",
+    "workbench.colorTheme": "eppz!"
 }
