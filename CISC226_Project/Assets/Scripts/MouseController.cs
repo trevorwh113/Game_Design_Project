@@ -14,6 +14,7 @@ public class MouseController : MonoBehaviour
     private PathFinder pathFinder;
     private List<OverlayTile> path = new List<OverlayTile>();
     private OverlayTile spawnTile;
+    private OverlayTile prevTile;
 
 
     // Start is called before the first frame update
@@ -36,8 +37,10 @@ public class MouseController : MonoBehaviour
             //character.transform.position = new Vector3(-0.5f, -4.5f, 0);
             PositionCharacterOnTile(spawnTile);
             character.onTile = spawnTile;
+            prevTile = spawnTile;
         }
-        character.onTile.showTile();
+        
+        
 
 
         var focusedTileHit = GetFocusedOnTile();
@@ -47,10 +50,21 @@ public class MouseController : MonoBehaviour
             transform.position = tile.transform.position;
             gameObject.GetComponent<SpriteRenderer>().sortingOrder = tile.GetComponent<SpriteRenderer>().sortingOrder;
             
+            // if (character.onTile.gridLocation == character.transform.position){
+            //     character.onTile.hideTile();    
+            // } else {
+            //     character.onTile.showTile();
+            // }
+            
+            //else {
+            //     character.onTile.hideTile();
+            // }
+            character.onTile.lightUp();
             if (Input.GetMouseButtonDown(0)){
                 // should be this?: dk how to fix: overlayTile.GetComponent<Overlay>().showTile();
                 // just copied and pasted code from the function here lol
-                tile.hideTile();
+
+
 
                 if (character != null){
                     path = pathFinder.FindPath(character.onTile, tile);
@@ -60,8 +74,11 @@ public class MouseController : MonoBehaviour
         if(path.Count>0){
             MoveAlongPath();
         }
-           
-        
+        if (prevTile.gridLocation != character.onTile.gridLocation){
+                Debug.Log("showtile");
+                prevTile.makeDark();
+            }
+        prevTile=character.onTile;
     }
 
     private void MoveAlongPath()

@@ -17,11 +17,11 @@ public class OverlayTile : MonoBehaviour
     {
         
     }
-    public void showTile(){
+    public void makeDark(){
         // sets transparency to full
         gameObject.GetComponent<SpriteRenderer>().color = Color.black;
     }
-    public void hideTile(){
+    public void lightUp(){
         // sets transparency to none; invisible
         gameObject.GetComponent<SpriteRenderer>().color =new Color(1,1,1,0);
     }
