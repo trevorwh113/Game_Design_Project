@@ -14,6 +14,8 @@ public class OverlayTile : MonoBehaviour
     public Vector3Int gridLocation; 
     // Flags if a tile is lit or not.
     public bool isLit;
+    public bool echolocated;
+    
 
 
     void Start() {
