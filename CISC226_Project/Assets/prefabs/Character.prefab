@@ -97,3 +97,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b274a15016149274581c3f2a398a2da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onTile: {fileID: 0}
+  spotlightSize: 2

@@ -59,7 +59,11 @@ public class MouseController : MonoBehaviour
             //else {
             //     character.onTile.hideTile();
             // }
-            character.onTile.lightUp();
+
+            // Lighten-up a square of tiles.
+            // character.onTile.lightUp();
+            character.onTile.lightUpAllAdjacent(character.spotlightSize);
+
             if (Input.GetMouseButtonDown(0)){
                 // should be this?: dk how to fix: overlayTile.GetComponent<Overlay>().showTile();
                 // just copied and pasted code from the function here lol
@@ -76,7 +80,10 @@ public class MouseController : MonoBehaviour
         }
         if (prevTile.gridLocation != character.onTile.gridLocation){
                 Debug.Log("showtile");
-                prevTile.makeDark();
+                
+                // Darken a square of tiles.
+                // prevTile.makeDark();
+                character.onTile.darkenAllAdjacent(prevTile, character.spotlightSize);
             }
         prevTile=character.onTile;
     }
