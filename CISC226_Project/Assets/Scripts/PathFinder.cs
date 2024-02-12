@@ -15,7 +15,9 @@ public class PathFinder
 
         while (openList.Count > 0){
             OverlayTile currentOverlayTile = openList.OrderBy(x => x.F ).First();
-
+            if (currentOverlayTile.isBlocked){
+                continue;
+            }
             openList.Remove(currentOverlayTile);
             closedList.Add(currentOverlayTile);
 
@@ -35,7 +37,7 @@ public class PathFinder
 
                 neighbour.previous = currentOverlayTile;
 
-                if (!openList.Contains(neighbour)){
+                if (!openList.Contains(neighbour) && !neighbour.isBlocked){
                     openList.Add(neighbour);
                 }
 
@@ -73,28 +75,28 @@ public class PathFinder
         //top neighbour
         Vector2Int locationToCheck = new Vector2Int(currentOverlayTile.gridLocation.x, currentOverlayTile.gridLocation.y+1);
 
-        if(map.ContainsKey(locationToCheck)){
+        if(map.ContainsKey(locationToCheck) && !map[locationToCheck].isBlocked){
             neighbours.Add(map[locationToCheck]);
         }
 
         //bottom neighbour
         locationToCheck = new Vector2Int(currentOverlayTile.gridLocation.x, currentOverlayTile.gridLocation.y-1);
 
-        if(map.ContainsKey(locationToCheck)){
+        if(map.ContainsKey(locationToCheck)&& !map[locationToCheck].isBlocked){
             neighbours.Add(map[locationToCheck]);
         }
 
         //right neighbour
         locationToCheck = new Vector2Int(currentOverlayTile.gridLocation.x+1, currentOverlayTile.gridLocation.y);
 
-        if(map.ContainsKey(locationToCheck)){
+        if(map.ContainsKey(locationToCheck)&& !map[locationToCheck].isBlocked){
             neighbours.Add(map[locationToCheck]);
         }
 
         //left neighbour
         locationToCheck = new Vector2Int(currentOverlayTile.gridLocation.x-1, currentOverlayTile.gridLocation.y);
 
-        if(map.ContainsKey(locationToCheck)){
+        if(map.ContainsKey(locationToCheck)&& !map[locationToCheck].isBlocked){
             neighbours.Add(map[locationToCheck]);
         }
         
