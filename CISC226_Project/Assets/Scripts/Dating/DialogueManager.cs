@@ -11,9 +11,20 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI name_text;
     public TextMeshProUGUI dialogue_text;
 
+
     // The Dialogue speed used to determien the pause between characters.
     [SerializeField]
     public float display_speed;
+
+
+    // Stores references to the 3 other story trigger panels.
+    public GameObject story_1;
+    public GameObject story_2;
+    public GameObject story_3;
+    public GameObject story_4;
+
+    // Stores a reference to the continue button for dialogue.
+    public GameObject continue_button;
     
 
     // Holds the strings to display in a queue.
@@ -68,13 +79,27 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray()) {
             dialogue_text.text += letter;
             // Waits a small amout of time.
+            
             // Divides the speed by 100 to get the pause time.
-            yield return new WaitForSeconds(display_speed / 100);  
+            yield return new WaitForSeconds(display_speed / 100);            
         }
     }
 
 
     void EndDialogue() {
-        Debug.Log("End conversation.");
+        // Clear the name and text.
+        dialogue_text.text = "";
+        name_text.text = "";
+        
+        // Disactivate the continue button.
+        continue_button.SetActive(false);
+        
+        // Activate all the conversation buttons.
+        story_1.SetActive(true);
+        // Disactivate all the other buttons.
+        story_2.SetActive(true);
+        story_3.SetActive(true);
+        story_4.SetActive(true);
+        
     }
 }
