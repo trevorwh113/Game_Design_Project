@@ -222,6 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   characterPrefab: {fileID: 6743430342914353330, guid: 36b351fc838251041bc4a587bc061171, type: 3}
+  enemyPrefab: {fileID: 1717224410918403587, guid: 5e0c280f0882a8c4badc29c046b6862d, type: 3}
 --- !u!1 &208148567
 GameObject:
   m_ObjectHideFlags: 0

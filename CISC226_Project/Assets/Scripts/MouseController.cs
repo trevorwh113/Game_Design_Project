@@ -11,6 +11,9 @@ public class MouseController : MonoBehaviour
     public GameObject characterPrefab;
     private CharacterInfo character; 
 
+    public GameObject enemyPrefab;
+    private EnemyMovement enemy1;
+
     private PathFinder pathFinder;
     private List<OverlayTile> path = new List<OverlayTile>();
     private OverlayTile spawnTile;
@@ -21,8 +24,9 @@ public class MouseController : MonoBehaviour
     void Start()
     {
         pathFinder = new PathFinder();
-    
-        
+
+        enemy1 = Instantiate(enemyPrefab).GetComponent<EnemyMovement>();
+
     }
 
     // usinh late update so it occurs after overlay update but this is a lazy way
@@ -34,14 +38,12 @@ public class MouseController : MonoBehaviour
             var hit = GetTileAtPos(new Vector2(-0.5f, -4.5f));
             spawnTile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
             character = Instantiate(characterPrefab).GetComponent<CharacterInfo>();
+
             //character.transform.position = new Vector3(-0.5f, -4.5f, 0);
             PositionCharacterOnTile(spawnTile);
             character.onTile = spawnTile;
             prevTile = spawnTile;
         }
-        
-        
-
 
         var focusedTileHit = GetFocusedOnTile();
 
@@ -86,6 +88,16 @@ public class MouseController : MonoBehaviour
                 character.onTile.darkenAllAdjacent(prevTile, character.spotlightSize);
             }
         prevTile=character.onTile;
+
+        // for echolocation attracting enemy movement:
+        if (Input.GetMouseButtonDown(1))
+        {
+            //for more than one enemy, could have a list or smth and iterate through
+            var enemyHit = GetTileAtPos(enemy1.transform.position);
+            OverlayTile enemy1Tile = enemyHit.Value.collider.gameObject.GetComponent<OverlayTile>();
+            enemy1.ApproachPlayer(enemy1Tile, character.onTile);
+        }
+
     }
 
     private void MoveAlongPath()
