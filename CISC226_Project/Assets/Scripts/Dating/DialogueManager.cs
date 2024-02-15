@@ -12,7 +12,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI dialogue_text;
 
 
-    // The Dialogue speed used to determien the pause between characters.
+    // The Dialogue speed used to determine the pause between characters.
     [SerializeField]
     public float display_speed;
 
