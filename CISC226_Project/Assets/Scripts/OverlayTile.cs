@@ -25,8 +25,16 @@ public class OverlayTile : MonoBehaviour
     
     void Update()
     {
-        
+        // If the tile is echolocated, light it up. Otherwise, turn it off.
+        // isLit is used to make sure the tile is not light up for other reasons (i.e. player vision).
+        if (echolocated && !isLit) {
+            gameObject.GetComponent<OverlayTile>().EchoON();
+        }
+        else if (!echolocated && !isLit) {
+            gameObject.GetComponent<OverlayTile>().EchoOFF();
+        }
     }
+
     public void makeDark(){
         // sets transparency to full
         if (isLit) {
@@ -95,5 +103,100 @@ public class OverlayTile : MonoBehaviour
         }
         
         return neighbours;
+    }
+
+
+    public void EchoON(){
+        // sets transparency to transparent.
+        gameObject.GetComponent<SpriteRenderer>().color =new Color(1,1,1,0);
+    }
+
+    public void EchoOFF(){
+        // sets the color back to black
+        gameObject.GetComponent<SpriteRenderer>().color = Color.black;
+    }
+    
+    public void MarkTileAsEchoed() {
+        echolocated = true;
+    }
+
+    public void UnmarkTileAsEchoed() {
+        echolocated = false;
+    }
+
+    public void MarkAdjacentAsEchoed(OverlayTile currentOverlayTile)
+    {
+        var map = MapManager.Instance.map;
+
+        List<OverlayTile> neighbours = new List<OverlayTile>();
+        neighbours.Add(currentOverlayTile);
+        Vector2Int locationToCheck;
+
+        // Get the tiles in a + around and including the given tile.
+
+        locationToCheck = new Vector2Int(currentOverlayTile.gridLocation.x + 1, 
+                                         currentOverlayTile.gridLocation.y);
+        if (map.ContainsKey(locationToCheck)) {
+            neighbours.Add(map[locationToCheck]);
+        }
+        locationToCheck = new Vector2Int(currentOverlayTile.gridLocation.x - 1, 
+                                         currentOverlayTile.gridLocation.y);
+        if (map.ContainsKey(locationToCheck)) {
+            neighbours.Add(map[locationToCheck]);
+        }
+
+        locationToCheck = new Vector2Int(currentOverlayTile.gridLocation.x, 
+                                         currentOverlayTile.gridLocation.y + 1);
+        if (map.ContainsKey(locationToCheck)) {
+            neighbours.Add(map[locationToCheck]);
+        }
+        locationToCheck = new Vector2Int(currentOverlayTile.gridLocation.x, 
+                                         currentOverlayTile.gridLocation.y - 1);
+        if (map.ContainsKey(locationToCheck)) {
+            neighbours.Add(map[locationToCheck]);
+        }
+
+        // Loop over the neighbours and mark them as echolocated.
+        foreach (var tile in neighbours) {
+            tile.MarkTileAsEchoed();
+        } 
+    }
+
+    public void UnmarkAdjacentAsEchoed(OverlayTile currentOverlayTile)
+    {
+        var map = MapManager.Instance.map;
+
+        List<OverlayTile> neighbours = new List<OverlayTile>();
+        neighbours.Add(currentOverlayTile);
+        Vector2Int locationToCheck;
+
+        // Get the tiles in a + around and including the given tile.
+
+        locationToCheck = new Vector2Int(currentOverlayTile.gridLocation.x + 1, 
+                                         currentOverlayTile.gridLocation.y);
+        if (map.ContainsKey(locationToCheck)) {
+            neighbours.Add(map[locationToCheck]);
+        }
+        locationToCheck = new Vector2Int(currentOverlayTile.gridLocation.x - 1, 
+                                         currentOverlayTile.gridLocation.y);
+        if (map.ContainsKey(locationToCheck)) {
+            neighbours.Add(map[locationToCheck]);
+        }
+
+        locationToCheck = new Vector2Int(currentOverlayTile.gridLocation.x, 
+                                         currentOverlayTile.gridLocation.y + 1);
+        if (map.ContainsKey(locationToCheck)) {
+            neighbours.Add(map[locationToCheck]);
+        }
+        locationToCheck = new Vector2Int(currentOverlayTile.gridLocation.x, 
+                                         currentOverlayTile.gridLocation.y - 1);
+        if (map.ContainsKey(locationToCheck)) {
+            neighbours.Add(map[locationToCheck]);
+        }
+
+        // Loop over the neighbours and mark them as echolocated.
+        foreach (var tile in neighbours) {
+            tile.UnmarkTileAsEchoed();
+        } 
     }
 }

@@ -77,6 +77,12 @@ public class MouseController : MonoBehaviour
         }
         if(path.Count>0){
             MoveAlongPath();
+            // Prevent echolocating while moving.
+            character.gameObject.GetComponent<Echolocator>().Disable();
+        }
+        if (path.Count==0) {
+            // Allow echolocating when not moving.
+            character.gameObject.GetComponent<Echolocator>().Enable();
         }
         if (prevTile.gridLocation != character.onTile.gridLocation){
                 Debug.Log("showtile");
