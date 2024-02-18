@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Resources;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PathFinder
@@ -15,9 +16,7 @@ public class PathFinder
 
         while (openList.Count > 0){
             OverlayTile currentOverlayTile = openList.OrderBy(x => x.F ).First();
-            if (currentOverlayTile.isBlocked){
-                continue;
-            }
+
             openList.Remove(currentOverlayTile);
             closedList.Add(currentOverlayTile);
 
@@ -28,7 +27,7 @@ public class PathFinder
 
 
             foreach (var neighbour in GetNeighbourTiles(currentOverlayTile)){
-                if(neighbour.isBlocked || closedList.Contains(neighbour)){
+                if( closedList.Contains(neighbour)){ //neighbour.isBlocked ||
                     continue;
                 }
 
@@ -37,7 +36,7 @@ public class PathFinder
 
                 neighbour.previous = currentOverlayTile;
 
-                if (!openList.Contains(neighbour) && !neighbour.isBlocked){
+                if (!openList.Contains(neighbour) ){
                     openList.Add(neighbour);
                 }
 
@@ -57,6 +56,14 @@ public class PathFinder
             currentTile = currentTile.previous;
         }
         finishedList.Reverse();
+
+        // cuts the list at the first isBlocked tile
+        for (int i = 0; i < finishedList.Count-1; i++){
+            if (finishedList[i].isBlocked==true){
+                finishedList.RemoveRange(i, finishedList.Count-i);
+                break;
+            }
+        }
         return finishedList;
 
     }
@@ -75,28 +82,28 @@ public class PathFinder
         //top neighbour
         Vector2Int locationToCheck = new Vector2Int(currentOverlayTile.gridLocation.x, currentOverlayTile.gridLocation.y+1);
 
-        if(map.ContainsKey(locationToCheck) && !map[locationToCheck].isBlocked){
+        if(map.ContainsKey(locationToCheck)){
             neighbours.Add(map[locationToCheck]);
         }
 
         //bottom neighbour
         locationToCheck = new Vector2Int(currentOverlayTile.gridLocation.x, currentOverlayTile.gridLocation.y-1);
 
-        if(map.ContainsKey(locationToCheck)&& !map[locationToCheck].isBlocked){
+        if(map.ContainsKey(locationToCheck)){
             neighbours.Add(map[locationToCheck]);
         }
 
         //right neighbour
         locationToCheck = new Vector2Int(currentOverlayTile.gridLocation.x+1, currentOverlayTile.gridLocation.y);
 
-        if(map.ContainsKey(locationToCheck)&& !map[locationToCheck].isBlocked){
+        if(map.ContainsKey(locationToCheck)){
             neighbours.Add(map[locationToCheck]);
         }
 
         //left neighbour
         locationToCheck = new Vector2Int(currentOverlayTile.gridLocation.x-1, currentOverlayTile.gridLocation.y);
 
-        if(map.ContainsKey(locationToCheck)&& !map[locationToCheck].isBlocked){
+        if(map.ContainsKey(locationToCheck)){
             neighbours.Add(map[locationToCheck]);
         }
         
