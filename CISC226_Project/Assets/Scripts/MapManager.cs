@@ -14,11 +14,6 @@ public class MapManager : MonoBehaviour
 
     // dict to store all overlay tiles by position
     public Dictionary<Vector2Int, OverlayTile> map;
-    private List<string> blockedTiles = new List<string> { "Cave_v7_4", "Cave_v7_5", "Cave_v7_6",
-                                                           "Cave_v7_7", "Cave_v7_8", "Cave_v7_9",
-                                                           "Cave_v7_10", "Cave_v7_11", "Cave_v7_12",
-                                                           "Cave_v7_13", "Cave_v7_14", "Cave_v7_15",
-                                                           "Cave_v7_16" };
 
     private void Awake(){
         //makes a singleton manager
@@ -34,7 +29,13 @@ public class MapManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var tileMap = gameObject.GetComponentInChildren<Tilemap>();
+        //gets all children of grid in a list in order in the unity hierarchy tab
+        var maps = gameObject.GetComponentsInChildren<Tilemap>();
+        var wall = maps[0];
+        var tileMap = maps[1];
+
+
+
         map = new Dictionary<Vector2Int, OverlayTile>();
         BoundsInt bounds = tileMap.cellBounds;
 
@@ -52,11 +53,13 @@ public class MapManager : MonoBehaviour
                         overlayTile.transform.position = cellWorldPosition;
                         overlayTile.GetComponent<SpriteRenderer>().sortingOrder = tileMap.GetComponent<TilemapRenderer>().sortingOrder;
                         overlayTile.gridLocation = tileLocation;
-                        if (blockedTiles.Contains(tileMap.GetSprite(new Vector3Int((int)cellWorldPosition.x, (int)cellWorldPosition.y, (int)cellWorldPosition.z)).ToString())){
+                        // if the other tilemap has a block there, then blocked is true
+                        if(wall.HasTile(tileLocation)){
                             overlayTile.isBlocked = true;
                         }
                         map.Add(tileKey, overlayTile);
                     }
+                    
                 }
             }
         }
