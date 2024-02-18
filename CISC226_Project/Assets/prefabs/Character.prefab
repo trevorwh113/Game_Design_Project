@@ -98,4 +98,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onTile: {fileID: 0}
-  spotlightSize: 4
+  spotlightSize: 2

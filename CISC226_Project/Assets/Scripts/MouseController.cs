@@ -35,7 +35,7 @@ public class MouseController : MonoBehaviour
     {
         
         if (character == null){
-            var hit = GetTileAtPos(new Vector2(-0.5f, -4.5f));
+            var hit = GetTileAtPos(new Vector2(-0.5f, -3.5f));
             spawnTile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
             character = Instantiate(characterPrefab).GetComponent<CharacterInfo>();
 
@@ -81,7 +81,7 @@ public class MouseController : MonoBehaviour
             MoveAlongPath();
         }
         if (prevTile.gridLocation != character.onTile.gridLocation){
-                Debug.Log("showtile");
+                //Debug.Log("showtile");
                 
                 // Darken a square of tiles.
                 // prevTile.makeDark();
@@ -118,6 +118,8 @@ public class MouseController : MonoBehaviour
         character.onTile = tile;
     }
 
+
+    // rename this one lol
     public RaycastHit2D? GetFocusedOnTile(){
         // get mouse position
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

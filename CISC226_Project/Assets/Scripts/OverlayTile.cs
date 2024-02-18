@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class OverlayTile : MonoBehaviour
@@ -27,6 +28,8 @@ public class OverlayTile : MonoBehaviour
     {
         
     }
+
+
     public void makeDark(){
         // sets transparency to full
         if (isLit) {
