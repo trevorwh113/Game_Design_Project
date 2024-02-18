@@ -1,27 +1,28 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class MouseController : MonoBehaviour
 {
     public float speed;
-    public GameObject characterPrefab;
-    private CharacterInfo character; 
+    [SerializeField] private CharacterInfo character; 
 
     private PathFinder pathFinder;
     private List<OverlayTile> path = new List<OverlayTile>();
     private OverlayTile spawnTile;
     private OverlayTile prevTile;
+    private bool spawned = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
         pathFinder = new PathFinder();
-    
         
     }
 
@@ -29,20 +30,16 @@ public class MouseController : MonoBehaviour
     // so we might need to make an event handler system in the future
     void LateUpdate()
     {
-        
-        if (character == null){
+        if (!spawned){
+            Debug.Log("spawn");
             var hit = GetTileAtPos(new Vector2(-0.5f, -3.5f));
             spawnTile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
-            character = Instantiate(characterPrefab).GetComponent<CharacterInfo>();
-            //character.transform.position = new Vector3(-0.5f, -4.5f, 0);
             PositionCharacterOnTile(spawnTile);
             character.onTile = spawnTile;
             prevTile = spawnTile;
+            spawned = true;
         }
         
-        
-
-
         var focusedTileHit = GetFocusedOnTile();
 
         if(focusedTileHit.HasValue){
