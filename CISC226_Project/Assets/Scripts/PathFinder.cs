@@ -57,8 +57,9 @@ public class PathFinder
         }
         finishedList.Reverse();
 
+
         // cuts the list at the first isBlocked tile
-        for (int i = 0; i < finishedList.Count-1; i++){
+        for (int i = 0; i < finishedList.Count; i++){
             if (finishedList[i].isBlocked==true){
                 finishedList.RemoveRange(i, finishedList.Count-i);
                 break;
