@@ -101,6 +101,37 @@ public class OverlayTile : MonoBehaviour
                 }
             }
         }
+
+        // If the range is more than 1, remove the corners to make a round shape.
+        if (range > 1) {
+            // Top right.
+            locationToCheck = new Vector2Int(currentOverlayTile.gridLocation.x + range, 
+                                                 currentOverlayTile.gridLocation.y + range);
+            if (map.ContainsKey(locationToCheck)) {
+                    neighbours.Remove(map[locationToCheck]);
+            }
+
+            // Top Left.
+            locationToCheck = new Vector2Int(currentOverlayTile.gridLocation.x - range, 
+                                                 currentOverlayTile.gridLocation.y + range);
+            if (map.ContainsKey(locationToCheck)) {
+                    neighbours.Remove(map[locationToCheck]);
+            }
+            
+            // Bottom right.
+            locationToCheck = new Vector2Int(currentOverlayTile.gridLocation.x + range, 
+                                                 currentOverlayTile.gridLocation.y - range);
+            if (map.ContainsKey(locationToCheck)) {
+                    neighbours.Remove(map[locationToCheck]);
+            }
+
+            // Bottom left.
+            locationToCheck = new Vector2Int(currentOverlayTile.gridLocation.x - range, 
+                                                 currentOverlayTile.gridLocation.y - range);
+            if (map.ContainsKey(locationToCheck)) {
+                    neighbours.Remove(map[locationToCheck]);
+            }
+        }
         
         return neighbours;
     }
