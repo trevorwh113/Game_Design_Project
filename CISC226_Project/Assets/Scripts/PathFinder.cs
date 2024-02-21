@@ -15,6 +15,7 @@ public class PathFinder
         openList.Add(start);
 
         while (openList.Count > 0){
+            //need to change this so it only looks at tile colliders?
             OverlayTile currentOverlayTile = openList.OrderBy(x => x.F ).First();
 
             openList.Remove(currentOverlayTile);

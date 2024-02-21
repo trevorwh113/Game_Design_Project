@@ -53,9 +53,12 @@ public class Echolocator : MonoBehaviour
 
     public void MarkEchoedTiles(RaycastHit2D[] tileList) {
         // Marks all the tiles in the list.
-        foreach (RaycastHit2D? hit in tileList) {
-            if(hit.HasValue){
-                OverlayTile tile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
+        foreach (RaycastHit2D hit in tileList) {
+            // trying to checking that collider is a tile and not enemy/player
+            //if(hit.HasValue
+            if(hit.collider.name == "OverlayTile(Clone)"){
+                //OverlayTile tile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
+                OverlayTile tile = hit.collider.gameObject.GetComponent<OverlayTile>();
                 
                 // Mark the tiles neighbours.
                 tile.MarkAdjacentAsEchoed(tile);
@@ -66,9 +69,12 @@ public class Echolocator : MonoBehaviour
 
     public void UnmarkEchoedTiles(RaycastHit2D[] tileList) {
         // Unmarks all the tiles in the list.
-        foreach (RaycastHit2D? hit in tileList) {
-            if(hit.HasValue){
-                OverlayTile tile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
+        foreach (RaycastHit2D hit in tileList) {
+            // trying to checking that collider is a tile and not enemy/player
+            //if(hit.HasValue
+            if(hit.collider.name == "OverlayTile(Clone)"){
+                //OverlayTile tile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
+                OverlayTile tile = hit.collider.gameObject.GetComponent<OverlayTile>();
                 
                 // Unmark the tiles neighbours.
                 tile.UnmarkAdjacentAsEchoed(tile);

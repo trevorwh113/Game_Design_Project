@@ -12,6 +12,9 @@ public class MouseController : MonoBehaviour
     public float speed;
     [SerializeField] private CharacterInfo character; 
 
+    [SerializeField] private EnemyMovement enemy1; 
+    private OverlayTile enemySpawnTile;
+
     private PathFinder pathFinder;
     private List<OverlayTile> path = new List<OverlayTile>();
     private OverlayTile spawnTile;
@@ -37,6 +40,11 @@ public class MouseController : MonoBehaviour
             PositionCharacterOnTile(spawnTile);
             character.onTile = spawnTile;
             prevTile = spawnTile;
+
+            var enemyHit = GetTileAtPos(new Vector2(0.5f, 3.5f));
+            enemySpawnTile = enemyHit.Value.collider.gameObject.GetComponent<OverlayTile>();
+            enemy1.PositionEnemyOnTile(enemySpawnTile);
+
             spawned = true;
         }
         
@@ -83,6 +91,16 @@ public class MouseController : MonoBehaviour
                 character.onTile.darkenAllAdjacent(prevTile, character.spotlightSize);
             }
         prevTile=character.onTile;
+
+        // for echolocation attracting enemy movement:
+        if (Input.GetMouseButtonDown(1))
+        {
+            //for more than one enemy, could have a list or smth and iterate through
+            var enemyHit = GetTileAtPos(enemy1.transform.position);
+            OverlayTile enemy1Tile = enemyHit.Value.collider.gameObject.GetComponent<OverlayTile>();
+            enemy1.ApproachPlayer(enemy1Tile, character.onTile);
+        }
+
     }
 
     private void MoveAlongPath()
@@ -114,7 +132,16 @@ public class MouseController : MonoBehaviour
         RaycastHit2D[] hits = Physics2D.RaycastAll(mousePos2d, Vector2.zero);
 
         if(hits.Length > 0){
-            return hits.OrderByDescending( i => i.collider.transform.position.z).First();
+            foreach (RaycastHit2D hit in hits)
+            {
+                // checking that collider is a tile and not enemy/player
+                if (hit.collider.name == "OverlayTile(Clone)")
+                {
+                    return hit;
+                }
+                //return hits.OrderByDescending( i => i.collider.transform.position.z).First()
+            }
+            
         }
 
         return null;
@@ -130,4 +157,5 @@ public class MouseController : MonoBehaviour
 
         return null;
     }
+
 }

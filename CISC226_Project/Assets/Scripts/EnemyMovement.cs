@@ -34,8 +34,18 @@ public class EnemyMovement : MonoBehaviour
                 isMoving = false;
             }
         }
-
         
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("game over");
+        if (other.gameObject.CompareTag("Player")) 
+        {
+            
+            //SceneManager.LoadScene(SceneManager.GetActiveScene());
+        }
     }
 
     //called by MouseController on rightclick
@@ -61,7 +71,7 @@ public class EnemyMovement : MonoBehaviour
     }
 
     //also altered verson of the one in MouseController
-    private void PositionEnemyOnTile(OverlayTile tile)
+    public void PositionEnemyOnTile(OverlayTile tile)
     {
         transform.position = new Vector3(tile.transform.position.x, tile.transform.position.y, tile.transform.position.z);
         GetComponent<SpriteRenderer>().sortingOrder = tile.GetComponent<SpriteRenderer>().sortingOrder;
