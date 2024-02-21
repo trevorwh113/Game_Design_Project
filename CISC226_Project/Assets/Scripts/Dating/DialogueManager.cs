@@ -29,17 +29,55 @@ public class DialogueManager : MonoBehaviour
 
     // Holds the strings to display in a queue.
     private Queue<string> sentences;
+    // Holds the dialogues in a queue.
+    private Queue<Dialogue> dialogues;
+
+    // Stores reference to the player and NPC object.
+    public GameObject player;
+    public GameObject npc;
+
+    // The NPC in question.
+    public string npc_name;
+
     
     // Start is called before the first frame update
     void Start()
     {
         // Initializes the queue of strings.
         sentences = new Queue<string>();
+
+        // Initializes the queue of dialogues.
+        dialogues = new Queue<Dialogue>();
+
     }
 
+    // Starts a full conversation composed of many character dialogues.
+    public void StartConversation(List<Dialogue> conversation) {
+        // Takes a list of dialogues and adds them to a queue.
+        foreach (Dialogue dialogue in conversation) {
+            dialogues.Enqueue(dialogue);
+        }
+
+        // Launches the first dialogue.
+        if (dialogues.Count != 0) {
+            StartDialogue(dialogues.Dequeue());
+        }
+    }
+
+    // Starts a single dialogue (1 character).
     public void StartDialogue(Dialogue dialogue) {
         // Set the name of the dialogue panel.
         name_text.text = dialogue.name;
+
+        // Activate the player/NPC based on the dialogue.
+        if (dialogue.is_npc) {
+            player.SetActive(false);
+            npc.SetActive(true);
+        }
+        else {
+            npc.SetActive(false);
+            player.SetActive(true);
+        }
 
         // Clear previous dialogue that was there.
         sentences.Clear();
@@ -54,11 +92,18 @@ public class DialogueManager : MonoBehaviour
 
     }
 
+    // Displays the next sentence in a dialogue. 
     public void DisplayNextSentence() {
-        // Check if there are more sentences in the queue.
+        // If there are no sentences left, either end the conversation OR
+        // move on to the next dialogue.
         if (sentences.Count == 0) {
-            EndDialogue();
-            return;
+            if (dialogues.Count == 0) {
+                EndConversation();
+            }
+            else {
+                StartDialogue(dialogues.Dequeue());
+            }
+            return;     // Stops before doing the next part.
         }
 
         // If there is more for the NPC to say, get the line.
@@ -71,6 +116,7 @@ public class DialogueManager : MonoBehaviour
         
     }
 
+    // Types the sentence one character at a time.
     IEnumerator TypeSentence(string sentence) {
         // Starts the UI as empty.
         dialogue_text.text = "";
@@ -86,7 +132,7 @@ public class DialogueManager : MonoBehaviour
     }
 
 
-    void EndDialogue() {
+    void EndConversation() {
         // Clear the name and text.
         dialogue_text.text = "";
         name_text.text = "";
@@ -100,6 +146,10 @@ public class DialogueManager : MonoBehaviour
         story_2.SetActive(true);
         story_3.SetActive(true);
         story_4.SetActive(true);
+
+        // Disactivate the player and activate the npc.
+        player.SetActive(false);
+        npc.SetActive(true);
         
     }
 }
