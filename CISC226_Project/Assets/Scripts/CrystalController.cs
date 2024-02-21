@@ -12,7 +12,8 @@ public class CrystalController : MonoBehaviour
     public Sprite[] spriteArray;
     int currentSprite = 0;
 
-    
+    // Flag to only change sprite once per echolocation.
+    bool wait = false;
 
     // The tile that the crystal is on
     OverlayTile tile;
@@ -28,17 +29,10 @@ public class CrystalController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         // Start crystal as first sprite
         spriteRenderer.sprite = spriteArray[currentSprite];
+    }
 
-
-
-
-
-
-
-
-        // THIS IS THE PROBLEM CODE.
-
-
+    void LateUpdate()
+    {   
         // Find the location of the crystal and the tile under it
         Vector2 pos = transform.position;
         var hit = cursor.GetComponent<MouseController>().GetTileAtPos(pos);
@@ -48,14 +42,21 @@ public class CrystalController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        // If echolocated but not lit, change sprite to damaged version
-        if(tile.echolocated && !tile.isLit)
+        // If echolocated change sprite to damaged version
+        if(tile.echolocated)
         {
             // Make sure crystal is not completely broken already
-            if(currentSprite < 3)
+            // Make sure sprite has not already changed (wait)
+            if(currentSprite < 3 && !wait)
             {
                 changeSprite();
+                wait = true;
             }
+        }
+        // Once echolocation stops, sprite can change again
+        else
+        {
+            wait = false;
         }
     }
 
