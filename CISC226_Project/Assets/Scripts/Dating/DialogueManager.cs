@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI dialogue_text;
 
 
+
     // The Dialogue speed used to determine the pause between characters.
     [SerializeField]
     public float display_speed;
@@ -25,7 +26,11 @@ public class DialogueManager : MonoBehaviour
 
     // Stores a reference to the continue button for dialogue.
     public GameObject continue_button;
-    
+    // Stores the references to the choice buttons.
+    public GameObject choice_a;
+    public GameObject choice_b;
+    public TextMeshProUGUI choice_a_text;
+    public TextMeshProUGUI choice_b_text;
 
     // Holds the strings to display in a queue.
     private Queue<string> sentences;
@@ -66,29 +71,62 @@ public class DialogueManager : MonoBehaviour
 
     // Starts a single dialogue (1 character).
     public void StartDialogue(Dialogue dialogue) {
-        // Set the name of the dialogue panel.
-        name_text.text = dialogue.name;
+        
+        // Start a non-choice dialogue.
+        if (!dialogue.is_choice) {
+            // Set the name of the dialogue panel.
+            name_text.text = dialogue.name;
 
-        // Activate the player/NPC based on the dialogue.
-        if (dialogue.is_npc) {
-            player.SetActive(false);
-            npc.SetActive(true);
+            // Activate the player/NPC based on the dialogue.
+            if (dialogue.is_npc) {
+                player.SetActive(false);
+                npc.SetActive(true);
+            }
+            else {
+                npc.SetActive(false);
+                player.SetActive(true);
+            }
+
+            // Hide the choice buttons.
+            choice_a.SetActive(false);
+            choice_b.SetActive(false);
+            // Show the continue button.
+            continue_button.SetActive(true);
+
+            // Clear previous dialogue that was there.
+            sentences.Clear();
+
+            // Loads all strings from 'dialogue' into the queue.
+            foreach (string sentence in dialogue.sentences) {
+                sentences.Enqueue(sentence);
+            }
+
+            // Displays the next sentences.
+            DisplayNextSentence();
         }
+
+        // Start a choice dialogue.
         else {
-            npc.SetActive(false);
-            player.SetActive(true);
+            // Clear the name and text.
+            dialogue_text.text = "";
+            name_text.text = "";
+
+            // Displays the dialogue question.
+            dialogue_text.text = dialogue.sentences[0];
+
+            // Show the two choice buttons.
+            choice_a.SetActive(true);
+            choice_b.SetActive(true);
+            choice_a_text.text = dialogue.sentences[1];
+            choice_b_text.text = dialogue.sentences[2];
+
+            // Hide the continue button.
+            continue_button.SetActive(false);
+
+
+            
         }
-
-        // Clear previous dialogue that was there.
-        sentences.Clear();
-
-        // Loads all strings from 'dialogue' into the queue.
-        foreach (string sentence in dialogue.sentences) {
-            sentences.Enqueue(sentence);
-        }
-
-        // Displays the next sentences.
-        DisplayNextSentence();
+        
 
     }
 
@@ -139,6 +177,9 @@ public class DialogueManager : MonoBehaviour
         
         // Disactivate the continue button.
         continue_button.SetActive(false);
+        // Disactivate the choice buttons.
+        choice_a.SetActive(false);
+        choice_b.SetActive(false);
         
         // Activate all the conversation buttons.
         story_1.SetActive(true);
@@ -152,4 +193,27 @@ public class DialogueManager : MonoBehaviour
         npc.SetActive(true);
         
     }
+
+    public void JumpToChoiceA() {
+        // A choice requires that 2 dialogues come after.
+        
+        // Dequeue the first dialogue and start it.
+        // Dequeue and get rid of the next dialogue.
+        Dialogue result = dialogues.Dequeue();
+        dialogues.Dequeue();
+
+        StartDialogue(result);
+    }
+
+    public void JumpToChoiceB() {
+        // A choice requires that 2 dialogues come after.
+        
+        // Dequeue the first dialogue and start it.
+        // Dequeue and get rid of the next dialogue.
+        dialogues.Dequeue();
+        Dialogue result = dialogues.Dequeue();
+
+        StartDialogue(result);
+    }
+
 }
