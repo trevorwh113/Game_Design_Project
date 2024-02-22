@@ -29,6 +29,7 @@ public class CrystalController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         // Start crystal as first sprite
         spriteRenderer.sprite = spriteArray[currentSprite];
+        
     }
 
     void LateUpdate()
@@ -36,14 +37,16 @@ public class CrystalController : MonoBehaviour
         // Find the location of the crystal and the tile under it
         Vector2 pos = transform.position;
         var hit = cursor.GetComponent<MouseController>().GetTileAtPos(pos);
-        tile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
+        if (hit.HasValue) {
+            tile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {   
         // If echolocated change sprite to damaged version
-        if(tile.echolocated)
+        if(tile != null && tile.echolocated)
         {
             // Make sure crystal is not completely broken already
             // Make sure sprite has not already changed (wait)

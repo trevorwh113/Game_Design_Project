@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerInfo : MonoBehaviour
 {
@@ -14,18 +15,15 @@ public class PlayerInfo : MonoBehaviour
     public int coins = 0;
 
 
-    // // Ensure the object this is attached to is never cleared.
-    // private void Start() {
-    //     // Self-destruct if there is a duplicate copy.
-    //     PlayerInfo instance = FindObjectOfType<PlayerInfo>();
-    //     if (instance != null && instance != this) {
-    //         Destroy(gameObject);
-    //     }
-        
-    //     // Otherwise, make sure it does not get unloaded.
-    //     DontDestroyOnLoad(gameObject);
+    private void Start() {
+      
+        // Make sure it does not get unloaded.
+        DontDestroyOnLoad(gameObject);
 
-    // }
+        // Transition to another scene.
+        SceneManager.LoadScene("intro_lvl");
+
+    }
 
 
 }

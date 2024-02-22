@@ -36,14 +36,16 @@ public class StalactiteController : MonoBehaviour
         // Find the location of the stalactite and the tile under it
         Vector2 pos = transform.position;
         var hit = cursor.GetComponent<MouseController>().GetTileAtPos(pos);
-        tile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
+        if (hit.HasValue) {
+            tile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         // If echolocated change sprite to damaged version
-        if(tile.echolocated)
+        if(tile != null && tile.echolocated)
         {
             // Make sure stalactite is not completely broken already
             // Make sure sprite has not already changed (wait)

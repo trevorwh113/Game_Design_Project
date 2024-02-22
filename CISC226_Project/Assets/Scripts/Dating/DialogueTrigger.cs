@@ -27,6 +27,10 @@ public class DialogueTrigger : MonoBehaviour
     public int affection_needed;
 
 
+    public void Start() {
+        playerInfo = FindObjectOfType<PlayerInfo>();
+    }
+
     public void TriggerDialogue() {
 
         DialogueManager dialogueManager = FindObjectOfType<DialogueManager>();
