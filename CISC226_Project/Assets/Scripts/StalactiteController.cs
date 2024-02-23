@@ -20,6 +20,10 @@ public class StalactiteController : MonoBehaviour
 
     // This is used in finding the overlay tile??
     public MouseController cursor;
+
+    // Used to get the tile the player is on and reset the scene.
+    private CharacterInfo character;
+    private LevelManager levelManager;
     
 
     // Start is called before the first frame update
@@ -29,6 +33,12 @@ public class StalactiteController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         // Start crystal as first sprite
         spriteRenderer.sprite = spriteArray[currentSprite];
+
+        // Get the levelManager and the character so that
+        // Each instance of stalactite doesn't need to save it.
+        character = FindObjectOfType<CharacterInfo>();
+        levelManager = FindObjectOfType<LevelManager>();
+
     }
 
     void LateUpdate()
@@ -53,6 +63,11 @@ public class StalactiteController : MonoBehaviour
             {
                 changeSprite();
                 wait = true;
+
+                // Kill the player if the sprite updated to 4 and player is on tile.
+                if (currentSprite == 4 && tile == character.onTile) {
+                    levelManager.ResetLevel();
+                }
             }
         }
         // Once echolocation stops, sprite can change again

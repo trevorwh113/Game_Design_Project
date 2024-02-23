@@ -20,9 +20,6 @@ public class PlayerInfo : MonoBehaviour
         // Make sure it does not get unloaded.
         DontDestroyOnLoad(gameObject);
 
-        // Transition to another scene.
-        SceneManager.LoadScene("intro_lvl");
-
     }
 
 

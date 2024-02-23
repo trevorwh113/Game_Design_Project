@@ -10359,7 +10359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crystals_remaining: 0
   coins_collected: 0
-  win_scene: Dating_test
+  win_scene: WinScreen
 --- !u!4 &2113023587
 Transform:
   m_ObjectHideFlags: 0

@@ -35,23 +35,30 @@ public class DialogueTrigger : MonoBehaviour
 
         DialogueManager dialogueManager = FindObjectOfType<DialogueManager>();
 
-        // Only trigger the dialogue if it should be unlocked.
-        if (doesStoryUnlock(dialogueManager)) {
+        // Avoids issues when not starting in the right scene.
+        if (playerInfo != null && dialogueManager != null) {
             
-            // Disactivate this game object (hide it).
-            gameObject.SetActive(false);
-            // Disactivate all the other buttons.
-            other_story_1.SetActive(false);
-            other_story_2.SetActive(false);
-            other_story_3.SetActive(false);
+            
+            // Only trigger the dialogue if it should be unlocked.
+            if (doesStoryUnlock(dialogueManager)) {
+                
+                // Disactivate this game object (hide it).
+                gameObject.SetActive(false);
+                // Disactivate all the other buttons.
+                other_story_1.SetActive(false);
+                other_story_2.SetActive(false);
+                other_story_3.SetActive(false);
 
-            // Activate the continue button.
-            continue_button.SetActive(true);
+                // Activate the continue button.
+                continue_button.SetActive(true);
 
-            // Start the whole conversation stored in 'dialogue'
-            dialogueManager.StartConversation(conversation);
+                // Start the whole conversation stored in 'dialogue'
+                dialogueManager.StartConversation(conversation);
+            }
+
         }
-
+        
+        
 
 
     }

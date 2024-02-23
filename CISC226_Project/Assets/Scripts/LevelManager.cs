@@ -24,17 +24,17 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // // Testing reasons.
-        // if (Input.GetKeyDown(KeyCode.E)) {
-        //     collectCoin();
-        //     breakCrystal();
-        // }
-        // if (Input.GetKeyDown(KeyCode.R)) {
-        //     ResetLevel();
-        // }
-        // if (Input.GetKeyDown(KeyCode.W)) {
-        //     WinLevel();
-        // }
+        // Testing reasons.
+        if (Input.GetKeyDown(KeyCode.E)) {
+            collectCoin();
+            breakCrystal();
+        }
+        if (Input.GetKeyDown(KeyCode.R)) {
+            ResetLevel();
+        }
+        if (Input.GetKeyDown(KeyCode.W)) {
+            WinLevel();
+        }
     }
 
 
