@@ -8,6 +8,7 @@ public class EnemyMovement : MonoBehaviour
     
     public float speed;
     OverlayTile target;
+
     bool isMoving = false;
 
     private PathFinder pathFinder;
@@ -32,6 +33,10 @@ public class EnemyMovement : MonoBehaviour
             if (transform.position == target.gridLocation)
             {
                 isMoving = false;
+
+                var hit = GetTileAtPos(transform.position);
+                onTile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
+
             }
         }
 
@@ -61,11 +66,22 @@ public class EnemyMovement : MonoBehaviour
     }
 
     //also altered verson of the one in MouseController
-    private void PositionEnemyOnTile(OverlayTile tile)
+    public void PositionEnemyOnTile(OverlayTile tile)
     {
         transform.position = new Vector3(tile.transform.position.x, tile.transform.position.y, tile.transform.position.z);
         GetComponent<SpriteRenderer>().sortingOrder = tile.GetComponent<SpriteRenderer>().sortingOrder;
         onTile = tile;
+    }
+
+    public RaycastHit2D? GetTileAtPos(Vector2 pos){
+        // list of objects in raycast
+        RaycastHit2D[] hits = Physics2D.RaycastAll(pos, Vector2.zero);
+
+        if(hits.Length > 0){
+            return hits[0];
+        }
+
+        return null;
     }
     
 

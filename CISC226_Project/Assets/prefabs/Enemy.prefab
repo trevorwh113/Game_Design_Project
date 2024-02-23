@@ -97,5 +97,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 021b82362408c1b4590f9877ad97c66f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
-  characterPrefab: {fileID: 0}
+  onTile: {fileID: 0}
+  speed: 2
