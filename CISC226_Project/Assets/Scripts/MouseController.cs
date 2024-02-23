@@ -12,6 +12,7 @@ public class MouseController : MonoBehaviour
 
     public float speed;
     [SerializeField] private CharacterInfo character; 
+    private LevelManager levelManager;
 
     [SerializeField] private EnemyMovement enemy1;
     private OverlayTile enemySpawnTile;
@@ -28,6 +29,8 @@ public class MouseController : MonoBehaviour
     void Start()
     {
         pathFinder = new PathFinder();
+
+        levelManager = FindObjectOfType<LevelManager>();
         
     }
 
@@ -124,10 +127,15 @@ public class MouseController : MonoBehaviour
         }
 
         //checks if enemy is touching player
-        if (character.onTile.Equals(enemy1.onTile))
+        if (character != null && enemy1 != null)
         {
-            Debug.Log("end level: reset");
+            if (character.onTile.Equals(enemy1.onTile))
+            {
+                Debug.Log("end level: reset");
+                levelManager.ResetLevel();
+            }
         }
+        
 
     }
 
