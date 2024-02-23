@@ -9,11 +9,13 @@ using UnityEngine.UIElements;
 
 public class MouseController : MonoBehaviour
 {
+
     public float speed;
     [SerializeField] private CharacterInfo character; 
 
     [SerializeField] private EnemyMovement enemy1;
     private OverlayTile enemySpawnTile;
+    private bool enemySpawned = false;
 
     private PathFinder pathFinder;
     private List<OverlayTile> path = new List<OverlayTile>();
@@ -36,29 +38,32 @@ public class MouseController : MonoBehaviour
         if (!spawned){
             Debug.Log("spawn");
             var hit = GetTileAtPos(new Vector2(-0.5f, -3.5f));
-<<<<<<< Updated upstream
-            if (hit.HasValue) {
+            
+            if (hit.HasValue)
+            {
                 spawnTile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
                 PositionCharacterOnTile(spawnTile);
                 character.onTile = spawnTile;
                 prevTile = spawnTile;
-                spawned = true;
-            }   
-=======
-            spawnTile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
-            PositionCharacterOnTile(spawnTile);
-            character.onTile = spawnTile;
-            prevTile = spawnTile;
+            }
+
+            spawned = true;
+        }
+
+        if (!enemySpawned){
+            Debug.Log("enemySpawn");
 
             //spawning enemy (temp system--we'll prob need a better one)
             var enemyHit = GetTileAtPos(new Vector2(0.5f, 3.5f));
-            enemySpawnTile = enemyHit.Value.collider.gameObject.GetComponent<OverlayTile>();
-            enemy1.PositionEnemyOnTile(enemySpawnTile);
-            enemy1.onTile = enemySpawnTile;
+            if (enemyHit.HasValue)
+            {
+                enemySpawnTile = enemyHit.Value.collider.gameObject.GetComponent<OverlayTile>();
+                enemy1.PositionEnemyOnTile(enemySpawnTile);
+                enemy1.onTile = enemySpawnTile;
+            }
 
-
-            spawned = true;
->>>>>>> Stashed changes
+            enemySpawned = true;
+            
         }
         
         var focusedTileHit = GetFocusedOnTile();
@@ -106,12 +111,8 @@ public class MouseController : MonoBehaviour
                 // prevTile.makeDark();
                 character.onTile.darkenAllAdjacent(prevTile, character.spotlightSize);
             }
-<<<<<<< Updated upstream
             prevTile=character.onTile;
         }
-        
-=======
-        prevTile=character.onTile;
 
         // for echolocation attracting enemy movement:
         if (Input.GetMouseButtonDown(1))
@@ -128,7 +129,6 @@ public class MouseController : MonoBehaviour
             Debug.Log("end level: reset");
         }
 
->>>>>>> Stashed changes
     }
 
     private void MoveAlongPath()
@@ -176,4 +176,5 @@ public class MouseController : MonoBehaviour
 
         return null;
     }
+
 }
