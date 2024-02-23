@@ -33,11 +33,13 @@ public class MouseController : MonoBehaviour
         if (!spawned){
             Debug.Log("spawn");
             var hit = GetTileAtPos(new Vector2(-0.5f, -3.5f));
-            spawnTile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
-            PositionCharacterOnTile(spawnTile);
-            character.onTile = spawnTile;
-            prevTile = spawnTile;
-            spawned = true;
+            if (hit.HasValue) {
+                spawnTile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
+                PositionCharacterOnTile(spawnTile);
+                character.onTile = spawnTile;
+                prevTile = spawnTile;
+                spawned = true;
+            }   
         }
         
         var focusedTileHit = GetFocusedOnTile();
@@ -58,31 +60,36 @@ public class MouseController : MonoBehaviour
             // }
 
             // Lighten-up a square of tiles.
-            // character.onTile.lightUp();
-            character.onTile.lightUpAllAdjacent(character.spotlightSize);
+            if (character.onTile != null) {
+                character.onTile.lightUpAllAdjacent(character.spotlightSize);
 
-            if (Input.GetMouseButtonDown(0)){
-                // should be this?: dk how to fix: overlayTile.GetComponent<Overlay>().showTile();
-                // just copied and pasted code from the function here lol
+                if (Input.GetMouseButtonDown(0)){
+                    // should be this?: dk how to fix: overlayTile.GetComponent<Overlay>().showTile();
+                    // just copied and pasted code from the function here lol
 
 
 
-                if (character != null){
-                    path = pathFinder.FindPath(character.onTile, tile);
+                    if (character != null){
+                        path = pathFinder.FindPath(character.onTile, tile);
+                    }
                 }
             }
+            
         }
         if(path.Count>0){
             MoveAlongPath();
         }
-        if (prevTile.gridLocation != character.onTile.gridLocation){
+        if (character.onTile != null && prevTile != null) {
+            if (prevTile.gridLocation != character.onTile.gridLocation){
                 //Debug.Log("showtile");
                 
                 // Darken a square of tiles.
                 // prevTile.makeDark();
                 character.onTile.darkenAllAdjacent(prevTile, character.spotlightSize);
             }
-        prevTile=character.onTile;
+            prevTile=character.onTile;
+        }
+        
     }
 
     private void MoveAlongPath()

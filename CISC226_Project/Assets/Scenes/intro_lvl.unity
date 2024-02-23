@@ -10328,6 +10328,53 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 4304780446404490348, guid: 6ee05050fbf89ab43b90dd87226cea4d, type: 3}
   m_PrefabInstance: {fileID: 8063734844467454734}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2113023585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2113023587}
+  - component: {fileID: 2113023586}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2113023586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113023585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e424e821c5fd1f49a1933ae31aa4025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crystals_remaining: 0
+  coins_collected: 0
+  win_scene: WinScreen
+--- !u!4 &2113023587
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113023585}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6587607, y: -4.8451834, z: -0.04961479}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4281301607823087838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10388,6 +10435,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal
       objectReference: {fileID: 0}
+    - target: {fileID: 6345753340046309946, guid: 0b58d4a7fe13e784f9807574ab78d1e7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1191224229408307834, guid: 0b58d4a7fe13e784f9807574ab78d1e7, type: 3}
     - {fileID: 7199128100672294328, guid: 0b58d4a7fe13e784f9807574ab78d1e7, type: 3}
@@ -10409,6 +10460,14 @@ PrefabInstance:
     - target: {fileID: 1568493642437243240, guid: 6ee05050fbf89ab43b90dd87226cea4d, type: 3}
       propertyPath: m_Name
       value: Stalactite
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568493642437243240, guid: 6ee05050fbf89ab43b90dd87226cea4d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568493642437243240, guid: 6ee05050fbf89ab43b90dd87226cea4d, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4304780446404490348, guid: 6ee05050fbf89ab43b90dd87226cea4d, type: 3}
       propertyPath: m_SortingLayer
@@ -10471,6 +10530,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 208148570}
+  - {fileID: 2113023587}
   - {fileID: 1751371745}
   - {fileID: 802470346}
   - {fileID: 150200119}
