@@ -46,11 +46,13 @@ public class EnemyMovement : MonoBehaviour
     //called by MouseController on rightclick
     public void ApproachPlayer(OverlayTile enemyTile, OverlayTile playerTile)
     {
+        // Only approach if the tiles are not the same tile.
+        if (enemyTile != playerTile) {
+            List<OverlayTile> path = pathFinder.FindPath(enemyTile, playerTile);
+            target = path[0];
 
-        List<OverlayTile> path = pathFinder.FindPath(enemyTile, playerTile);
-        target = path[0];
-
-        isMoving = true;
+            isMoving = true;
+        }
         
     }
 

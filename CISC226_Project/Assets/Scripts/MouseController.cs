@@ -30,9 +30,11 @@ public class MouseController : MonoBehaviour
     {
         pathFinder = new PathFinder();
 
+        // Gets the level manager for reseting in case of enemies.
         levelManager = FindObjectOfType<LevelManager>();
         
     }
+
 
     // usinh late update so it occurs after overlay update but this is a lazy way
     // so we might need to make an event handler system in the future
@@ -48,30 +50,16 @@ public class MouseController : MonoBehaviour
                 PositionCharacterOnTile(spawnTile);
                 character.onTile = spawnTile;
                 prevTile = spawnTile;
+                spawned = true;
             }
 
-            spawned = true;
         }
 
-        if (!enemySpawned){
-            Debug.Log("enemySpawn");
-
-            //spawning enemy (temp system--we'll prob need a better one)
-            var enemyHit = GetTileAtPos(new Vector2(0.5f, 3.5f));
-            if (enemyHit.HasValue)
-            {
-                enemySpawnTile = enemyHit.Value.collider.gameObject.GetComponent<OverlayTile>();
-                enemy1.PositionEnemyOnTile(enemySpawnTile);
-                enemy1.onTile = enemySpawnTile;
-            }
-
-            enemySpawned = true;
-            
-        }
         
         var focusedTileHit = GetFocusedOnTile();
 
         if(focusedTileHit.HasValue){
+
             OverlayTile tile = focusedTileHit.Value.collider.gameObject.GetComponent<OverlayTile>();
             transform.position = tile.transform.position;
             gameObject.GetComponent<SpriteRenderer>().sortingOrder = tile.GetComponent<SpriteRenderer>().sortingOrder;
@@ -87,26 +75,27 @@ public class MouseController : MonoBehaviour
             // }
 
             // Lighten-up a square of tiles.
-            if (character.onTile != null) {
+            if (spawned) {
                 character.onTile.lightUpAllAdjacent(character.spotlightSize);
-
-                if (Input.GetMouseButtonDown(0)){
+            }
+            
+            if (Input.GetMouseButtonDown(0)){
                     // should be this?: dk how to fix: overlayTile.GetComponent<Overlay>().showTile();
                     // just copied and pasted code from the function here lol
 
 
 
-                    if (character != null){
-                        path = pathFinder.FindPath(character.onTile, tile);
-                    }
+                if (spawned && tile != null){
+                    path = pathFinder.FindPath(character.onTile, tile);
                 }
             }
+            
             
         }
         if(path.Count>0){
             MoveAlongPath();
         }
-        if (character.onTile != null && prevTile != null) {
+        if (spawned) {
             if (prevTile.gridLocation != character.onTile.gridLocation){
                 //Debug.Log("showtile");
                 
@@ -117,6 +106,25 @@ public class MouseController : MonoBehaviour
             prevTile=character.onTile;
         }
 
+        
+        // ENEMY STUFF WILL NEED TO BE REWORKED FOR MULTIPLE ENEMIES
+        // ---------------------------------------------------------
+        if (!enemySpawned){
+            Debug.Log("enemySpawn");
+
+            //spawning enemy (temp system--we'll prob need a better one)
+            var enemyHit = GetTileAtPos(new Vector2(0.5f, 3.5f));
+            if (enemyHit.HasValue)
+            {
+                enemySpawnTile = enemyHit.Value.collider.gameObject.GetComponent<OverlayTile>();
+                enemy1.PositionEnemyOnTile(enemySpawnTile);
+                enemy1.onTile = enemySpawnTile;
+
+                enemySpawned = true;
+            }
+            
+        }
+        
         // for echolocation attracting enemy movement:
         if (Input.GetMouseButtonDown(1))
         {
@@ -127,7 +135,7 @@ public class MouseController : MonoBehaviour
         }
 
         //checks if enemy is touching player
-        if (character != null && enemy1 != null)
+        if (spawned && enemySpawned) 
         {
             if (character.onTile.Equals(enemy1.onTile))
             {

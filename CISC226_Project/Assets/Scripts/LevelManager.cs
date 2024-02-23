@@ -40,15 +40,17 @@ public class LevelManager : MonoBehaviour
 
     // Method to reset the scene.
     public void ResetLevel() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     // Called when you win a level. Loads the win screen and adds
     // everything relevant to the PlayerInfo object.
     public void WinLevel() {
-        // Adds the collected coins to the player's total.
+        // Adds the collected coins to the player's total if the data is found.
         PlayerInfo playerInfo = FindObjectOfType<PlayerInfo>();
-        playerInfo.coins += coins_collected;
+        if (playerInfo != null) {
+            playerInfo.coins += coins_collected;
+        }
 
 
         // Loads the win screen so that the player knows they won.
