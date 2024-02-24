@@ -48,8 +48,9 @@ public class MouseController : MonoBehaviour
     void LateUpdate()
     {
         if (!spawned){
+            Debug.Log("entered !spawned");
             var hit = GetTileAtPos(character.transform.position);
-            
+            Debug.Log("spawned" + hit.HasValue);
             if (hit.HasValue)
             {
                 spawnTile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
@@ -61,14 +62,14 @@ public class MouseController : MonoBehaviour
                 Debug.Log("spawn");
             }
 
-            //spawned = true;
-
         }
 
-        if (enemiesSpawned.Contains(false)){
+        if (spawned && enemiesSpawned.Contains(false)){
+            Debug.Log("entered !enemiesSpawned");
             for (int i = 0; i < levelManager.enemies.Count; i++)
             {
                 var hit = GetTileAtPos(levelManager.enemies[i].transform.position);
+                Debug.Log("enemies" + i + hit.HasValue);
                 if (hit.HasValue && enemiesSpawned[i] == false)
                 {
                     levelManager.enemySpawnTile.Add(hit.Value.collider.gameObject.GetComponent<OverlayTile>());
@@ -81,7 +82,6 @@ public class MouseController : MonoBehaviour
             
             }
 
-            //enemiesSpawned = true;
         }
 
         

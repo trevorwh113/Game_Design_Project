@@ -47,6 +47,7 @@ public class LevelManager : MonoBehaviour
 
     // Method to reset the scene.
     public void ResetLevel() {
+        Debug.Log("resetting");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
