@@ -14,9 +14,8 @@ public class MouseController : MonoBehaviour
     [SerializeField] private CharacterInfo character; 
     private LevelManager levelManager;
 
-    [SerializeField] private EnemyMovement enemy1;
-    private OverlayTile enemySpawnTile;
-    private bool enemySpawned = false;
+    private EnemyMovement newEnemy;
+    private bool enemiesSpawned = false;
 
     private PathFinder pathFinder;
     private List<OverlayTile> path = new List<OverlayTile>();
@@ -30,11 +29,18 @@ public class MouseController : MonoBehaviour
     {
         pathFinder = new PathFinder();
 
-        // Gets the level manager for reseting in case of enemies.
         levelManager = FindObjectOfType<LevelManager>();
+
+        // for (int i = 0; i < levelManager.enemies.Capacity; i++)
+        // {
+        //     newEnemy = new EnemyMovement();
+        //     levelManager.enemies.Add(newEnemy);
+        //     Debug.Log("added 1");
+        // }
+        
+        
         
     }
-
 
     // usinh late update so it occurs after overlay update but this is a lazy way
     // so we might need to make an event handler system in the future
@@ -42,7 +48,7 @@ public class MouseController : MonoBehaviour
     {
         if (!spawned){
             Debug.Log("spawn");
-            var hit = GetTileAtPos(new Vector2(-0.5f, -3.5f));
+            var hit = GetTileAtPos(character.transform.position);
             
             if (hit.HasValue)
             {
@@ -50,16 +56,37 @@ public class MouseController : MonoBehaviour
                 PositionCharacterOnTile(spawnTile);
                 character.onTile = spawnTile;
                 prevTile = spawnTile;
+
                 spawned = true;
             }
 
+            //spawned = true;
+
+        }
+
+        if (!enemiesSpawned){
+            for (int i = 0; i < levelManager.enemies.Capacity; i++)
+            {
+                Debug.Log(i);
+                var hit = GetTileAtPos(levelManager.enemies[i].transform.position);
+                if (hit.HasValue)
+                {
+                    levelManager.enemySpawnTile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
+                    levelManager.enemies[i].PositionEnemyOnTile(levelManager.enemySpawnTile);
+                    levelManager.enemies[i].onTile = levelManager.enemySpawnTile;
+
+                    enemiesSpawned = true;
+                }
+            
+            }
+
+            //enemiesSpawned = true;
         }
 
         
         var focusedTileHit = GetFocusedOnTile();
 
         if(focusedTileHit.HasValue){
-
             OverlayTile tile = focusedTileHit.Value.collider.gameObject.GetComponent<OverlayTile>();
             transform.position = tile.transform.position;
             gameObject.GetComponent<SpriteRenderer>().sortingOrder = tile.GetComponent<SpriteRenderer>().sortingOrder;
@@ -75,27 +102,26 @@ public class MouseController : MonoBehaviour
             // }
 
             // Lighten-up a square of tiles.
-            if (spawned) {
+            if (character.onTile != null) {
                 character.onTile.lightUpAllAdjacent(character.spotlightSize);
-            }
-            
-            if (Input.GetMouseButtonDown(0)){
+
+                if (Input.GetMouseButtonDown(0)){
                     // should be this?: dk how to fix: overlayTile.GetComponent<Overlay>().showTile();
                     // just copied and pasted code from the function here lol
 
 
 
-                if (spawned && tile != null){
-                    path = pathFinder.FindPath(character.onTile, tile);
+                    if (character != null){
+                        path = pathFinder.FindPath(character.onTile, tile);
+                    }
                 }
             }
-            
             
         }
         if(path.Count>0){
             MoveAlongPath();
         }
-        if (spawned) {
+        if (character.onTile != null && prevTile != null) {
             if (prevTile.gridLocation != character.onTile.gridLocation){
                 //Debug.Log("showtile");
                 
@@ -106,43 +132,30 @@ public class MouseController : MonoBehaviour
             prevTile=character.onTile;
         }
 
-        
-        // ENEMY STUFF WILL NEED TO BE REWORKED FOR MULTIPLE ENEMIES
-        // ---------------------------------------------------------
-        if (!enemySpawned){
-            Debug.Log("enemySpawn");
-
-            //spawning enemy (temp system--we'll prob need a better one)
-            var enemyHit = GetTileAtPos(new Vector2(0.5f, 3.5f));
-            if (enemyHit.HasValue)
-            {
-                enemySpawnTile = enemyHit.Value.collider.gameObject.GetComponent<OverlayTile>();
-                enemy1.PositionEnemyOnTile(enemySpawnTile);
-                enemy1.onTile = enemySpawnTile;
-
-                enemySpawned = true;
-            }
-            
-        }
-        
         // for echolocation attracting enemy movement:
         if (Input.GetMouseButtonDown(1))
         {
-            //for more than one enemy, could have a list or smth and iterate through
-            var enemyHit = GetTileAtPos(enemy1.transform.position);
-            OverlayTile enemy1Tile = enemyHit.Value.collider.gameObject.GetComponent<OverlayTile>();
-            enemy1.ApproachPlayer(enemy1Tile, character.onTile);
+            for (int i = 0; i < levelManager.enemies.Capacity; i++)
+            {
+                var enemyHit = GetTileAtPos(levelManager.enemies[i].transform.position);
+                OverlayTile enemy1Tile = enemyHit.Value.collider.gameObject.GetComponent<OverlayTile>();
+                levelManager.enemies[i].ApproachPlayer(enemy1Tile, character.onTile);
+            }
+            
         }
 
-        //checks if enemy is touching player
-        if (spawned && enemySpawned) 
+        //checks if enemies are touching player
+        for (int i = 0; i < levelManager.enemies.Capacity; i++)
         {
-            if (character.onTile.Equals(enemy1.onTile))
+            if (character.onTile != null && levelManager.enemies[i].onTile != null)
             {
-                Debug.Log("end level: reset");
-                levelManager.ResetLevel();
+                if (character.onTile.Equals(levelManager.enemies[i].onTile))
+                {
+                    levelManager.ResetLevel();
+                }
             }
         }
+            
         
 
     }
