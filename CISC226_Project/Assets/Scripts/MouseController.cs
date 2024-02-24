@@ -14,8 +14,6 @@ public class MouseController : MonoBehaviour
     [SerializeField] private CharacterInfo character; 
     private LevelManager levelManager;
 
-    private EnemyMovement newEnemy;
-    private List<bool> enemiesSpawned = new List<bool>{false, false, false};
     private bool touchingEnemy = false;
 
     private PathFinder pathFinder;
@@ -48,9 +46,9 @@ public class MouseController : MonoBehaviour
     void LateUpdate()
     {
         if (!spawned){
-            Debug.Log("entered !spawned");
+            // Debug.Log("entered !spawned");
             var hit = GetTileAtPos(character.transform.position);
-            Debug.Log("spawned" + hit.HasValue);
+            // Debug.Log("spawned" + hit.HasValue);
             if (hit.HasValue)
             {
                 spawnTile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
@@ -59,25 +57,25 @@ public class MouseController : MonoBehaviour
                 prevTile = spawnTile;
 
                 spawned = true;
-                Debug.Log("spawn");
+                // Debug.Log("spawn");
             }
 
         }
 
-        if (spawned && enemiesSpawned.Contains(false)){
-            Debug.Log("entered !enemiesSpawned");
+        if (spawned && levelManager.enemiesSpawned.Contains(false)){
+            // Debug.Log("entered !enemiesSpawned");
             for (int i = 0; i < levelManager.enemies.Count; i++)
             {
                 var hit = GetTileAtPos(levelManager.enemies[i].transform.position);
-                Debug.Log("enemies" + i + hit.HasValue);
-                if (hit.HasValue && enemiesSpawned[i] == false)
+                // Debug.Log("enemies" + i + hit.HasValue);
+                if (hit.HasValue && levelManager.enemiesSpawned[i] == false)
                 {
                     levelManager.enemySpawnTile.Add(hit.Value.collider.gameObject.GetComponent<OverlayTile>());
                     levelManager.enemies[i].PositionEnemyOnTile(levelManager.enemySpawnTile[i]);
                     levelManager.enemies[i].onTile = levelManager.enemySpawnTile[i];
 
-                    enemiesSpawned[i] = true;
-                    Debug.Log(i);
+                    levelManager.enemiesSpawned[i] = true;
+                    // Debug.Log(i);
                 }
             
             }

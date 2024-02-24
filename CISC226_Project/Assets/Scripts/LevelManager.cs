@@ -9,11 +9,10 @@ public class LevelManager : MonoBehaviour
     // crystals, enemies, etc.
 
     //list of enemies: the int in brackets is the list capacity. change as needed
-    public EnemyMovement enemy0;
-    public EnemyMovement enemy1;
-    public EnemyMovement enemy2;
-    [SerializeField] public List<EnemyMovement> enemies = new List<EnemyMovement>(3);
+    
+    [SerializeField] public List<EnemyMovement> enemies = new List<EnemyMovement>();
     public List<OverlayTile> enemySpawnTile;
+    public List<bool> enemiesSpawned = new List<bool>();
 
     public int crystals_remaining;      // Set for the level.
     public int coins_collected = 0;     // Should default to always.
@@ -25,7 +24,7 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -47,7 +46,7 @@ public class LevelManager : MonoBehaviour
 
     // Method to reset the scene.
     public void ResetLevel() {
-        Debug.Log("resetting");
+        // Debug.Log("resetting");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
