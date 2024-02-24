@@ -15,6 +15,7 @@ public class StalactiteController : MonoBehaviour
     // Flag to only change sprite once per echolocation.
     bool wait = false;
 
+
     // The tile that the stalactite is on
     OverlayTile tile;
 
@@ -82,5 +83,9 @@ public class StalactiteController : MonoBehaviour
     {
         currentSprite++;
         spriteRenderer.sprite = spriteArray[currentSprite];
+        if (currentSprite == 4)
+        {
+            tile.isBlocked = true;
+        }
     }
 }

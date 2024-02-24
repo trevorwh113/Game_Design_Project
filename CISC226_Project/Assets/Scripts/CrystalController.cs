@@ -15,6 +15,8 @@ public class CrystalController : MonoBehaviour
     // Flag to only change sprite once per echolocation.
     bool wait = false;
 
+    bool broken = false;
+
     // The tile that the crystal is on
     OverlayTile tile;
 
@@ -39,6 +41,11 @@ public class CrystalController : MonoBehaviour
         var hit = cursor.GetComponent<MouseController>().GetTileAtPos(pos);
         if (hit.HasValue) {
             tile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
+        }
+        tile.isBlocked = true;
+        if(broken)
+        {
+            tile.isBlocked = false;
         }
     }
 
@@ -68,5 +75,9 @@ public class CrystalController : MonoBehaviour
     {
         currentSprite++;
         spriteRenderer.sprite = spriteArray[currentSprite];
+        if (currentSprite == 3)
+        {
+            broken = true;
+        }
     }
 }
