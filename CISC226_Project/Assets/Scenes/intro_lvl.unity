@@ -10564,8 +10564,11 @@ MonoBehaviour:
   enemy0: {fileID: 1421105438}
   enemy1: {fileID: 1865377281}
   enemy2: {fileID: 1070971392}
-  enemies: []
-  enemySpawnTiles: []
+  enemies:
+  - {fileID: 1421105438}
+  - {fileID: 1865377281}
+  - {fileID: 1070971392}
+  enemySpawnTile: []
   crystals_remaining: 0
   coins_collected: 0
   win_scene: WinScreen

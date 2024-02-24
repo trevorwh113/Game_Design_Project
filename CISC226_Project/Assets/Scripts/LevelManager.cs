@@ -13,7 +13,7 @@ public class LevelManager : MonoBehaviour
     public EnemyMovement enemy1;
     public EnemyMovement enemy2;
     [SerializeField] public List<EnemyMovement> enemies = new List<EnemyMovement>(3);
-    public OverlayTile enemySpawnTile;
+    public List<OverlayTile> enemySpawnTile;
 
     public int crystals_remaining;      // Set for the level.
     public int coins_collected = 0;     // Should default to always.
@@ -25,10 +25,7 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemies.Add(enemy0);
-        enemies.Add(enemy1);
-        enemies.Add(enemy2);
-        Debug.Log(enemies[0] == null);
+
     }
 
     // Update is called once per frame

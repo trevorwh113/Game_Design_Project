@@ -15,7 +15,8 @@ public class MouseController : MonoBehaviour
     private LevelManager levelManager;
 
     private EnemyMovement newEnemy;
-    private bool enemiesSpawned = false;
+    private List<bool> enemiesSpawned = new List<bool>{false, false, false};
+    private bool touchingEnemy = false;
 
     private PathFinder pathFinder;
     private List<OverlayTile> path = new List<OverlayTile>();
@@ -47,7 +48,6 @@ public class MouseController : MonoBehaviour
     void LateUpdate()
     {
         if (!spawned){
-            Debug.Log("spawn");
             var hit = GetTileAtPos(character.transform.position);
             
             if (hit.HasValue)
@@ -58,24 +58,25 @@ public class MouseController : MonoBehaviour
                 prevTile = spawnTile;
 
                 spawned = true;
+                Debug.Log("spawn");
             }
 
             //spawned = true;
 
         }
 
-        if (!enemiesSpawned){
-            for (int i = 0; i < levelManager.enemies.Capacity; i++)
+        if (enemiesSpawned.Contains(false)){
+            for (int i = 0; i < levelManager.enemies.Count; i++)
             {
-                Debug.Log(i);
                 var hit = GetTileAtPos(levelManager.enemies[i].transform.position);
-                if (hit.HasValue)
+                if (hit.HasValue && enemiesSpawned[i] == false)
                 {
-                    levelManager.enemySpawnTile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
-                    levelManager.enemies[i].PositionEnemyOnTile(levelManager.enemySpawnTile);
-                    levelManager.enemies[i].onTile = levelManager.enemySpawnTile;
+                    levelManager.enemySpawnTile.Add(hit.Value.collider.gameObject.GetComponent<OverlayTile>());
+                    levelManager.enemies[i].PositionEnemyOnTile(levelManager.enemySpawnTile[i]);
+                    levelManager.enemies[i].onTile = levelManager.enemySpawnTile[i];
 
-                    enemiesSpawned = true;
+                    enemiesSpawned[i] = true;
+                    Debug.Log(i);
                 }
             
             }
@@ -135,7 +136,7 @@ public class MouseController : MonoBehaviour
         // for echolocation attracting enemy movement:
         if (Input.GetMouseButtonDown(1))
         {
-            for (int i = 0; i < levelManager.enemies.Capacity; i++)
+            for (int i = 0; i < levelManager.enemies.Count; i++)
             {
                 var enemyHit = GetTileAtPos(levelManager.enemies[i].transform.position);
                 OverlayTile enemy1Tile = enemyHit.Value.collider.gameObject.GetComponent<OverlayTile>();
@@ -145,12 +146,13 @@ public class MouseController : MonoBehaviour
         }
 
         //checks if enemies are touching player
-        for (int i = 0; i < levelManager.enemies.Capacity; i++)
+        for (int i = 0; i < levelManager.enemies.Count; i++)
         {
-            if (character.onTile != null && levelManager.enemies[i].onTile != null)
+            if (character.onTile != null && levelManager.enemies[i].onTile != null && touchingEnemy == false)
             {
                 if (character.onTile.Equals(levelManager.enemies[i].onTile))
                 {
+                    touchingEnemy = true;
                     levelManager.ResetLevel();
                 }
             }
