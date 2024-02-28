@@ -42,11 +42,16 @@ public class CrystalController : MonoBehaviour
         if (hit.HasValue) {
             tile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
         }
-        tile.isBlocked = true;
-        if(broken)
-        {
-            tile.isBlocked = false;
+        
+        // Safety guard to make sure there is always a tile we're working with.
+        if (tile != null) {
+            tile.isBlocked = true;
+            if(broken)
+            {
+                tile.isBlocked = false;
+            }
         }
+        
     }
 
     // Update is called once per frame
