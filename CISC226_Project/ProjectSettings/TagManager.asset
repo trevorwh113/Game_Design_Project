@@ -53,6 +53,9 @@ TagManager:
   - name: cursor
     uniqueID: 2644281137
     locked: 0
+  - name: coin sparkle
+    uniqueID: 334806395
+    locked: 0
   - name: character
     uniqueID: 3624687363
     locked: 0
