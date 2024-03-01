@@ -15,11 +15,16 @@ public class StalactiteController : MonoBehaviour
     // Flag to only change sprite once per echolocation.
     bool wait = false;
 
+
     // The tile that the stalactite is on
     OverlayTile tile;
 
     // This is used in finding the overlay tile??
     public MouseController cursor;
+
+    // Used to get the tile the player is on and reset the scene.
+    private CharacterInfo character;
+    private LevelManager levelManager;
     
 
     // Start is called before the first frame update
@@ -29,6 +34,12 @@ public class StalactiteController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         // Start crystal as first sprite
         spriteRenderer.sprite = spriteArray[currentSprite];
+
+        // Get the levelManager and the character so that
+        // Each instance of stalactite doesn't need to save it.
+        character = FindObjectOfType<CharacterInfo>();
+        levelManager = FindObjectOfType<LevelManager>();
+
     }
 
     void LateUpdate()
@@ -36,14 +47,16 @@ public class StalactiteController : MonoBehaviour
         // Find the location of the stalactite and the tile under it
         Vector2 pos = transform.position;
         var hit = cursor.GetComponent<MouseController>().GetTileAtPos(pos);
-        tile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
+        if (hit.HasValue) {
+            tile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         // If echolocated change sprite to damaged version
-        if(tile.echolocated)
+        if(tile != null && tile.echolocated)
         {
             // Make sure stalactite is not completely broken already
             // Make sure sprite has not already changed (wait)
@@ -51,6 +64,11 @@ public class StalactiteController : MonoBehaviour
             {
                 changeSprite();
                 wait = true;
+
+                // Kill the player if the sprite updated to 4 and player is on tile.
+                if (currentSprite == 4 && tile == character.onTile) {
+                    levelManager.ResetLevel();
+                }
             }
         }
         // Once echolocation stops, sprite can change again
@@ -65,5 +83,9 @@ public class StalactiteController : MonoBehaviour
     {
         currentSprite++;
         spriteRenderer.sprite = spriteArray[currentSprite];
+        if (currentSprite == 4)
+        {
+            tile.isBlocked = true;
+        }
     }
 }

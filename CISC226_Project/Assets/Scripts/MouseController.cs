@@ -9,8 +9,12 @@ using UnityEngine.UIElements;
 
 public class MouseController : MonoBehaviour
 {
+
     public float speed;
     [SerializeField] private CharacterInfo character; 
+    private LevelManager levelManager;
+
+    private bool touchingEnemy = false;
 
     private PathFinder pathFinder;
     private List<OverlayTile> path = new List<OverlayTile>();
@@ -23,6 +27,17 @@ public class MouseController : MonoBehaviour
     void Start()
     {
         pathFinder = new PathFinder();
+
+        levelManager = FindObjectOfType<LevelManager>();
+
+        // for (int i = 0; i < levelManager.enemies.Capacity; i++)
+        // {
+        //     newEnemy = new EnemyMovement();
+        //     levelManager.enemies.Add(newEnemy);
+        //     Debug.Log("added 1");
+        // }
+        
+        
         
     }
 
@@ -31,14 +46,42 @@ public class MouseController : MonoBehaviour
     void LateUpdate()
     {
         if (!spawned){
-            Debug.Log("spawn");
-            var hit = GetTileAtPos(new Vector2(-0.5f, -3.5f));
-            spawnTile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
-            PositionCharacterOnTile(spawnTile);
-            character.onTile = spawnTile;
-            prevTile = spawnTile;
-            spawned = true;
+            // Debug.Log("entered !spawned");
+            var hit = GetTileAtPos(character.transform.position);
+            // Debug.Log("spawned" + hit.HasValue);
+            if (hit.HasValue)
+            {
+                spawnTile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
+                PositionCharacterOnTile(spawnTile);
+                character.onTile = spawnTile;
+                prevTile = spawnTile;
+
+                spawned = true;
+                // Debug.Log("spawn");
+            }
+
         }
+
+        if (spawned && levelManager.enemiesSpawned.Contains(false)){
+            // Debug.Log("entered !enemiesSpawned");
+            for (int i = 0; i < levelManager.enemies.Count; i++)
+            {
+                var hit = GetTileAtPos(levelManager.enemies[i].transform.position);
+                // Debug.Log("enemies" + i + hit.HasValue);
+                if (hit.HasValue && levelManager.enemiesSpawned[i] == false)
+                {
+                    levelManager.enemySpawnTile.Add(hit.Value.collider.gameObject.GetComponent<OverlayTile>());
+                    levelManager.enemies[i].PositionEnemyOnTile(levelManager.enemySpawnTile[i]);
+                    levelManager.enemies[i].onTile = levelManager.enemySpawnTile[i];
+
+                    levelManager.enemiesSpawned[i] = true;
+                    // Debug.Log(i);
+                }
+            
+            }
+
+        }
+
         
         var focusedTileHit = GetFocusedOnTile();
 
@@ -58,31 +101,63 @@ public class MouseController : MonoBehaviour
             // }
 
             // Lighten-up a square of tiles.
-            // character.onTile.lightUp();
-            character.onTile.lightUpAllAdjacent(character.spotlightSize);
+            if (character.onTile != null) {
+                character.onTile.lightUpAllAdjacent(character.spotlightSize);
 
-            if (Input.GetMouseButtonDown(0)){
-                // should be this?: dk how to fix: overlayTile.GetComponent<Overlay>().showTile();
-                // just copied and pasted code from the function here lol
+                if (Input.GetMouseButtonDown(0)){
+                    // should be this?: dk how to fix: overlayTile.GetComponent<Overlay>().showTile();
+                    // just copied and pasted code from the function here lol
 
 
 
-                if (character != null){
-                    path = pathFinder.FindPath(character.onTile, tile);
+                    if (character != null){
+                        path = pathFinder.FindPath(character.onTile, tile);
+                    }
                 }
             }
+            
         }
         if(path.Count>0){
             MoveAlongPath();
         }
-        if (prevTile.gridLocation != character.onTile.gridLocation){
+        if (character.onTile != null && prevTile != null) {
+            if (prevTile.gridLocation != character.onTile.gridLocation){
                 //Debug.Log("showtile");
                 
                 // Darken a square of tiles.
                 // prevTile.makeDark();
                 character.onTile.darkenAllAdjacent(prevTile, character.spotlightSize);
             }
-        prevTile=character.onTile;
+            prevTile=character.onTile;
+        }
+
+        // for echolocation attracting enemy movement:
+        if (Input.GetMouseButtonDown(1))
+        {
+            for (int i = 0; i < levelManager.enemies.Count; i++)
+            {
+                var enemyHit = GetTileAtPos(levelManager.enemies[i].transform.position);
+                OverlayTile enemy1Tile = enemyHit.Value.collider.gameObject.GetComponent<OverlayTile>();
+                levelManager.enemies[i].ApproachPlayer(enemy1Tile, character.onTile);
+            }
+            
+        }
+
+        //checks if enemies are touching player
+        for (int i = 0; i < levelManager.enemies.Count; i++)
+        {
+            if (character.onTile != null && levelManager.enemies[i].onTile != null && touchingEnemy == false)
+            {
+                if (character.onTile.Equals(levelManager.enemies[i].onTile))
+                {
+                    touchingEnemy = true;
+                    levelManager.ResetLevel();
+                }
+            }
+        }
+            
+        
+
     }
 
     private void MoveAlongPath()
@@ -130,4 +205,5 @@ public class MouseController : MonoBehaviour
 
         return null;
     }
+
 }
