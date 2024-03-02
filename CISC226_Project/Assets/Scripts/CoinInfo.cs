@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CoinInfo : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class CoinInfo : MonoBehaviour
     public MouseController cursor;
     private CharacterInfo character;
     private LevelManager levelManager;
-
+    private TMP_Text coinsText;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class CoinInfo : MonoBehaviour
         cursor = FindObjectOfType<MouseController>();
         character = FindObjectOfType<CharacterInfo>();
         levelManager = FindObjectOfType<LevelManager>();
+        coinsText = FindObjectOfType<TMP_Text>();
     }
 
     // Update is called once per frame
@@ -51,7 +53,9 @@ public class CoinInfo : MonoBehaviour
                     spriteRenderer.enabled = false; 
                     sparkle.spriteRenderer.enabled = false;
 
-                    Debug.Log("coins: " + levelManager.coins_collected);
+                    coinsText.SetText("Coins: " + levelManager.coins_collected);
+                    Debug.Log("Coins: " + levelManager.coins_collected);
+
                 }
                     
             } 
