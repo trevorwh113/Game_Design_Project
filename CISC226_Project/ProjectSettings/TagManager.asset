@@ -53,6 +53,9 @@ TagManager:
   - name: enemies
     uniqueID: 2718162467
     locked: 0
+  - name: character
+    uniqueID: 3624687363
+    locked: 0
   - name: select
     uniqueID: 487398233
     locked: 0
@@ -61,9 +64,6 @@ TagManager:
     locked: 0
   - name: coin sparkle
     uniqueID: 334806395
-    locked: 0
-  - name: character
-    uniqueID: 3624687363
     locked: 0
   - name: text
     uniqueID: 1841877161
