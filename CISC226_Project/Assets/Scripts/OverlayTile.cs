@@ -15,6 +15,9 @@ public class OverlayTile : MonoBehaviour
     // Flags if a tile is lit or not.
     public bool isLit;
     public bool echolocated;
+
+    // Flags a goal tile.
+    public bool is_goal_tile;
     
 
 

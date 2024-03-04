@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 269407157}
   - component: {fileID: 269407156}
   - component: {fileID: 269407155}
+  - component: {fileID: 269407159}
   m_Layer: 5
   m_Name: Story4
   m_TagString: Untagged
@@ -276,6 +277,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269407153}
   m_CullTransparentMesh: 1
+--- !u!114 &269407159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269407153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c11df73b66a470b43a16e22b738cbdba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locked: {fileID: 1574119635, guid: a5b2d44ad022f0440bc818b5f2f50567, type: 3}
+  unlocked: {fileID: -977891048, guid: ef285178fd769894293b19fdbd05ecba, type: 3}
+  text_field: {fileID: 760323451}
 --- !u!1 &300429854
 GameObject:
   m_ObjectHideFlags: 0
@@ -1100,6 +1116,7 @@ GameObject:
   - component: {fileID: 821283632}
   - component: {fileID: 821283631}
   - component: {fileID: 821283630}
+  - component: {fileID: 821283634}
   m_Layer: 5
   m_Name: Story3
   m_TagString: Untagged
@@ -1240,6 +1257,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821283628}
   m_CullTransparentMesh: 1
+--- !u!114 &821283634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821283628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c11df73b66a470b43a16e22b738cbdba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locked: {fileID: 1574119635, guid: a5b2d44ad022f0440bc818b5f2f50567, type: 3}
+  unlocked: {fileID: -977891048, guid: ef285178fd769894293b19fdbd05ecba, type: 3}
+  text_field: {fileID: 904202815}
 --- !u!1 &904202813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1999,12 +2031,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e820cfaa66c555047ad769130755726b, type: 3}
+  m_Sprite: {fileID: 169720164, guid: 9d6b217fed06da94c95e513ddc450c04, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 8.85, y: 9.13}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2019,8 +2051,8 @@ Transform:
   m_GameObject: {fileID: 1335855787}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -145.29356, y: -97.365555, z: -359.85083}
-  m_LocalScale: {x: 467.9952, y: 467.9952, z: 467.9952}
+  m_LocalPosition: {x: -161, y: -118, z: -359.851}
+  m_LocalScale: {x: 37.870174, y: 37.870174, z: 37.870174}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 515956419}
@@ -2647,6 +2679,7 @@ GameObject:
   - component: {fileID: 1998452941}
   - component: {fileID: 1998452940}
   - component: {fileID: 1998452939}
+  - component: {fileID: 1998452943}
   m_Layer: 5
   m_Name: Story2
   m_TagString: Untagged
@@ -2787,6 +2820,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998452937}
   m_CullTransparentMesh: 1
+--- !u!114 &1998452943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998452937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c11df73b66a470b43a16e22b738cbdba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locked: {fileID: 1574119635, guid: a5b2d44ad022f0440bc818b5f2f50567, type: 3}
+  unlocked: {fileID: -977891048, guid: ef285178fd769894293b19fdbd05ecba, type: 3}
+  text_field: {fileID: 300429856}
 --- !u!1 &2114152878
 GameObject:
   m_ObjectHideFlags: 0
@@ -2934,6 +2982,7 @@ GameObject:
   - component: {fileID: 2118377416}
   - component: {fileID: 2118377415}
   - component: {fileID: 2118377418}
+  - component: {fileID: 2118377419}
   m_Layer: 5
   m_Name: Story1
   m_TagString: Untagged
@@ -3104,6 +3153,21 @@ MonoBehaviour:
   continue_button: {fileID: 1164617600}
   playerInfo: {fileID: 0}
   affection_needed: 0
+--- !u!114 &2118377419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118377413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c11df73b66a470b43a16e22b738cbdba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locked: {fileID: 1574119635, guid: a5b2d44ad022f0440bc818b5f2f50567, type: 3}
+  unlocked: {fileID: -977891048, guid: ef285178fd769894293b19fdbd05ecba, type: 3}
+  text_field: {fileID: 1523143833}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -83,6 +83,9 @@ public class CrystalController : MonoBehaviour
         if (currentSprite == 3)
         {
             broken = true;
+
+            // Break it in the levelManager.
+            FindObjectOfType<LevelManager>().breakCrystal();
         }
     }
 }

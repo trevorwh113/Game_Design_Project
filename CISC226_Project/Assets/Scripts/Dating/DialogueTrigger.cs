@@ -66,12 +66,18 @@ public class DialogueTrigger : MonoBehaviour
 
     // Decides whether the story should trigger or not.
     public bool doesStoryUnlock(DialogueManager dialogueManager) {
-        return ((playerInfo.affection_bird == affection_needed 
+        if (playerInfo != null) {
+            return ((playerInfo.affection_bird == affection_needed 
                     && dialogueManager.npc_name == "bird") || 
                 (playerInfo.affection_worm == affection_needed 
                     && dialogueManager.npc_name == "worm") || 
                 (playerInfo.affection_croc == affection_needed 
                     && dialogueManager.npc_name == "croc")); 
+        }
+        
+        else {
+            return false;
+        }
     }
 
 
