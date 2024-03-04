@@ -85,6 +85,7 @@ public class StalactiteController : MonoBehaviour
         spriteRenderer.sprite = spriteArray[currentSprite];
         if (currentSprite == 4)
         {
+            spriteRenderer.sortingLayerID = SortingLayer.NameToID("character");
             tile.isBlocked = true;
         }
     }
