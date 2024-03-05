@@ -41,8 +41,7 @@ public class DialogueTrigger : MonoBehaviour
             
             // Only trigger the dialogue if it should be unlocked.
             if (doesStoryUnlock(dialogueManager)) {
-                
-                // Disactivate this game object (hide it).
+                // Disactivate thisk game object (hide it).
                 gameObject.SetActive(false);
                 // Disactivate all the other buttons.
                 other_story_1.SetActive(false);
