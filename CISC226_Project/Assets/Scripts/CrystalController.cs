@@ -42,6 +42,7 @@ public class CrystalController : MonoBehaviour
         if (hit.HasValue) {
             tile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
         }
+
         
         // Safety guard to make sure there is always a tile we're working with.
         if (tile != null) {

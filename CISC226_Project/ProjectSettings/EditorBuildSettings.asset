@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pete_Date.unity
     guid: 90989d2e52ab77b459503cf486c1c92b
+  - enabled: 1
+    path: Assets/Scenes/lvl_1.unity
+    guid: 42d82bb8fe48bf749a2822d2e203fc7a
   m_configObjects: {}
