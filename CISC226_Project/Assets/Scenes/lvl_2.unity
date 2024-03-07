@@ -49520,12 +49520,8 @@ MonoBehaviour:
   - {fileID: 608224762}
   - {fileID: 1586422938}
   - {fileID: 1888630492}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   enemySpawnTile: []
-  enemiesSpawned: 0000000000000000
+  enemiesSpawned: 00000000
   crystals_remaining: 0
   coins_collected: 0
   win_scene: WinScreen
