@@ -255,7 +255,7 @@ SpriteRenderer:
   m_SortingLayerID: -1650686159
   m_SortingLayer: 7
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 62638c1bb78aae6499ac7cc1116cf539, type: 3}
+  m_Sprite: {fileID: 21300000, guid: faf03d4a5b5e9494392aeb789841ac8b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85707,7 +85707,7 @@ MonoBehaviour:
   - {fileID: 808896721}
   enemySpawnTile: []
   enemiesSpawned: 0000000000000000
-  crystals_remaining: 0
+  crystals_remaining: 15
   coins_collected: 0
   win_scene: WinScreen
   break_crystals: 0
