@@ -75,7 +75,7 @@ public class MouseController : MonoBehaviour
                     levelManager.enemies[i].onTile = levelManager.enemySpawnTile[i];
 
                     levelManager.enemiesSpawned[i] = true;
-                    // Debug.Log(i);
+                    //Debug.Log("enemy spawned i");
                 }
             
             }
@@ -155,8 +155,6 @@ public class MouseController : MonoBehaviour
                 }
             }
         }
-            
-        
 
     }
 

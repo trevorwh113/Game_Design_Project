@@ -69,7 +69,29 @@ public class StalactiteController : MonoBehaviour
                 if (currentSprite == 4 && tile == character.onTile) {
                     levelManager.ResetLevel();
                 }
+
+                // Kill any enemies that are on the tile.
+                if (currentSprite == 4) {
+                    int i = 0;
+                    while (i < levelManager.enemies.Count) {
+                        // Get the enemy.
+                        EnemyMovement foe = levelManager.enemies[i];
+                        
+                        // Remove it if necessary.
+                        if (tile == foe.onTile) {
+                            bool removed = levelManager.enemies.Remove(foe);
+                            if (removed) {
+                                levelManager.enemiesSpawned.Remove(true);
+                                Destroy(foe.gameObject);
+                                // Correct the indexing.
+                                i--;
+                            }
+                        }
+                        i++;
+                    }
+                }
             }
+            
         }
         // Once echolocation stops, sprite can change again
         else
@@ -85,6 +107,7 @@ public class StalactiteController : MonoBehaviour
         spriteRenderer.sprite = spriteArray[currentSprite];
         if (currentSprite == 4)
         {
+            spriteRenderer.sortingLayerID = SortingLayer.NameToID("character");
             tile.isBlocked = true;
         }
     }

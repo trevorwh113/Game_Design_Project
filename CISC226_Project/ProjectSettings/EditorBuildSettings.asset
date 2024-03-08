@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/intro_lvl.unity
     guid: 275da97fd1ff083439c63d836adb626a
   - enabled: 1
-    path: Assets/Scenes/Dating_test.unity
+    path: Assets/Scenes/Wilhemina_Date.unity
     guid: 1b82539e856fa2f4db9780c312e51d5b
   - enabled: 1
     path: Assets/Scenes/PreloadScene.unity
@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WinScreen.unity
     guid: 5c4a717a8e2aa5b418b23090bb3d4d1d
+  - enabled: 1
+    path: Assets/Scenes/CityMap.unity
+    guid: 4638a25312d78734cb394b711f6132b5
+  - enabled: 1
+    path: Assets/Scenes/Pete_Date.unity
+    guid: 90989d2e52ab77b459503cf486c1c92b
+  - enabled: 1
+    path: Assets/Scenes/lvl_1.unity
+    guid: 42d82bb8fe48bf749a2822d2e203fc7a
   m_configObjects: {}

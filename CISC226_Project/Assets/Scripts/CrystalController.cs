@@ -42,6 +42,7 @@ public class CrystalController : MonoBehaviour
         if (hit.HasValue) {
             tile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
         }
+
         
         // Safety guard to make sure there is always a tile we're working with.
         if (tile != null) {
@@ -83,6 +84,9 @@ public class CrystalController : MonoBehaviour
         if (currentSprite == 3)
         {
             broken = true;
+
+            // Break it in the levelManager.
+            FindObjectOfType<LevelManager>().breakCrystal();
         }
     }
 }

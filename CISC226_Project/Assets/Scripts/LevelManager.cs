@@ -15,10 +15,19 @@ public class LevelManager : MonoBehaviour
     public List<bool> enemiesSpawned = new List<bool>();
 
     public int crystals_remaining;      // Set for the level.
-    public int coins_collected = 0;     // Should default to always.
+    public int coins_collected = 0;     // Should default to 0 always.
 
     // Indicates the string to transition to on a win.
     public string win_scene;
+
+    // Sets the possible win conditions.
+    public bool break_crystals;
+    public bool kill_enemies;
+    public bool reach_goal;
+
+
+    // The character.
+    public CharacterInfo character;
 
 
     // Start is called before the first frame update
@@ -30,17 +39,38 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Testing reasons.
-        if (Input.GetKeyDown(KeyCode.E)) {
-            collectCoin();
-            breakCrystal();
+        // Win conditions.
+        if (break_crystals) {
+            if (crystals_remaining == 0) {
+                WinLevel();
+            }
         }
-        if (Input.GetKeyDown(KeyCode.R)) {
-            ResetLevel();
+
+        if (kill_enemies) {
+            if (enemies.Count == 0) {
+                WinLevel();
+            }
         }
-        if (Input.GetKeyDown(KeyCode.W)) {
-            WinLevel();
+
+        if (reach_goal) {
+            if (character.onTile != null 
+                && character.onTile.is_goal_tile) {
+                WinLevel();
+            }
         }
+
+        
+        // // Testing reasons.
+        // if (Input.GetKeyDown(KeyCode.E)) {
+        //     collectCoin();
+        //     breakCrystal();
+        // }
+        // if (Input.GetKeyDown(KeyCode.R)) {
+        //     ResetLevel();
+        // }
+        // if (Input.GetKeyDown(KeyCode.W)) {
+        //     WinLevel();
+        // }
     }
 
 
@@ -73,5 +103,6 @@ public class LevelManager : MonoBehaviour
     // Methods to decrease the crystals remaining.
     public void breakCrystal() {
         crystals_remaining -= 1;
+        // Debug.Log(crystals_remaining);
     }
 }

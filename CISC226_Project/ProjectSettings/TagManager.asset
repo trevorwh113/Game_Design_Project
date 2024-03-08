@@ -47,12 +47,24 @@ TagManager:
   - name: crystals
     uniqueID: 3011016067
     locked: 0
+  - name: coins
+    uniqueID: 2823493639
+    locked: 0
+  - name: enemies
+    uniqueID: 2718162467
+    locked: 0
+  - name: character
+    uniqueID: 3624687363
+    locked: 0
   - name: select
     uniqueID: 487398233
     locked: 0
   - name: cursor
     uniqueID: 2644281137
     locked: 0
-  - name: character
-    uniqueID: 3624687363
+  - name: coin sparkle
+    uniqueID: 334806395
+    locked: 0
+  - name: text
+    uniqueID: 1841877161
     locked: 0

@@ -41,8 +41,7 @@ public class DialogueTrigger : MonoBehaviour
             
             // Only trigger the dialogue if it should be unlocked.
             if (doesStoryUnlock(dialogueManager)) {
-                
-                // Disactivate this game object (hide it).
+                // Disactivate thisk game object (hide it).
                 gameObject.SetActive(false);
                 // Disactivate all the other buttons.
                 other_story_1.SetActive(false);
@@ -66,12 +65,18 @@ public class DialogueTrigger : MonoBehaviour
 
     // Decides whether the story should trigger or not.
     public bool doesStoryUnlock(DialogueManager dialogueManager) {
-        return ((playerInfo.affection_bird == affection_needed 
+        if (playerInfo != null) {
+            return ((playerInfo.affection_bird == affection_needed 
                     && dialogueManager.npc_name == "bird") || 
                 (playerInfo.affection_worm == affection_needed 
                     && dialogueManager.npc_name == "worm") || 
                 (playerInfo.affection_croc == affection_needed 
                     && dialogueManager.npc_name == "croc")); 
+        }
+        
+        else {
+            return false;
+        }
     }
 
 
