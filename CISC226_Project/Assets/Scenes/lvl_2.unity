@@ -47445,6 +47445,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   echo_length: 4
+  light_propagate_speed: 0.1
+  light_linger: 0.25
 --- !u!1001 &1434838575
 PrefabInstance:
   m_ObjectHideFlags: 0

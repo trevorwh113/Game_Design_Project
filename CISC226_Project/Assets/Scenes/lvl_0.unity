@@ -7729,6 +7729,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   echo_length: 4
+  light_propagate_speed: 0.1
+  light_linger: 0.25
 --- !u!1 &1595190524
 GameObject:
   m_ObjectHideFlags: 0

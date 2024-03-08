@@ -8770,7 +8770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onTile: {fileID: 0}
-  spotlightSize: 2
+  spotlightSize: 1
 --- !u!212 &1421240363
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8850,7 +8850,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42547730aa3b6dd429f726b92814a16d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  echo_length: 8
+  echo_length: 5
+  light_propagate_speed: 0.1
+  light_linger: 0.25
 --- !u!212 &1484529386 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 8453971919030231901, guid: 0e160296a8ce8424b92123e7d319e1c4, type: 3}
