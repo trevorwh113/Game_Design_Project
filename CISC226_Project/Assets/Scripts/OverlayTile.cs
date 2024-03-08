@@ -32,11 +32,30 @@ public class OverlayTile : MonoBehaviour
         // isLit is used to make sure the tile is not light up for other reasons (i.e. player vision).
         if (echolocated && !isLit) {
             gameObject.GetComponent<OverlayTile>().EchoON();
+
+            // Turn it off after a delay.
+            echolocated = false;
+            StartCoroutine("FadeEcho");
+
         }
-        else if (!echolocated && !isLit) {
-            gameObject.GetComponent<OverlayTile>().EchoOFF();
+        // The tiles in the vision radius should not fade.
+        if (echolocated && isLit) {
+            echolocated = false;
         }
     }
+
+
+    private IEnumerator FadeEcho() {
+        Echolocator echolocator = FindObjectOfType<Echolocator>();
+        echolocator.Disable();
+
+        yield return new WaitForSeconds(echolocator.echo_duration);
+
+        EchoOFF();
+        echolocator.Enable();
+    }
+
+
 
     public void makeDark(){
         // sets transparency to full

@@ -295,6 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   character: {fileID: 1421240362}
+  is_enabled: 0
 --- !u!1 &183645158
 GameObject:
   m_ObjectHideFlags: 0
@@ -80802,7 +80803,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42547730aa3b6dd429f726b92814a16d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_enabled: 0
   echo_length: 4
+  echo_duration: 0.75
 --- !u!1001 &1434838575
 PrefabInstance:
   m_ObjectHideFlags: 0

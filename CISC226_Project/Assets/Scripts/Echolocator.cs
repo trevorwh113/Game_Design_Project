@@ -6,13 +6,20 @@ using System.Linq;
 public class Echolocator : MonoBehaviour
 {
     // Tracks whether the script is enabled or not.
-    private bool is_enabled;
+    public bool is_enabled;
     
     // Constant for the mouse input button.
     private int RIGHT_CLICK = 1;
 
     // Variable to decide how long the echolocation will be.
     public int echo_length;
+
+    // The amount of time the echo lasts, in seconds.
+    public float echo_duration;
+
+    private MouseController mouseController;
+
+
     // Varialbe used to store the list of tiles most recently echolocated.
     private RaycastHit2D[] echoTarget;
 
@@ -24,6 +31,9 @@ public class Echolocator : MonoBehaviour
 
     void Start() {
         Enable();
+
+        mouseController = FindObjectOfType<MouseController>();
+        
     }
 
     // Update is called once per frame
@@ -40,16 +50,25 @@ public class Echolocator : MonoBehaviour
 
                 // Mark the tiles are echolocated.
                 MarkEchoedTiles(echoTarget);
-                            
+
+                StartCoroutine("Freeze");
+                 
             }
 
-            // When right-click is released, hide the tiles of echolocated.
-            if (Input.GetMouseButtonUp(RIGHT_CLICK)) {
-                UnmarkEchoedTiles(echoTarget);
-            }
+            // // When right-click is released, hide the tiles of echolocated.
+            // if (Input.GetMouseButtonUp(RIGHT_CLICK)) {
+            //     UnmarkEchoedTiles(echoTarget);
+            // }
         }
     }
 
+
+    private IEnumerator Freeze() {
+        yield return new WaitForEndOfFrame();
+        mouseController.Disable();
+        yield return new WaitForSeconds(echo_duration);
+        mouseController.Enable();
+    }
 
     public void MarkEchoedTiles(RaycastHit2D[] tileList) {
         // Marks all the tiles in the list.

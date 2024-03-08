@@ -22,10 +22,13 @@ public class MouseController : MonoBehaviour
     private OverlayTile prevTile;
     private bool spawned = false;
 
+    public bool is_enabled;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        Enable();
         pathFinder = new PathFinder();
 
         levelManager = FindObjectOfType<LevelManager>();
@@ -45,117 +48,127 @@ public class MouseController : MonoBehaviour
     // so we might need to make an event handler system in the future
     void LateUpdate()
     {
-        if (!spawned){
-            // Debug.Log("entered !spawned");
-            var hit = GetTileAtPos(character.transform.position);
-            // Debug.Log("spawned" + hit.HasValue);
-            if (hit.HasValue)
-            {
-                spawnTile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
-                PositionCharacterOnTile(spawnTile);
-                character.onTile = spawnTile;
-                prevTile = spawnTile;
+        if (is_enabled) {
+            if (!spawned){
+                // Debug.Log("entered !spawned");
+                var hit = GetTileAtPos(character.transform.position);
+                // Debug.Log("spawned" + hit.HasValue);
+                if (hit.HasValue)
+                {
+                    spawnTile = hit.Value.collider.gameObject.GetComponent<OverlayTile>();
+                    PositionCharacterOnTile(spawnTile);
+                    character.onTile = spawnTile;
+                    prevTile = spawnTile;
 
-                spawned = true;
-                // Debug.Log("spawn");
+                    spawned = true;
+                    // Debug.Log("spawn");
+                }
+
             }
 
-        }
+            if (spawned && levelManager.enemiesSpawned.Contains(false)){
+                // Debug.Log("entered !enemiesSpawned");
+                for (int i = 0; i < levelManager.enemies.Count; i++)
+                {
+                    var hit = GetTileAtPos(levelManager.enemies[i].transform.position);
+                    // Debug.Log("enemies" + i + hit.HasValue);
+                    if (hit.HasValue && levelManager.enemiesSpawned[i] == false)
+                    {
+                        levelManager.enemySpawnTile.Add(hit.Value.collider.gameObject.GetComponent<OverlayTile>());
+                        levelManager.enemies[i].PositionEnemyOnTile(levelManager.enemySpawnTile[i]);
+                        levelManager.enemies[i].onTile = levelManager.enemySpawnTile[i];
 
-        if (spawned && levelManager.enemiesSpawned.Contains(false)){
-            // Debug.Log("entered !enemiesSpawned");
+                        levelManager.enemiesSpawned[i] = true;
+                        //Debug.Log("enemy spawned i");
+                    }
+                
+                }
+
+            }
+
+            
+            var focusedTileHit = GetFocusedOnTile();
+
+            if(focusedTileHit.HasValue){
+                OverlayTile tile = focusedTileHit.Value.collider.gameObject.GetComponent<OverlayTile>();
+                transform.position = tile.transform.position;
+                gameObject.GetComponent<SpriteRenderer>().sortingOrder = tile.GetComponent<SpriteRenderer>().sortingOrder;
+                
+                // if (character.onTile.gridLocation == character.transform.position){
+                //     character.onTile.hideTile();    
+                // } else {
+                //     character.onTile.showTile();
+                // }
+                
+                //else {
+                //     character.onTile.hideTile();
+                // }
+
+                // Lighten-up a square of tiles.
+                if (character.onTile != null) {
+                    character.onTile.lightUpAllAdjacent(character.spotlightSize);
+
+                    if (Input.GetMouseButtonDown(0)){
+                        // should be this?: dk how to fix: overlayTile.GetComponent<Overlay>().showTile();
+                        // just copied and pasted code from the function here lol
+
+
+
+                        if (character != null){
+                            path = pathFinder.FindPath(character.onTile, tile);
+                        }
+                    }
+                }
+                
+            }
+            if(path.Count>0){
+                MoveAlongPath();
+            }
+            if (character.onTile != null && prevTile != null) {
+                if (prevTile.gridLocation != character.onTile.gridLocation){
+                    //Debug.Log("showtile");
+                    
+                    // Darken a square of tiles.
+                    // prevTile.makeDark();
+                    character.onTile.darkenAllAdjacent(prevTile, character.spotlightSize);
+                }
+                prevTile=character.onTile;
+            }
+
+            // for echolocation attracting enemy movement:
+            if (Input.GetMouseButtonDown(1))
+            {
+                for (int i = 0; i < levelManager.enemies.Count; i++)
+                {
+                    var enemyHit = GetTileAtPos(levelManager.enemies[i].transform.position);
+                    OverlayTile enemy1Tile = enemyHit.Value.collider.gameObject.GetComponent<OverlayTile>();
+                    levelManager.enemies[i].ApproachPlayer(enemy1Tile, character.onTile);
+                }
+                
+            }
+
+            //checks if enemies are touching player
             for (int i = 0; i < levelManager.enemies.Count; i++)
             {
-                var hit = GetTileAtPos(levelManager.enemies[i].transform.position);
-                // Debug.Log("enemies" + i + hit.HasValue);
-                if (hit.HasValue && levelManager.enemiesSpawned[i] == false)
+                if (character.onTile != null && levelManager.enemies[i].onTile != null && touchingEnemy == false)
                 {
-                    levelManager.enemySpawnTile.Add(hit.Value.collider.gameObject.GetComponent<OverlayTile>());
-                    levelManager.enemies[i].PositionEnemyOnTile(levelManager.enemySpawnTile[i]);
-                    levelManager.enemies[i].onTile = levelManager.enemySpawnTile[i];
-
-                    levelManager.enemiesSpawned[i] = true;
-                    //Debug.Log("enemy spawned i");
-                }
-            
-            }
-
-        }
-
-        
-        var focusedTileHit = GetFocusedOnTile();
-
-        if(focusedTileHit.HasValue){
-            OverlayTile tile = focusedTileHit.Value.collider.gameObject.GetComponent<OverlayTile>();
-            transform.position = tile.transform.position;
-            gameObject.GetComponent<SpriteRenderer>().sortingOrder = tile.GetComponent<SpriteRenderer>().sortingOrder;
-            
-            // if (character.onTile.gridLocation == character.transform.position){
-            //     character.onTile.hideTile();    
-            // } else {
-            //     character.onTile.showTile();
-            // }
-            
-            //else {
-            //     character.onTile.hideTile();
-            // }
-
-            // Lighten-up a square of tiles.
-            if (character.onTile != null) {
-                character.onTile.lightUpAllAdjacent(character.spotlightSize);
-
-                if (Input.GetMouseButtonDown(0)){
-                    // should be this?: dk how to fix: overlayTile.GetComponent<Overlay>().showTile();
-                    // just copied and pasted code from the function here lol
-
-
-
-                    if (character != null){
-                        path = pathFinder.FindPath(character.onTile, tile);
+                    if (character.onTile.Equals(levelManager.enemies[i].onTile))
+                    {
+                        touchingEnemy = true;
+                        levelManager.ResetLevel();
                     }
                 }
             }
-            
         }
-        if(path.Count>0){
-            MoveAlongPath();
-        }
-        if (character.onTile != null && prevTile != null) {
-            if (prevTile.gridLocation != character.onTile.gridLocation){
-                //Debug.Log("showtile");
-                
-                // Darken a square of tiles.
-                // prevTile.makeDark();
-                character.onTile.darkenAllAdjacent(prevTile, character.spotlightSize);
-            }
-            prevTile=character.onTile;
-        }
+    }
 
-        // for echolocation attracting enemy movement:
-        if (Input.GetMouseButtonDown(1))
-        {
-            for (int i = 0; i < levelManager.enemies.Count; i++)
-            {
-                var enemyHit = GetTileAtPos(levelManager.enemies[i].transform.position);
-                OverlayTile enemy1Tile = enemyHit.Value.collider.gameObject.GetComponent<OverlayTile>();
-                levelManager.enemies[i].ApproachPlayer(enemy1Tile, character.onTile);
-            }
-            
-        }
 
-        //checks if enemies are touching player
-        for (int i = 0; i < levelManager.enemies.Count; i++)
-        {
-            if (character.onTile != null && levelManager.enemies[i].onTile != null && touchingEnemy == false)
-            {
-                if (character.onTile.Equals(levelManager.enemies[i].onTile))
-                {
-                    touchingEnemy = true;
-                    levelManager.ResetLevel();
-                }
-            }
-        }
+    public void Enable() {
+        is_enabled = true;
+    }
 
+    public void Disable() {
+        is_enabled = false;
     }
 
     private void MoveAlongPath()
