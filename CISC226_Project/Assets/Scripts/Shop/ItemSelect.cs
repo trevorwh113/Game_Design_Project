@@ -32,6 +32,10 @@ public class ItemSelect : MonoBehaviour
     public string npc;
 
 
+    // The out-of-stock icon.
+    public Sprite out_of_stock_icon;
+
+
     
     
     
@@ -66,7 +70,7 @@ public class ItemSelect : MonoBehaviour
             // Null out the icons on the button.
             button_name.text = "";
             button_cost.text = "";
-            // Add a out-of-stock srpite.
+            button_icon.GetComponent<UnityEngine.UI.Image>().sprite = out_of_stock_icon; 
         }
     }
 
