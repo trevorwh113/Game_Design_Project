@@ -680,7 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a86a68a32d2904ca27296eea3def16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: Wilhemina_Date
+  destination: Shop
 --- !u!114 &487469621
 MonoBehaviour:
   m_ObjectHideFlags: 0
