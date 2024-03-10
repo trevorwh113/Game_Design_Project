@@ -2733,7 +2733,136 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1231c40a69b69674e8ed32d989f02de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: []
+  conversation:
+  - name: Player
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Hey Wilhelmina!
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - '**The ladylike worm turns around startled**'
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 1
+    sentences:
+    - "Oh it's you! How unexpected\r"
+    - "Sorry didn\u2019t mean to scare you.\r"
+    - "Aren\u2019t you happy to see me?\r"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - "Ah no need to apologize, this is a pleasant surprise!\r"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - "Of course, you just seem to always catch me off guard.\r"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - "To what do I owe the pleasure of your appearance?\r"
+  - name: Player
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - "I got you it! The eye stuff!\r"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - "Pardon? I am not sure what you are referring to?\r"
+  - name: Player
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - " **You place the mascara on the ground in front of Wilhelmina**\r"
+    - "This stuff! It took me a while because I had no clue what it was.\r"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 1
+    sentences:
+    - "Ah, Mascara! What a rare find, thank you for this!\r"
+    - No problem, it was easy peasy.
+    - "Still don\u2019t know why you need it.\r"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Of course, you seem very capable.
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - "I suppose you wouldn\u2019t but nonetheless i appreciate your effort."
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - This is wonderful, I cannot wait to put it on!
+    - "**You watch Wilhelmina go to reach for the bottle, and then stops when she
+      realizes she can\u2019t because she doesn\u2019t have arms**"
+    - "This is embarrassing, it did not hit me until now that I would not be able
+      to use it.\r"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - "After all the effort you put in too\u2026\r"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - "It's a long story\u2026\r"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - "I thought I did want it\u2026\r"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - "Not too long ago I was turned into a worm\u2026 I used to be a human, and
+      a pretty successful one too.\r"
+    - "I haven\u2019t quite adjusted to living like this yet, I do not feel like
+      myself anymore. \r"
+  - name: Player
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - "Well I just met you but I think you are great as is!\r\n \r"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 1
+    sentences:
+    - "Thank you, I just wish I could get used to this existence.\r"
+    - "It will just take some time.\r"
+    - "You\u2019ll know yourself again soon.\r"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - "There must be some truth to that.\r"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - "That is surprisingly insightful, darling.\r"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - "You\u2019ve given me a lot to think about, I should go ponder.\r"
+  - name: Player
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - "Okay, see you Wilhelmina!\r"
   other_story_1: {fileID: 2118377413}
   other_story_2: {fileID: 821283628}
   other_story_3: {fileID: 269407153}
@@ -3268,32 +3397,124 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - This is a test conversation.
-    - Isn't that cool?
-  - name: Player
-    is_npc: 0
-    is_choice: 0
-    sentences:
-    - Isn't that amazing!!!
-    - It sure is...
+    - "**As you\u2019re walking in the park you hear a woman sobbing in the park.
+      When you get closer you see that she\u2019s\u2026 a worm**\r"
   - name: Choice
-    is_npc: 0
+    is_npc: 1
     is_choice: 1
     sentences:
-    - This is the question?
-    - No
-    - Yes
-  - name: Player
-    is_npc: 0
-    is_choice: 0
-    sentences:
-    - Love that for you!
-    - STOP.
+    - '**sniff* i''ll be alone forever **sniff**'
+    - Hey there, you okay?
+    - uhh.. do you need a hug?
   - name: Wilhelmina
     is_npc: 1
     is_choice: 0
     sentences:
-    - How rude. :(
+    - No but thank you for asking
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - " \u2026not from a stranger"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - "**the worm wipes away her tears** I\u2019m making such a scene, I apologize
+      darling.\r"
+  - name: Player
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - "You don\u2019t have to say sorry, you're obviously upset.\r\r"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 1
+    sentences:
+    - "I suppose I am.. My husband left me and it has left me quite shocked.\r\r"
+    - "I'm so sorry!\r\r"
+    - "Ruh Roh\r\r"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - "It's okay, I'm doing the best I can\r\r"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - "yea.. Its bad\r\r\r"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - "There\u2019s just a big gap in my life where he used to be, I feel so alone.\r\n\r\r\r"
+  - name: Player
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - "I understand that feeling, I felt alone for a long time before I came here\r\r\n\r\r\r"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - "So we have more in common than I thought\u2026\r\n\r\r\n\r\r\r"
+    - How do you seem so put together?
+  - name: Player
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - "Time will fill the spot that he left and you\u2019ll move on so don\u2019t
+      worry."
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - "Ah well he's not the only thing I lost\u2026"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 1
+    sentences:
+    - Anyways, on top of everything else, I also just ran out of mascara.
+    - Do you even have eyes?
+    - "you could use dirt\r"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - " I\u2019m choosing to ignore that because that question is irrelevant."
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - " I\u2019m choosing to ignore that because that question is irrelevant."
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I am a lady, I must look presentable
+  - name: Player
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - "I don\u2019t see what difference it makes but as long as you\u2019re happy!"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Thank you for that sentiment. I am quite grateful you passed by when you did,
+      it helped bring me to my senses.
+    - "I\u2019m Wilhelmina by the way.\r"
+  - name: Player
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - "Of course, it's no problem really. I gotta run now but I\u2019ll see you around?"
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Yes, I would like that. Farewell!
   other_story_1: {fileID: 1998452937}
   other_story_2: {fileID: 821283628}
   other_story_3: {fileID: 269407153}
