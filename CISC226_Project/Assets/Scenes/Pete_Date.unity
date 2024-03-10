@@ -3579,7 +3579,7 @@ MonoBehaviour:
     is_choice: 1
     sentences:
     - Nice to meet you, Pete.
-    - "I admire your passion, although I'm a bit concerned for you\u2026\r"
+    - "I'm a bit concerned for you\u2026\r"
     - I like your hat.
   - name: Pete
     is_npc: 1
