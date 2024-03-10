@@ -325,6 +325,9 @@ MonoBehaviour:
   affection_worm: 0
   affection_bird: 0
   affection_croc: 0
+  currentScene: lvl_1
+  lvlwin: 00000000000000000000
+  lvlPtr: 0
   coins: 0
 --- !u!4 &1316857110
 Transform:
