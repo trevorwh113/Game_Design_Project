@@ -25,6 +25,7 @@ public class StalactiteController : MonoBehaviour
     // Used to get the tile the player is on and reset the scene.
     private CharacterInfo character;
     private LevelManager levelManager;
+    private CanvasManager canvasManager;
     
 
     // Start is called before the first frame update
@@ -39,6 +40,7 @@ public class StalactiteController : MonoBehaviour
         // Each instance of stalactite doesn't need to save it.
         character = FindObjectOfType<CharacterInfo>();
         levelManager = FindObjectOfType<LevelManager>();
+        canvasManager = FindObjectOfType<CanvasManager>();
 
     }
 
@@ -83,6 +85,7 @@ public class StalactiteController : MonoBehaviour
                             if (removed) {
                                 levelManager.enemiesSpawned.Remove(true);
                                 Destroy(foe.gameObject);
+                                canvasManager.enemiesText.SetText("Enemies Remaining: " + levelManager.enemies.Count);
                                 // Correct the indexing.
                                 i--;
                             }

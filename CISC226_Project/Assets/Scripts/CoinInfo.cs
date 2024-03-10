@@ -16,7 +16,7 @@ public class CoinInfo : MonoBehaviour
     public MouseController cursor;
     private CharacterInfo character;
     private LevelManager levelManager;
-    private TMP_Text coinsText;
+    private CanvasManager canvasManager;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,7 @@ public class CoinInfo : MonoBehaviour
         cursor = FindObjectOfType<MouseController>();
         character = FindObjectOfType<CharacterInfo>();
         levelManager = FindObjectOfType<LevelManager>();
-        coinsText = FindObjectOfType<TMP_Text>();
+        canvasManager = FindObjectOfType<CanvasManager>();
     }
 
     // Update is called once per frame
@@ -53,7 +53,7 @@ public class CoinInfo : MonoBehaviour
                     spriteRenderer.enabled = false; 
                     sparkle.spriteRenderer.enabled = false;
 
-                    coinsText.SetText("Coins: " + levelManager.coins_collected);
+                    canvasManager.coinsText.SetText("Coins Collected: " + levelManager.coins_collected);
                     Debug.Log("Coins: " + levelManager.coins_collected);
 
                 }

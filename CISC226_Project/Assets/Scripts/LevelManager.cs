@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using  UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
@@ -20,11 +21,15 @@ public class LevelManager : MonoBehaviour
     // Indicates the string to transition to on a win.
     public string win_scene;
 
+    //string of scene to load when exit button is pressed
+    public string exit_scene;
+
     // Sets the possible win conditions.
     public bool break_crystals;
     public bool kill_enemies;
     public bool reach_goal;
 
+    private CanvasManager canvasManager;
 
     // The character.
     public CharacterInfo character;
@@ -33,7 +38,7 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        canvasManager = FindObjectOfType<CanvasManager>();
     }
 
     // Update is called once per frame
@@ -94,6 +99,11 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(win_scene);
     }
 
+    public void ExitLevel()
+    {
+        SceneManager.LoadScene(exit_scene);
+    }
+
 
     // Methods to increase the coins collected.
     public void collectCoin() {
@@ -103,6 +113,7 @@ public class LevelManager : MonoBehaviour
     // Methods to decrease the crystals remaining.
     public void breakCrystal() {
         crystals_remaining -= 1;
+        canvasManager.crystalsText.SetText("Crystals Remaining: " + crystals_remaining);
         // Debug.Log(crystals_remaining);
     }
 }
