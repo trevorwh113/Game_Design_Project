@@ -10,6 +10,11 @@ public class PlayerInfo : MonoBehaviour
     public int affection_worm = 0;
     public int affection_bird = 0;
     public int affection_croc = 0;
+    public string currentScene = "lvl_1";
+    
+    public bool[] lvlwin = new bool[10];
+
+    public int lvlPtr = 0;
 
     // Tracks the coins that the player has.
     public int coins = 0;
@@ -19,8 +24,8 @@ public class PlayerInfo : MonoBehaviour
       
         // Make sure it does not get unloaded.
         DontDestroyOnLoad(gameObject);
+        lvlwin[0] = true;
 
     }
-
 
 }
