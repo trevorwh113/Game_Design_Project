@@ -3403,7 +3403,7 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 1
     sentences:
-    - '**sniff* i''ll be alone forever **sniff**'
+    - '**sniff* I''ll be alone forever **sniff**'
     - Hey there, you okay?
     - uhh.. do you need a hug?
   - name: Wilhelmina
@@ -3438,12 +3438,12 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - "It's okay, I'm doing the best I can\r\r"
+    - It's okay, I'm doing the best I can.
   - name: Wilhelmina
     is_npc: 1
     is_choice: 0
     sentences:
-    - "yea.. Its bad\r\r\r"
+    - "yea.. Its bad.\r\r\r"
   - name: Wilhelmina
     is_npc: 1
     is_choice: 0
@@ -3477,22 +3477,22 @@ MonoBehaviour:
     sentences:
     - Anyways, on top of everything else, I also just ran out of mascara.
     - Do you even have eyes?
-    - "you could use dirt\r"
+    - "You could use dirt!\r"
   - name: Wilhelmina
     is_npc: 1
     is_choice: 0
     sentences:
-    - " I\u2019m choosing to ignore that because that question is irrelevant."
+    - " I\u2019m choosing to ignore that because the question is irrelevant."
   - name: Wilhelmina
     is_npc: 1
     is_choice: 0
     sentences:
-    - " I\u2019m choosing to ignore that because that question is irrelevant."
+    - " I\u2019m choosing to ignore that because the question is irrelevant."
   - name: Wilhelmina
     is_npc: 1
     is_choice: 0
     sentences:
-    - I am a lady, I must look presentable
+    - I am a lady, I must look presentable.
   - name: Player
     is_npc: 0
     is_choice: 0
