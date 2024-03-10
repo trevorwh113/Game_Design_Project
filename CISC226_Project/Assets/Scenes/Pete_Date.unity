@@ -3589,8 +3589,8 @@ MonoBehaviour:
     - "I\u2019ve got to get back to the game now, but talking to you was pretty cool!
       I'll see you around."
   - name: Pete
-    is_npc: 0
-    is_choice: 1
+    is_npc: 1
+    is_choice: 0
     sentences:
     - Thanks, buddy!!
     - "I\u2019ve got to get back to the game now, but talking to you was pretty cool!
