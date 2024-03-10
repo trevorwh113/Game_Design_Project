@@ -19,6 +19,7 @@ public class lvlButton : MonoBehaviour
         if (playerInfo.lvlwin[myPtr] == true){
                 this.gameObject.GetComponent<Button>().interactable = true;
         }
+
     }
 
     // Update is called once per frame

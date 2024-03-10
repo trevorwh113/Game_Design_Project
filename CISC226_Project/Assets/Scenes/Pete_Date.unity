@@ -3264,36 +3264,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversation:
-  - name: Pete
-    is_npc: 1
-    is_choice: 0
-    sentences:
-    - This is a test conversation.
-    - Isn't that cool?
   - name: Player
     is_npc: 0
     is_choice: 0
     sentences:
-    - Isn't that amazing!!!
-    - It sure is...
-  - name: Choice
+    - '*Walking past the park, you see a group of people playing ball.*'
+    - '*While trying to catch the ball, a pigeon runs backwards into the road right
+      in front of you and almost gets hit by a taxi.*'
+    - Oh my god! Are you ok??
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Yes! I caught it! *He holds up the ball triumphantly*
+  - name: Player
     is_npc: 0
     is_choice: 1
     sentences:
-    - This is the question?
-    - No
-    - Yes
-  - name: Player
-    is_npc: 0
-    is_choice: 0
-    sentences:
-    - Love that for you!
-    - STOP.
+    - "Why didn\u2019t you watch where you were going?"
+    - You could have died!
+    - "You almost ran into me!\r"
   - name: Pete
     is_npc: 1
     is_choice: 0
     sentences:
-    - How rude. :(
+    - '*Concerned* Do you think so?'
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - '*Concerned* Oh man, I''m sorry! I didn''t mean to at all.'
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I guess sometimes I don't pay very much attention to things around me. Playing
+      ball is my favourite thing in the world! I've never really seen the point of
+      thinking about anything else.
   other_story_1: {fileID: 1998452937}
   other_story_2: {fileID: 821283628}
   other_story_3: {fileID: 269407153}
