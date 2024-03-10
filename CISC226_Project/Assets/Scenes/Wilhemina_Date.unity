@@ -3397,8 +3397,8 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - "**As you\u2019re walking in the park you hear a woman sobbing in the park.
-      When you get closer you see that she\u2019s\u2026 a worm**\r"
+    - "**As you\u2019re walking in the park you hear a woman sobbing. When you get
+      closer you see that she\u2019s\u2026 a worm**\r"
   - name: Choice
     is_npc: 1
     is_choice: 1
