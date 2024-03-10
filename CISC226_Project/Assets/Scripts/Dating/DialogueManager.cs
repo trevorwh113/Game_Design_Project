@@ -111,8 +111,9 @@ public class DialogueManager : MonoBehaviour
             dialogue_text.text = "";
             name_text.text = "";
 
-            // Displays the dialogue question.
+            // Displays the dialogue question and speaker.
             dialogue_text.text = dialogue.sentences[0];
+            name_text.text = dialogue.name;
 
             // Show the two choice buttons.
             choice_a.SetActive(true);
