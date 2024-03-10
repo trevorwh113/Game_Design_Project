@@ -149,7 +149,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78005665}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -183.5, y: 112}
+  m_AnchoredPosition: {x: -183.5, y: 111.999985}
   m_SizeDelta: {x: 306.47, y: 65.161}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &78005667
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1619759831}
         m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
         m_MethodName: JumpToChoiceB
         m_Mode: 1
@@ -447,7 +447,7 @@ MonoBehaviour:
   other_story_1: {fileID: 2118377413}
   other_story_2: {fileID: 1998452937}
   other_story_3: {fileID: 821283628}
-  continue_button: {fileID: 0}
+  continue_button: {fileID: 1344595559}
   playerInfo: {fileID: 0}
   affection_needed: 3
 --- !u!114 &269407156
@@ -1161,7 +1161,7 @@ MonoBehaviour:
   other_story_1: {fileID: 2118377413}
   other_story_2: {fileID: 1998452937}
   other_story_3: {fileID: 269407153}
-  continue_button: {fileID: 0}
+  continue_button: {fileID: 1344595559}
   playerInfo: {fileID: 0}
   affection_needed: 2
 --- !u!114 &821283631
@@ -1741,7 +1741,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1619759831}
         m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
         m_MethodName: DisplayNextSentence
         m_Mode: 1
@@ -1825,8 +1825,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -4.274994}
+  m_SizeDelta: {x: 0, y: -8.550013}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1386870253
 MonoBehaviour:
@@ -1850,14 +1850,14 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 41e6f20d2d0a2a74390a1caa6ccdbb66, type: 2}
+  m_sharedMaterial: {fileID: -5743263954782639743, guid: 41e6f20d2d0a2a74390a1caa6ccdbb66, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 4282800999
   m_fontColor: {r: 0.4039216, g: 0.35686275, b: 0.27450982, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2382,18 +2382,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d6d15c6f7d5e2841b5372a920ce7fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name_text: {fileID: 0}
-  dialogue_text: {fileID: 0}
+  name_text: {fileID: 2074825327}
+  dialogue_text: {fileID: 344287725}
   display_speed: 2
   story_1: {fileID: 2118377413}
   story_2: {fileID: 1998452937}
   story_3: {fileID: 821283628}
   story_4: {fileID: 269407153}
-  continue_button: {fileID: 0}
-  choice_a: {fileID: 0}
-  choice_b: {fileID: 0}
-  choice_a_text: {fileID: 0}
-  choice_b_text: {fileID: 0}
+  continue_button: {fileID: 1344595559}
+  choice_a: {fileID: 2072156286}
+  choice_b: {fileID: 78005665}
+  choice_a_text: {fileID: 1902551146}
+  choice_b_text: {fileID: 1386870253}
   player: {fileID: 1335855787}
   npc: {fileID: 1125615007}
   npc_name: worm
@@ -2580,8 +2580,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -3.4799788}
+  m_SizeDelta: {x: 0, y: -6.960043}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1902551146
 MonoBehaviour:
@@ -2605,14 +2605,14 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 41e6f20d2d0a2a74390a1caa6ccdbb66, type: 2}
+  m_sharedMaterial: {fileID: -5743263954782639743, guid: 41e6f20d2d0a2a74390a1caa6ccdbb66, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 4282866022
   m_fontColor: {r: 0.40000004, g: 0.34901962, b: 0.2784314, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2737,7 +2737,7 @@ MonoBehaviour:
   other_story_1: {fileID: 2118377413}
   other_story_2: {fileID: 821283628}
   other_story_3: {fileID: 269407153}
-  continue_button: {fileID: 0}
+  continue_button: {fileID: 1344595559}
   playerInfo: {fileID: 0}
   affection_needed: 1
 --- !u!114 &1998452940
@@ -2875,7 +2875,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072156286}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2932,7 +2932,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1619759831}
         m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
         m_MethodName: JumpToChoiceA
         m_Mode: 1
@@ -3297,7 +3297,7 @@ MonoBehaviour:
   other_story_1: {fileID: 1998452937}
   other_story_2: {fileID: 821283628}
   other_story_3: {fileID: 269407153}
-  continue_button: {fileID: 0}
+  continue_button: {fileID: 1344595559}
   playerInfo: {fileID: 0}
   affection_needed: 0
 --- !u!114 &2118377419
