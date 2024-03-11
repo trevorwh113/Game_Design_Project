@@ -53822,6 +53822,7 @@ GameObject:
   - component: {fileID: 1785987633}
   - component: {fileID: 1785987632}
   - component: {fileID: 1785987631}
+  - component: {fileID: 1785987634}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -53917,6 +53918,21 @@ Canvas:
   m_SortingLayerID: 1841877161
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1785987634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785987629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11d7f9bfbe47bbb4981dc7f86e65cba8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsText: {fileID: 807832915}
+  enemiesText: {fileID: 46316376}
+  crystalsText: {fileID: 509772813}
 --- !u!1 &1817162334
 GameObject:
   m_ObjectHideFlags: 0
@@ -54592,7 +54608,7 @@ MonoBehaviour:
   - {fileID: 1418247822}
   enemySpawnTile: []
   enemiesSpawned: 0000000000
-  crystals_remaining: 0
+  crystals_remaining: 5
   coins_collected: 0
   win_scene: WinScreen
   exit_scene: CityMap
