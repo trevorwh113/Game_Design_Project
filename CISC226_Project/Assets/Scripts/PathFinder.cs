@@ -46,6 +46,46 @@ public class PathFinder
         return new List<OverlayTile>();
     }
 
+
+    // same as above method but for enemies
+    public List<OverlayTile> enemyFindPath(OverlayTile start, OverlayTile end){
+        List<OverlayTile> openList = new List<OverlayTile>();
+        List<OverlayTile> closedList = new List<OverlayTile>();
+
+        openList.Add(start);
+
+        while (openList.Count > 0){
+            OverlayTile currentOverlayTile = openList.OrderBy(x => x.F ).First();
+
+            openList.Remove(currentOverlayTile);
+            closedList.Add(currentOverlayTile);
+
+            if(currentOverlayTile == end){
+                // finalize our path
+                return GetFinishedEnemyList(start, end);
+            }
+
+
+            foreach (var neighbour in GetNeighbourTiles(currentOverlayTile)){
+                if( neighbour.isBlocked || closedList.Contains(neighbour)){ //neighbour.isBlocked ||
+                    continue;
+                }
+
+                neighbour.G = GetManhattenDistance(start, neighbour);
+                neighbour.H = GetManhattenDistance(end, neighbour);
+
+                neighbour.previous = currentOverlayTile;
+
+                if (!openList.Contains(neighbour) ){
+                    openList.Add(neighbour);
+                }
+
+            }
+
+        }
+        return new List<OverlayTile>();
+    }
+
     private List<OverlayTile> GetFinishedList(OverlayTile start, OverlayTile end)
     {
         List<OverlayTile> finishedList = new List<OverlayTile>();
@@ -65,6 +105,22 @@ public class PathFinder
                 break;
             }
         }
+        return finishedList;
+
+    }
+
+    // same as above method but for enemies
+    private List<OverlayTile> GetFinishedEnemyList(OverlayTile start, OverlayTile end)
+    {
+        List<OverlayTile> finishedList = new List<OverlayTile>();
+        OverlayTile currentTile = end;
+
+        while (currentTile != start){
+            finishedList.Add(currentTile);
+            currentTile = currentTile.previous;
+        }
+        finishedList.Reverse();
+
         return finishedList;
 
     }

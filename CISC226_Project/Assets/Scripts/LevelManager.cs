@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections;
 using UnityEngine;
-using  UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
@@ -20,11 +22,15 @@ public class LevelManager : MonoBehaviour
     // Indicates the string to transition to on a win.
     public string win_scene;
 
+    //string of scene to load when exit button is pressed
+    public string exit_scene;
+
     // Sets the possible win conditions.
     public bool break_crystals;
     public bool kill_enemies;
     public bool reach_goal;
 
+    private CanvasManager canvasManager;
 
     // The character.
     public CharacterInfo character;
@@ -33,7 +39,7 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        canvasManager = FindObjectOfType<CanvasManager>();
     }
 
     // Update is called once per frame
@@ -87,11 +93,29 @@ public class LevelManager : MonoBehaviour
         PlayerInfo playerInfo = FindObjectOfType<PlayerInfo>();
         if (playerInfo != null) {
             playerInfo.coins += coins_collected;
+
+            // unlocks the next level if you are completing the current level you are on (aka doesn't unlock the thrid level if youve just replayed lvl 1)
+            if (playerInfo.currentScene == SceneManager.GetActiveScene().name){
+                // gets next scene only if the next scene is not exceeding lvl 10
+                if(SceneManager.GetActiveScene().buildIndex+1 < SceneUtility.GetBuildIndexByScenePath("Assets/Scenes/levels/lvl_10.unity")+1){
+                    // unity is so stupid so instead of just using getscene by index, we have to do this 
+                    string path = SceneUtility.GetScenePathByBuildIndex(SceneManager.GetActiveScene().buildIndex+1);
+                    playerInfo.currentScene = System.IO.Path.GetFileNameWithoutExtension(path);
+                    playerInfo.lvlPtr++;
+                    playerInfo.lvlwin[playerInfo.lvlPtr] = true;
+
+                }
+            }
         }
 
 
         // Loads the win screen so that the player knows they won.
         SceneManager.LoadScene(win_scene);
+    }
+
+    public void ExitLevel()
+    {
+        SceneManager.LoadScene(exit_scene);
     }
 
 
@@ -103,6 +127,7 @@ public class LevelManager : MonoBehaviour
     // Methods to decrease the crystals remaining.
     public void breakCrystal() {
         crystals_remaining -= 1;
+        canvasManager.crystalsText.SetText("Crystals Remaining: " + crystals_remaining);
         // Debug.Log(crystals_remaining);
     }
 }

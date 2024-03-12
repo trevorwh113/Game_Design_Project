@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
@@ -49,7 +48,7 @@ public class EnemyMovement : MonoBehaviour
     {
         // Only approach if the tiles are not the same tile.
         if (enemyTile != playerTile) {
-            List<OverlayTile> path = pathFinder.FindPath(enemyTile, playerTile);
+            List<OverlayTile> path = pathFinder.enemyFindPath(enemyTile, playerTile);
             
             // Makes sure the path is not empty before targeting the path.
             if (path.Count != 0) {
