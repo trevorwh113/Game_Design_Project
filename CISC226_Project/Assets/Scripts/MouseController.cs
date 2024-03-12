@@ -140,20 +140,8 @@ public class MouseController : MonoBehaviour
         // for echolocation attracting enemy movement:
         if (Input.GetMouseButtonDown(1))
         {
-            for (int i = 0; i < levelManager.enemies.Count; i++)
-            {
-                // Requires the enemy to be onscreen to move   ----------------------------------
-                Vector3 viewPos = cam.WorldToViewportPoint(levelManager.enemies[i].transform.position);
-                if (viewPos.x >= 0 && viewPos.x <= 1 && viewPos.y >= 0 && viewPos.y <= 1 && viewPos.z > 0) {
-
-                    var enemyHit = GetTileAtPos(levelManager.enemies[i].transform.position);
-                    OverlayTile enemy1Tile = enemyHit.Value.collider.gameObject.GetComponent<OverlayTile>();
-                    levelManager.enemies[i].ApproachPlayer(enemy1Tile, character.onTile);
-
-                }
-
-                
-            }
+            StartCoroutine("DelayEnemies");
+            
             
         }
 
@@ -171,6 +159,26 @@ public class MouseController : MonoBehaviour
         }
 
     }
+
+
+    private IEnumerator DelayEnemies() {
+        yield return new WaitForSeconds(0.5f);
+        for (int i = 0; i < levelManager.enemies.Count; i++)
+            {
+                // Requires the enemy to be onscreen to move   ----------------------------------
+                Vector3 viewPos = cam.WorldToViewportPoint(levelManager.enemies[i].transform.position);
+                if (viewPos.x >= 0 && viewPos.x <= 1 && viewPos.y >= 0 && viewPos.y <= 1 && viewPos.z > 0) {
+
+                    var enemyHit = GetTileAtPos(levelManager.enemies[i].transform.position);
+                    OverlayTile enemy1Tile = enemyHit.Value.collider.gameObject.GetComponent<OverlayTile>();
+                    levelManager.enemies[i].ApproachPlayer(enemy1Tile, character.onTile);
+
+                }
+
+                
+            }   
+    }
+
 
     private void MoveAlongPath()
     {
