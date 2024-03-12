@@ -83,6 +83,7 @@ public class CrystalController : MonoBehaviour
         spriteRenderer.sprite = spriteArray[currentSprite];
         if (currentSprite == 3)
         {
+            spriteRenderer.sortingLayerID = SortingLayer.NameToID("ground");
             broken = true;
 
             // Break it in the levelManager.
