@@ -30,7 +30,7 @@ public class ButtonImageManager : MonoBehaviour
             // Updates the look of the buttons.
             if (!button.doesStoryUnlock(dialogueManager)) {
                 button.GetComponent<Image>().sprite = locked;       // Sets the image
-                text_field.text = "-------";                               // Clears the text
+                text_field.text = "Item needed";                               // Clears the text
             }
         }
 

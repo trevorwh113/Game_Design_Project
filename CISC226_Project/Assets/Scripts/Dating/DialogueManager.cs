@@ -107,6 +107,7 @@ public class DialogueManager : MonoBehaviour
 
         // Start a choice dialogue.
         else {
+            
             // Clear the name and text.
             dialogue_text.text = "";
             name_text.text = "";
@@ -133,6 +134,8 @@ public class DialogueManager : MonoBehaviour
 
     // Displays the next sentence in a dialogue. 
     public void DisplayNextSentence() {
+        continue_button.SetActive(false);
+        
         // If there are no sentences left, either end the conversation OR
         // move on to the next dialogue.
         if (sentences.Count == 0) {
@@ -152,6 +155,8 @@ public class DialogueManager : MonoBehaviour
         StopAllCoroutines();
         // Updates the UI with that line.
         StartCoroutine(TypeSentence(sentence));
+
+
         
     }
 
@@ -168,6 +173,8 @@ public class DialogueManager : MonoBehaviour
             // Divides the speed by 100 to get the pause time.
             yield return new WaitForSeconds(display_speed / 100);            
         }
+
+        continue_button.SetActive(true);
     }
 
 
