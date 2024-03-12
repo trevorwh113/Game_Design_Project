@@ -2588,7 +2588,8 @@ MonoBehaviour:
   item_list:
   - name: Item 1
     cost: 1
-    description: Sample
+    description: A keychain showing a game character. Could be used as emergency
+      food?
     icon: {fileID: 21300000, guid: a91d2cd25c26fc848bff82bbc25c0036, type: 3}
   - name: Item 2
     cost: 10
