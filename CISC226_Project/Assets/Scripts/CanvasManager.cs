@@ -7,8 +7,9 @@ public class CanvasManager : MonoBehaviour
 {
 
     public TMP_Text coinsText;
-    public TMP_Text enemiesText;
     public TMP_Text crystalsText;
+    public TMP_Text enemiesText;
+
 
 
     // Start is called before the first frame update

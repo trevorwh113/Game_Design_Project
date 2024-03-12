@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+
 public class LevelManager : MonoBehaviour
 {
     // The properties unique to each level, such as number of coins,
@@ -34,6 +35,8 @@ public class LevelManager : MonoBehaviour
 
     // The character.
     public CharacterInfo character;
+
+    
 
 
     // Start is called before the first frame update
@@ -122,12 +125,15 @@ public class LevelManager : MonoBehaviour
     // Methods to increase the coins collected.
     public void collectCoin() {
         coins_collected += 1;
+        canvasManager.coinsText.SetText("" + coins_collected);
     }
 
     // Methods to decrease the crystals remaining.
     public void breakCrystal() {
         crystals_remaining -= 1;
-        canvasManager.crystalsText.SetText("Crystals Remaining: " + crystals_remaining);
+        canvasManager.crystalsText.SetText("" + crystals_remaining);
         // Debug.Log(crystals_remaining);
     }
+
+    //enemy text is updated when enemies are killed in StalactiteController
 }

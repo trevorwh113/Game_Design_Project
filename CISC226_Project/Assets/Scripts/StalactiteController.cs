@@ -85,7 +85,7 @@ public class StalactiteController : MonoBehaviour
                             if (removed) {
                                 levelManager.enemiesSpawned.Remove(true);
                                 Destroy(foe.gameObject);
-                                canvasManager.enemiesText.SetText("Enemies Remaining: " + levelManager.enemies.Count);
+                                canvasManager.enemiesText.SetText("" + levelManager.enemies.Count);
                                 // Correct the indexing.
                                 i--;
                             }
