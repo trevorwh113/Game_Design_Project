@@ -1157,7 +1157,180 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1231c40a69b69674e8ed32d989f02de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: []
+  conversation:
+  - name: 
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - '[You show up to Avery''s house with the scale polish. You knock and Avery
+      answers the door]'
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Hey I'm so happy you made it. I've been looking forward to this.
+  - name: Player
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Thanks, so have I. I can't wait to see your games.
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - '[Avery brings you into their house]'
+    - Well here it is. Its not very big but I like it. And don't worry, I made sure
+      to clean before you got here.
+  - name: Player
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - 
+    - Wow I really love how it looks
+    - Doesn't look like it
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Thanks, I really tried to make it cozy
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Omg i hate you
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Anyways, what is that you're holding?
+  - name: Player
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Its a git for you. Remember how you mentioned getting scale polish? I figured
+      I should repay you for having me over.
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I love it!! I should try it on now.
+    - Here I'll set the game up for you and then you can play as I put it on.
+  - name: Player
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - '[The two of you chat for a bit as you play the game. Avery shortly falls quiet]'
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Hey um... I'm really struggling to reach right now. Do you think you could
+      help me put this on?
+  - name: Player
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - YOU DIRTY DOG
+    - Oh I would love to.
+  - name: Player
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Ok you play the game but sit still so I can put this on you
+  - name: 
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - '[The two of you chat as you paint their scales]'
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - So how is cave diving going for you. I'd imagine you;re good at it since you're
+      a bat.
+  - name: Player
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Huh?? You know not all bats live in caves right?
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - WHAT?!? I'm so sorry I didn't know. I shouldn't have said anything.
+  - name: Player
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - Womp womp
+    - Don't worry it's fine
+  - name: Player
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - It actually caused problems with my family and friends. We're forest bats and
+      so they all thought it was weird that I wanted to go explore caves. I ended
+      up being left behind.
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I can't believe they did that. That's so awful of them. It's crazy that your
+      own family would leave you over diffferent beliefs.
+  - name: 
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - '[You agree with them before going back to painting their scales]'
+  - name: 
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - '[Eventually you finish painting their scales and find that it is almost time
+      to go]'
+  - name: Player
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Oh wow it's almost time for me to go. Thanks for having me over Avery. Next
+      time we should try a multiplayer game so we can both play at th same time.
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Oh uh sorry I don't really own any. I've never had anyone to play with so I
+      only really play solo rpgs.
+  - name: Player
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - LMAO
+    - Thats valid. RGPs are sick
+  - name: Player
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Well now you also have me to play with so we can try some multiplayer games
+      together.
+  - name: Player
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Well now you also have me to play with so we can try some multiplayer games
+      together.
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I'd love to. We should totally do that soon. Thanks for coming over.
+  - name: Player
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Alright, see you later.
   other_story_1: {fileID: 2118377413}
   other_story_2: {fileID: 1998452937}
   other_story_3: {fileID: 269407153}
@@ -2750,7 +2923,7 @@ MonoBehaviour:
     sentences:
     - 
     - I got you a keychain of Pention
-    - I got you a keychain of Paimon
+    - I got you a keychain of Palmon
   - name: Avery
     is_npc: 1
     is_choice: 0
@@ -3481,7 +3654,7 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - Its this cool game I found. Its called Genshin Impact.
+    - Its this cool game I found. Its called Shengin Bimpact.
   - name: Player
     is_npc: 0
     is_choice: 1
@@ -3509,7 +3682,7 @@ MonoBehaviour:
     is_choice: 1
     sentences:
     - 
-    - I was NOT compared to Genshin
+    - I was NOT compared to Shengin
     - What? How? Who?
   - name: Avery
     is_npc: 1
@@ -3525,8 +3698,8 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - Its just that... the character is named paimon and you just look like... I
-      mean you and paimon are... Wait!! We're at my stop I need to go I'm so sorry!!
+    - Its just that... the character is named Palmon and you just look like... I
+      mean you and Palmon are... Wait!! We're at my stop I need to go I'm so sorry!!
   other_story_1: {fileID: 1998452937}
   other_story_2: {fileID: 821283628}
   other_story_3: {fileID: 269407153}
