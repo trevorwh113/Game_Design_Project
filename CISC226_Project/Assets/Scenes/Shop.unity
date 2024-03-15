@@ -793,15 +793,15 @@ MonoBehaviour:
   - name: Item 1
     cost: 1
     description: This is the description for item 1.
-    icon: {fileID: 21300000, guid: a91d2cd25c26fc848bff82bbc25c0036, type: 3}
+    icon: {fileID: 21300000, guid: 33a7d6c457e856241967e31526235cb2, type: 3}
   - name: Item 2
     cost: 10
     description: This is the description for item 2.
-    icon: {fileID: 21300000, guid: cf5b4ab7556b00842a2fb320f0a74d5f, type: 3}
+    icon: {fileID: 21300000, guid: ffff6ad15604b784f969425795bbb525, type: 3}
   - name: Item 3
     cost: 99
     description: This is the description for item 3.
-    icon: {fileID: 21300000, guid: 68682115daa27d44b8050ae2dbba6e56, type: 3}
+    icon: {fileID: 21300000, guid: 43eb0f309d631aa498da8b40873b654e, type: 3}
   state_index: 0
   npc: worm
   out_of_stock_icon: {fileID: -189468701, guid: 44a213e1abfd81f4494bb98ec686f471, type: 3}
@@ -974,7 +974,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.00003624, y: 0.000002861}
-  m_SizeDelta: {x: 97.166, y: 74.836}
+  m_SizeDelta: {x: 97, y: 74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &570789335
 MonoBehaviour:
@@ -2091,7 +2091,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.000040472, y: 0.000015259}
-  m_SizeDelta: {x: 94.962, y: 74.836}
+  m_SizeDelta: {x: 97, y: 74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1418500165
 MonoBehaviour:
@@ -2593,15 +2593,15 @@ MonoBehaviour:
     cost: 1
     description: A keychain showing a game character. Could be used as emergency
       food?
-    icon: {fileID: 21300000, guid: a91d2cd25c26fc848bff82bbc25c0036, type: 3}
+    icon: {fileID: 21300000, guid: 33a7d6c457e856241967e31526235cb2, type: 3}
   - name: Item 2
     cost: 10
     description: Test
-    icon: {fileID: 21300000, guid: cf5b4ab7556b00842a2fb320f0a74d5f, type: 3}
+    icon: {fileID: 21300000, guid: ffff6ad15604b784f969425795bbb525, type: 3}
   - name: Item 3
     cost: 99
     description: This is the description for item 3.
-    icon: {fileID: 21300000, guid: 68682115daa27d44b8050ae2dbba6e56, type: 3}
+    icon: {fileID: 21300000, guid: 43eb0f309d631aa498da8b40873b654e, type: 3}
   state_index: 0
   npc: croc
   out_of_stock_icon: {fileID: -189468701, guid: 44a213e1abfd81f4494bb98ec686f471, type: 3}
@@ -2914,15 +2914,15 @@ MonoBehaviour:
   - name: Item 1
     cost: 1
     description: Short Description.
-    icon: {fileID: 21300000, guid: a91d2cd25c26fc848bff82bbc25c0036, type: 3}
+    icon: {fileID: 21300000, guid: 33a7d6c457e856241967e31526235cb2, type: 3}
   - name: Item 2
     cost: 10
     description: Also short description.
-    icon: {fileID: 21300000, guid: cf5b4ab7556b00842a2fb320f0a74d5f, type: 3}
+    icon: {fileID: 21300000, guid: ffff6ad15604b784f969425795bbb525, type: 3}
   - name: Item 3
     cost: 99
     description: This is the description for item 3.
-    icon: {fileID: 21300000, guid: 68682115daa27d44b8050ae2dbba6e56, type: 3}
+    icon: {fileID: 21300000, guid: 43eb0f309d631aa498da8b40873b654e, type: 3}
   state_index: 0
   npc: bird
   out_of_stock_icon: {fileID: -189468701, guid: 44a213e1abfd81f4494bb98ec686f471, type: 3}
@@ -3115,7 +3115,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000052452, y: 0}
-  m_SizeDelta: {x: 96.065, y: 74.836}
+  m_SizeDelta: {x: 97, y: 74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2074825325
 GameObject:
