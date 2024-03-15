@@ -2911,17 +2911,20 @@ MonoBehaviour:
   button_cost: {fileID: 396032302}
   button_icon: {fileID: 1943853595}
   item_list:
-  - name: Item 1
+  - name: French Fry
     cost: 1
-    description: Short Description.
+    description: 'A single (fresh!) french fry. Not quite a luxurious meal, but hey,
+      better than a fry off the sidewalk. '
     icon: {fileID: 21300000, guid: 33a7d6c457e856241967e31526235cb2, type: 3}
-  - name: Item 2
+  - name: Bottle Cap
     cost: 10
-    description: Also short description.
+    description: 'The cap from some long-forgotten bottle. It''s shiny! It''s textured!
+      Maybe someone will find it interesting... '
     icon: {fileID: 21300000, guid: ffff6ad15604b784f969425795bbb525, type: 3}
-  - name: Item 3
+  - name: Jerseys
     cost: 99
-    description: This is the description for item 3.
+    description: These jerseys match! A gift for someone special, or a jersey so
+      good you need two in your wardrobe?
     icon: {fileID: 21300000, guid: 43eb0f309d631aa498da8b40873b654e, type: 3}
   state_index: 0
   npc: bird
