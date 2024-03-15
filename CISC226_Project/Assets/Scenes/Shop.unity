@@ -341,8 +341,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -790,18 +790,18 @@ MonoBehaviour:
   button_cost: {fileID: 1565610589}
   button_icon: {fileID: 570789333}
   item_list:
-  - name: Item 1
-    cost: 1
+  - name: Mascara
+    cost: 2
     description: This is the description for item 1.
-    icon: {fileID: 21300000, guid: 33a7d6c457e856241967e31526235cb2, type: 3}
-  - name: Item 2
-    cost: 10
+    icon: {fileID: 21300000, guid: 052f3bea573dc7c48ae2960547f09ff0, type: 3}
+  - name: Bouquet
+    cost: 6
     description: This is the description for item 2.
-    icon: {fileID: 21300000, guid: ffff6ad15604b784f969425795bbb525, type: 3}
-  - name: Item 3
-    cost: 99
+    icon: {fileID: 21300000, guid: 65ac874e21b59e546b67ed2c8278253f, type: 3}
+  - name: Truffle Mulch
+    cost: 12
     description: This is the description for item 3.
-    icon: {fileID: 21300000, guid: 43eb0f309d631aa498da8b40873b654e, type: 3}
+    icon: {fileID: 21300000, guid: 6595d37ea34a77642a58745c6fecaedb, type: 3}
   state_index: 0
   npc: worm
   out_of_stock_icon: {fileID: -189468701, guid: 44a213e1abfd81f4494bb98ec686f471, type: 3}
@@ -839,7 +839,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -51.7, y: 32.9}
+  m_AnchoredPosition: {x: -14, y: 32.9}
   m_SizeDelta: {x: -133.951, y: -96.236}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &542674772
@@ -896,7 +896,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -966,14 +966,14 @@ RectTransform:
   m_GameObject: {fileID: 570789333}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 517425423}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00003624, y: 0.000002861}
+  m_AnchoredPosition: {x: 15, y: 0.000002861}
   m_SizeDelta: {x: 97, y: 74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &570789335
@@ -1140,7 +1140,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -53.5, y: 33.7}
+  m_AnchoredPosition: {x: -16, y: 33.7}
   m_SizeDelta: {x: -133.951, y: -96.236}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &652574432
@@ -1197,7 +1197,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1312,7 +1312,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1371,7 +1371,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -50, y: 32.8}
+  m_AnchoredPosition: {x: -16, y: 32.8}
   m_SizeDelta: {x: -133.951, y: -96.236}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &712986540
@@ -2083,14 +2083,14 @@ RectTransform:
   m_GameObject: {fileID: 1418500163}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1795442013}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000040472, y: 0.000015259}
+  m_AnchoredPosition: {x: 17, y: 0.00000086287}
   m_SizeDelta: {x: 97, y: 74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1418500165
@@ -2527,7 +2527,8 @@ MonoBehaviour:
   name_field: {fileID: 2074825327}
   confirm_button: {fileID: 1155372925}
   coinsText: {fileID: 1825777855}
-  greeting_message: What can I get for ya?
+  greeting_message: Blorp goop? Oopi floopy!                                                             
+    [Need a gift for your favoroite person? Look no further!]
 --- !u!1 &1795442012
 GameObject:
   m_ObjectHideFlags: 0
@@ -2589,19 +2590,19 @@ MonoBehaviour:
   button_cost: {fileID: 59992679}
   button_icon: {fileID: 1418500163}
   item_list:
-  - name: Item 1
-    cost: 1
+  - name: Keychain
+    cost: 2
     description: A keychain showing a game character. Could be used as emergency
       food?
-    icon: {fileID: 21300000, guid: 33a7d6c457e856241967e31526235cb2, type: 3}
-  - name: Item 2
-    cost: 10
+    icon: {fileID: 21300000, guid: 59ab789139c19384683d36381b9870be, type: 3}
+  - name: Nail Polish
+    cost: 6
     description: Test
-    icon: {fileID: 21300000, guid: ffff6ad15604b784f969425795bbb525, type: 3}
-  - name: Item 3
-    cost: 99
+    icon: {fileID: 21300000, guid: aa16cc4fe0225684fbff1fd76058d369, type: 3}
+  - name: 2P Game
+    cost: 12
     description: This is the description for item 3.
-    icon: {fileID: 21300000, guid: 43eb0f309d631aa498da8b40873b654e, type: 3}
+    icon: {fileID: 21300000, guid: ab45528a06ae852468d06fadd915fc9e, type: 3}
   state_index: 0
   npc: croc
   out_of_stock_icon: {fileID: -189468701, guid: 44a213e1abfd81f4494bb98ec686f471, type: 3}
@@ -2912,17 +2913,17 @@ MonoBehaviour:
   button_icon: {fileID: 1943853595}
   item_list:
   - name: French Fry
-    cost: 1
+    cost: 2
     description: 'A single (fresh!) french fry. Not quite a luxurious meal, but hey,
       better than a fry off the sidewalk. '
     icon: {fileID: 21300000, guid: 33a7d6c457e856241967e31526235cb2, type: 3}
   - name: Bottle Cap
-    cost: 10
+    cost: 6
     description: 'The cap from some long-forgotten bottle. It''s shiny! It''s textured!
       Maybe someone will find it interesting... '
     icon: {fileID: 21300000, guid: ffff6ad15604b784f969425795bbb525, type: 3}
   - name: Jerseys
-    cost: 99
+    cost: 12
     description: These jerseys match! A gift for someone special, or a jersey so
       good you need two in your wardrobe?
     icon: {fileID: 21300000, guid: 43eb0f309d631aa498da8b40873b654e, type: 3}
@@ -3110,14 +3111,14 @@ RectTransform:
   m_GameObject: {fileID: 1943853595}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1854122509}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000052452, y: 0}
+  m_AnchoredPosition: {x: 14, y: 0}
   m_SizeDelta: {x: 97, y: 74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2074825325

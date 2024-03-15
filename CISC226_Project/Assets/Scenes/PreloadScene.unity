@@ -328,7 +328,7 @@ MonoBehaviour:
   currentScene: lvl_1
   lvlwin: 00000000000000000000
   lvlPtr: 0
-  coins: 0
+  coins: 1000
 --- !u!4 &1316857110
 Transform:
   m_ObjectHideFlags: 0

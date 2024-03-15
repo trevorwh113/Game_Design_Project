@@ -2384,7 +2384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name_text: {fileID: 2074825327}
   dialogue_text: {fileID: 344287725}
-  display_speed: 2
+  display_speed: 1.2
   story_1: {fileID: 2118377413}
   story_2: {fileID: 1998452937}
   story_3: {fileID: 821283628}
