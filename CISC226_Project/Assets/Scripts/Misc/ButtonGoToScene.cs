@@ -13,4 +13,8 @@ public class ButtonGoToScene : MonoBehaviour
         // Does not attempt to ensure that the destination is a valid scene name.
         SceneManager.LoadScene(destination);
     }
+
+    public void quitGame() {
+        Application.Quit();
+    }
 }
