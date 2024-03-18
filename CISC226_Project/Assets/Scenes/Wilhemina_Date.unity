@@ -2743,12 +2743,13 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - '**The ladylike worm turns around startled**'
-  - name: Wilhelmina
-    is_npc: 1
+    - '[The ladylike worm turns around startled]'
+    - Oh it's you! How unexpected
+  - name: You
+    is_npc: 0
     is_choice: 1
     sentences:
-    - "Oh it's you! How unexpected\r"
+    - "\r"
     - "Sorry didn\u2019t mean to scare you.\r"
     - "Aren\u2019t you happy to see me?\r"
   - name: Wilhelmina
@@ -2784,9 +2785,14 @@ MonoBehaviour:
     - "This stuff! It took me a while because I had no clue what it was.\r"
   - name: Wilhelmina
     is_npc: 1
-    is_choice: 1
+    is_choice: 0
     sentences:
     - "Ah, Mascara! What a rare find, thank you for this!\r"
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - "\r"
     - No problem, it was easy peasy.
     - "Still don\u2019t know why you need it.\r"
   - name: Wilhelmina
@@ -2798,14 +2804,14 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - "I suppose you wouldn\u2019t but nonetheless i appreciate your effort."
+    - "I suppose you wouldn\u2019t but nonetheless I appreciate your effort."
   - name: Wilhelmina
     is_npc: 1
     is_choice: 0
     sentences:
     - This is wonderful, I cannot wait to put it on!
-    - "**You watch Wilhelmina go to reach for the bottle, and then stops when she
-      realizes she can\u2019t because she doesn\u2019t have arms**"
+    - "[You watch Wilhelmina go to reach for the bottle, and then stops when she
+      realizes she can\u2019t because she doesn\u2019t have arms]"
     - "This is embarrassing, it did not hit me until now that I would not be able
       to use it.\r"
   - name: Wilhelmina
@@ -2838,9 +2844,14 @@ MonoBehaviour:
     - "Well I just met you but I think you are great as is!\r\n \r"
   - name: Wilhelmina
     is_npc: 1
+    is_choice: 0
+    sentences:
+    - Thank you, I just wish I could get used to this existence.
+  - name: You
+    is_npc: 0
     is_choice: 1
     sentences:
-    - "Thank you, I just wish I could get used to this existence.\r"
+    - "\r"
     - "It will just take some time.\r"
     - "You\u2019ll know yourself again soon.\r"
   - name: Wilhelmina
@@ -3393,119 +3404,126 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversation:
-  - name: Wilhelmina
+  - name: Worm
     is_npc: 1
     is_choice: 0
     sentences:
-    - "**As you\u2019re walking in the park you hear a woman sobbing. When you get
-      closer you see that she\u2019s\u2026 a worm**\r"
-  - name: Choice
-    is_npc: 1
+    - "[As you\u2019re walking in the park you hear a woman sobbing. When you get
+      closer you see that she\u2019s\u2026 a worm]\r"
+    - "[sniff] I'll be alone forever [sniff]\r"
+  - name: You
+    is_npc: 0
     is_choice: 1
     sentences:
-    - '**sniff* I''ll be alone forever **sniff**'
+    - 
     - Hey there, you okay?
     - uhh.. do you need a hug?
-  - name: Wilhelmina
+  - name: Worm
     is_npc: 1
     is_choice: 0
     sentences:
     - No but thank you for asking
-  - name: Wilhelmina
+  - name: Worm
     is_npc: 1
     is_choice: 0
     sentences:
     - " \u2026not from a stranger"
-  - name: Wilhelmina
+  - name: Worm
     is_npc: 1
     is_choice: 0
     sentences:
-    - "**the worm wipes away her tears** I\u2019m making such a scene, I apologize
+    - "[the worm wipes away her tears] I\u2019m making such a scene, I apologize
       darling.\r"
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
     - "You don\u2019t have to say sorry, you're obviously upset.\r\r"
-  - name: Wilhelmina
+  - name: Worm
     is_npc: 1
-    is_choice: 1
+    is_choice: 0
     sentences:
     - "I suppose I am.. My husband left me and it has left me quite shocked.\r\r"
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - "\r\r"
     - "I'm so sorry!\r\r"
     - "Ruh Roh\r\r"
-  - name: Wilhelmina
+  - name: Worm
     is_npc: 1
     is_choice: 0
     sentences:
     - It's okay, I'm doing the best I can.
-  - name: Wilhelmina
+  - name: Worm
     is_npc: 1
     is_choice: 0
     sentences:
     - "yea.. Its bad.\r\r\r"
-  - name: Wilhelmina
+  - name: Worm
     is_npc: 1
     is_choice: 0
     sentences:
     - "There\u2019s just a big gap in my life where he used to be, I feel so alone.\r\n\r\r\r"
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
     - "I understand that feeling, I felt alone for a long time before I came here\r\r\n\r\r\r"
-  - name: Wilhelmina
+  - name: Worm
     is_npc: 1
     is_choice: 0
     sentences:
     - "So we have more in common than I thought\u2026\r\n\r\r\n\r\r\r"
     - How do you seem so put together?
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
     - "Time will fill the spot that he left and you\u2019ll move on so don\u2019t
       worry."
-  - name: Wilhelmina
+  - name: Worm
     is_npc: 1
     is_choice: 0
     sentences:
     - "Ah well he's not the only thing I lost\u2026"
-  - name: Wilhelmina
-    is_npc: 1
+    - Anyways, on top of everything else, I also just ran out of mascara.
+  - name: You
+    is_npc: 0
     is_choice: 1
     sentences:
-    - Anyways, on top of everything else, I also just ran out of mascara.
+    - 
     - Do you even have eyes?
     - "You could use dirt!\r"
-  - name: Wilhelmina
+  - name: Worm
     is_npc: 1
     is_choice: 0
     sentences:
     - " I\u2019m choosing to ignore that because the question is irrelevant."
-  - name: Wilhelmina
+  - name: Worm
     is_npc: 1
     is_choice: 0
     sentences:
     - " I\u2019m choosing to ignore that because the question is irrelevant."
-  - name: Wilhelmina
+  - name: Worm
     is_npc: 1
     is_choice: 0
     sentences:
     - I am a lady, I must look presentable.
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
     - "I don\u2019t see what difference it makes but as long as you\u2019re happy!"
-  - name: Wilhelmina
+  - name: Worm
     is_npc: 1
     is_choice: 0
     sentences:
     - Thank you for that sentiment. I am quite grateful you passed by when you did,
       it helped bring me to my senses.
     - "I\u2019m Wilhelmina by the way.\r"
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
