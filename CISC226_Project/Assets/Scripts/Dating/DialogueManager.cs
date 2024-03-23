@@ -44,6 +44,9 @@ public class DialogueManager : MonoBehaviour
     // The NPC in question.
     public string npc_name;
 
+    // The button used to launch the dialogue.
+    private DialogueTrigger trigger;
+
     
     // Start is called before the first frame update
     void Start()
@@ -57,7 +60,9 @@ public class DialogueManager : MonoBehaviour
     }
 
     // Starts a full conversation composed of many character dialogues.
-    public void StartConversation(List<Dialogue> conversation) {
+    public void StartConversation(List<Dialogue> conversation, DialogueTrigger storyTrigger) {
+        trigger = storyTrigger;
+        
         // Takes a list of dialogues and adds them to a queue.
         foreach (Dialogue dialogue in conversation) {
             dialogues.Enqueue(dialogue);
@@ -199,6 +204,30 @@ public class DialogueManager : MonoBehaviour
         // Disactivate the player and activate the npc.
         player.SetActive(false);
         npc.SetActive(true);
+
+        // Update the correct npc.
+        PlayerInfo playerInfo = FindObjectOfType<PlayerInfo>();
+        if (playerInfo != null && trigger != null) {
+            Debug.Log("test");
+            if (npc_name == "bird") {
+                // Increment the stories read only if it is the last unclocked one.
+                if (trigger.affection_needed + 1 > playerInfo.stories_read_bird) {
+                    playerInfo.stories_read_bird += 1;
+                }
+            }
+            else if (npc_name == "worm") {
+                if (trigger.affection_needed + 1 > playerInfo.stories_read_worm) {
+                    playerInfo.stories_read_worm += 1;
+                }
+            }
+            else if (npc_name == "croc") {
+                if (trigger.affection_needed + 1 > playerInfo.stories_read_croc) {
+                    playerInfo.stories_read_croc += 1;
+                }
+            }
+
+        }
+        trigger = null;
         
     }
 

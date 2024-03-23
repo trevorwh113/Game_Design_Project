@@ -450,6 +450,7 @@ MonoBehaviour:
   continue_button: {fileID: 1344595559}
   playerInfo: {fileID: 0}
   affection_needed: 3
+  num_previous_stories: 3
 --- !u!114 &269407156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,6 +560,7 @@ MonoBehaviour:
   locked: {fileID: 1574119635, guid: a5b2d44ad022f0440bc818b5f2f50567, type: 3}
   unlocked: {fileID: -977891048, guid: ef285178fd769894293b19fdbd05ecba, type: 3}
   text_field: {fileID: 232452129}
+  message: Story 4
 --- !u!1 &344287723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,6 +1166,7 @@ MonoBehaviour:
   continue_button: {fileID: 1344595559}
   playerInfo: {fileID: 0}
   affection_needed: 2
+  num_previous_stories: 2
 --- !u!114 &821283631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1273,6 +1276,7 @@ MonoBehaviour:
   locked: {fileID: 1574119635, guid: a5b2d44ad022f0440bc818b5f2f50567, type: 3}
   unlocked: {fileID: -977891048, guid: ef285178fd769894293b19fdbd05ecba, type: 3}
   text_field: {fileID: 782914980}
+  message: Story 3
 --- !u!1 &1125615007
 GameObject:
   m_ObjectHideFlags: 0
@@ -2880,6 +2884,7 @@ MonoBehaviour:
   continue_button: {fileID: 1344595559}
   playerInfo: {fileID: 0}
   affection_needed: 1
+  num_previous_stories: 1
 --- !u!114 &1998452940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2989,6 +2994,7 @@ MonoBehaviour:
   locked: {fileID: 1574119635, guid: a5b2d44ad022f0440bc818b5f2f50567, type: 3}
   unlocked: {fileID: -977891048, guid: ef285178fd769894293b19fdbd05ecba, type: 3}
   text_field: {fileID: 1170478756}
+  message: Story 2
 --- !u!1 &2072156286
 GameObject:
   m_ObjectHideFlags: 0
@@ -3539,6 +3545,7 @@ MonoBehaviour:
   continue_button: {fileID: 1344595559}
   playerInfo: {fileID: 0}
   affection_needed: 0
+  num_previous_stories: 0
 --- !u!114 &2118377419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3554,6 +3561,7 @@ MonoBehaviour:
   locked: {fileID: 1574119635, guid: a5b2d44ad022f0440bc818b5f2f50567, type: 3}
   unlocked: {fileID: -977891048, guid: ef285178fd769894293b19fdbd05ecba, type: 3}
   text_field: {fileID: 1523143833}
+  message: Story 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
