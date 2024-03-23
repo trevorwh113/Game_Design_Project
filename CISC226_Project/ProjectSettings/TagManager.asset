@@ -44,11 +44,11 @@ TagManager:
   - name: ground
     uniqueID: 2979235411
     locked: 0
-  - name: crystals
-    uniqueID: 3011016067
-    locked: 0
   - name: coins
     uniqueID: 2823493639
+    locked: 0
+  - name: crystals
+    uniqueID: 3011016067
     locked: 0
   - name: enemies
     uniqueID: 2718162467

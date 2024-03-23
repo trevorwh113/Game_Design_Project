@@ -14,6 +14,7 @@ public class ShopManager : MonoBehaviour
 
     public GameObject confirm_button;
 
+    public TMP_Text coinsText;
 
 
     // Various default messages.
@@ -28,7 +29,10 @@ public class ShopManager : MonoBehaviour
         // Display a greeting message. Hide what shouldn't be there.
         name_field.text = "";
         text_field.text = greeting_message;  
-        confirm_button.SetActive(false); 
+        confirm_button.SetActive(false);
+
+        // set coins text
+        coinsText.SetText("Coins: " + playerInfo.coins);
     }
 
     // Update is called once per frame

@@ -2384,7 +2384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name_text: {fileID: 2074825327}
   dialogue_text: {fileID: 344287725}
-  display_speed: 2
+  display_speed: 1.2
   story_1: {fileID: 2118377413}
   story_2: {fileID: 1998452937}
   story_3: {fileID: 821283628}
@@ -2734,7 +2734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversation:
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
@@ -2745,11 +2745,11 @@ MonoBehaviour:
     is_choice: 0
     sentences:
     - Oh hey, it's you again! How are you doing?
-  - name: Pete
-    is_npc: 1
+  - name: You
+    is_npc: 0
     is_choice: 1
     sentences:
-    - Oh hey, it's you again! How are you doing?
+    - 
     - Amazing. I'm so glad to see you.
     - I've been better...
   - name: Pete
@@ -2764,7 +2764,7 @@ MonoBehaviour:
     sentences:
     - I think I know what you mean.
     - The game I just played was so much fun, but it's left me really hungry!
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
@@ -2776,12 +2776,12 @@ MonoBehaviour:
     is_choice: 0
     sentences:
     - O-oh, really? You want me to eat it? I mean, are you sure about this?
-    - "I\u2019ve been alright with the sidewalk ones this far\u2026"
-  - name: Pete
-    is_npc: 1
+    - "I\u2019ve been alright with the sidewalk fries so far\u2026"
+  - name: You
+    is_npc: 0
     is_choice: 1
     sentences:
-    - "I\u2019ve been alright with the sidewalk ones this far\u2026"
+    - 
     - "You won't know until you try it.\r"
     - Pretty please?
   - name: Pete
@@ -2799,12 +2799,12 @@ MonoBehaviour:
     is_choice: 0
     sentences:
     - '[He takes a bite and chews. A moment later, his face lights up.]'
-    - WOAH! This is so much better than the sidewalk ones!
-  - name: Pete
-    is_npc: 1
+    - WOAH! This is so much better than the sidewalk fries!
+  - name: You
+    is_npc: 0
     is_choice: 1
     sentences:
-    - WOAH! This is so much better than the sidewalk ones!
+    - 
     - I told you so.
     - I'm glad you like it.
   - name: Pete
@@ -2823,7 +2823,7 @@ MonoBehaviour:
     sentences:
     - We should share it, it's only fair! Here, take the other half. [He holds it
       out to you]
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
@@ -2834,20 +2834,20 @@ MonoBehaviour:
     sentences:
     - What?? Really? That's so cool!.
     - I didn't know that some people ONLY ate fruit.
-  - name: Pete
-    is_npc: 1
+  - name: You
+    is_npc: 0
     is_choice: 1
     sentences:
-    - I didn't know that some people ONLY ate fruit.
+    - 
     - Sure, plenty of people do.
     - You don't know a lot, do you?
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
     - Different people have all sorts of diets. The last bats I lived with ate animals,
       but I always preferred fruit.
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
@@ -2858,7 +2858,7 @@ MonoBehaviour:
     is_choice: 0
     sentences:
     - Oh wow! You were the only one who ate fruit?
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
@@ -2871,7 +2871,7 @@ MonoBehaviour:
     is_choice: 0
     sentences:
     - "Oh no! I can't imagine losing my team\u2026 That must have been so hard!"
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 1
     sentences:
@@ -2895,11 +2895,11 @@ MonoBehaviour:
     - Anyone who doesn't accept you is missing out. You have the best ideas!
     - Your fry was so much better than the ones I eat off the ground, I might have
       to try your fruit diet, since your taste is so good!
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 1
     sentences:
-    - I might have to try your fruit diet, since your taste is so good!
+    - 
     - Thanks Pete, that means a lot.
     - You know fries aren't fruit, right?
   - name: Pete
@@ -2916,7 +2916,7 @@ MonoBehaviour:
     - True... I definitely like fries too much to give them up. Too bad.
     - Well, thanks for telling me about all that, anyway. I never knew people lived
       such different lives!
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
@@ -3456,7 +3456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversation:
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
@@ -3464,24 +3464,24 @@ MonoBehaviour:
     - '[While trying to catch the ball, a pigeon runs backwards into the road right
       in front of you and almost gets hit by a taxi.]'
     - Oh my god! Are you OK??
-  - name: Pete
+  - name: Pigeon
     is_npc: 1
     is_choice: 0
     sentences:
     - Yes! I caught it! [He holds up the ball triumphantly]
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
     - "Why didn\u2019t you watch where you were going?"
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 1
     sentences:
-    - "Why didn\u2019t you watch where you were going?"
+    - 
     - You could have died!
     - "You almost ran into me!\r"
-  - name: Pete
+  - name: Pigeon
     is_npc: 1
     is_choice: 0
     sentences:
@@ -3489,7 +3489,7 @@ MonoBehaviour:
     - I guess sometimes I don't pay very much attention to things around me. Playing
       ball is my favourite thing in the world! I've never really seen the point of
       thinking about anything else.
-  - name: Pete
+  - name: Pigeon
     is_npc: 1
     is_choice: 0
     sentences:
@@ -3497,88 +3497,88 @@ MonoBehaviour:
     - I guess sometimes I don't pay very much attention to things around me. Playing
       ball is my favourite thing in the world! I've never really seen the point of
       thinking about anything else.
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
     - "But that\u2019s so dangerous\u2026 is there really nothing else you like to
       do?"
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 1
     sentences:
     - "What about\u2026"
     - "Reading books?\r"
     - "Listening to music?\r"
-  - name: Pete
+  - name: Pigeon
     is_npc: 1
     is_choice: 0
     sentences:
     - "I dunno\u2026 I've never really tried that before. But the other players\u2019
       jerseys have letters on them!\r"
-  - name: Pete
+  - name: Pigeon
     is_npc: 1
     is_choice: 0
     sentences:
     - "I dunno\u2026 I've never really tried that before. But I like the sound the
       ball makes as it whooshes through the air!\r"
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
     - "\u2026you must do something other than play ball."
-  - name: Pete
+  - name: Pigeon
     is_npc: 1
     is_choice: 0
     sentences:
     - "Hm, well\u2026 I mean, when I\u2019m hungry I eat old fries off the sidewalk."
     - "I guess that\u2019s a good experience. Not as good as ball, but OK."
-  - name: Pete
-    is_npc: 1
+  - name: You
+    is_npc: 0
     is_choice: 1
     sentences:
-    - "I guess that\u2019s a good experience. Not as good as ball, but OK."
+    - 
     - That's disgusting.
     - "Sounds\u2026 delicious."
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
     - "Hey, have you ever had fries when they\u2019re fresh? They\u2019re supposed
       to be eaten warm; they might taste better that way."
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
     - "Hey, have you ever had fries when they\u2019re fresh? They\u2019re supposed
       to be eaten warm; they might taste better that way."
-  - name: Pete
+  - name: Pigeon
     is_npc: 1
     is_choice: 0
     sentences:
     - "Huh, no, I haven\u2019t\u2026 that\u2019s a new idea. Hey, you\u2019re pretty
       cool."
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
     - Thanks.
-  - name: Pete
+  - name: Pigeon
     is_npc: 1
     is_choice: 0
     sentences:
     - "\u2026oh wait! I never introduced myself, did I? Oh no, how rude! I\u2019m
       Pete."
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
     - Nice to meet you, Pete.
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 1
     sentences:
-    - Nice to meet you, Pete.
+    - 
     - "I'm a bit concerned for you\u2026\r"
     - I like your hat.
   - name: Pete

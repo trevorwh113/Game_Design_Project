@@ -20,13 +20,12 @@ public class ConfirmPurchase : MonoBehaviour
     // The item that was most recently selected.
     public ItemSelect most_recent;
 
-
+    public TMP_Text coinsText;
     
     // Start is called before the first frame update
     void Start()
     {
         playerInfo = FindObjectOfType<PlayerInfo>();
-
     }
 
     public void Buy() {
@@ -39,6 +38,7 @@ public class ConfirmPurchase : MonoBehaviour
                 
                 // Subtract from the coins.
                 playerInfo.coins -= cost;
+                coinsText.SetText("Coins: " + playerInfo.coins);
 
                 // Update the text and name.
                 text_field.text = "Purchased!";

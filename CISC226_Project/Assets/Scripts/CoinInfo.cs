@@ -47,13 +47,12 @@ public class CoinInfo : MonoBehaviour
             {
                 if (isCollected == false)
                 {
-                    levelManager.coins_collected++;
+                    levelManager.collectCoin();
                     isCollected = true;
                     //disappear by toggling sprite renderers
                     spriteRenderer.enabled = false; 
                     sparkle.spriteRenderer.enabled = false;
 
-                    canvasManager.coinsText.SetText("Coins Collected: " + levelManager.coins_collected);
                     Debug.Log("Coins: " + levelManager.coins_collected);
 
                 }
