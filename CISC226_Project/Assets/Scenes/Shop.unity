@@ -2914,8 +2914,8 @@ MonoBehaviour:
   item_list:
   - name: French Fry
     cost: 2
-    description: 'A single (fresh!) french fry. Not quite a luxurious meal, but hey,
-      better than a fry off the sidewalk. '
+    description: A single (fresh!) french fry. Not quite a luxurious meal, but hey,
+      better than crumbs off the sidewalk.
     icon: {fileID: 21300000, guid: 33a7d6c457e856241967e31526235cb2, type: 3}
   - name: Bottle Cap
     cost: 6
