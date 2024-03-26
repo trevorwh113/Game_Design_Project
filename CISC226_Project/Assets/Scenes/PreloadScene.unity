@@ -324,7 +324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   affection_worm: 0
-  affection_bird: 1000
+  affection_bird: 0
   affection_croc: 0
   stories_read_worm: 0
   stories_read_bird: 0
