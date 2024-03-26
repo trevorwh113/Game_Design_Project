@@ -443,7 +443,214 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1231c40a69b69674e8ed32d989f02de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: []
+  conversation:
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - '[Pete spots you as you''re walking towards him in the park and comes running
+      over.]'
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Hey! Guess what!
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - What?
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I finally beat my personal record for consecutive ball throws!
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - Congrats! You worked hard.
+    - Now go beat the new one!
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I did! And now I want to celebrate with you. We should do something fun!
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - You're right! The grind never stops!
+    - ...Well, maybe it can stop a little bit, right now. My wings are sore.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - We can celebrate. I've brought you something.
+    - '[You reveal the matching jerseys.]'
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Woah! For me? Thank you so much!
+    - '[He takes them both from you and unwraps them.]'
+    - Oh... um, these are really nice, but... I'm not sure they're both going to
+      fit me?
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - '[You take the smaller one from him.] No, Pete, this one''s for me. We each
+      get one, so we can match.'
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - OH! I see.
+    - So we can match... that's so cool!
+    - '[Putting it on] I''ll never take it off!'
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - Aw, me neither.
+    - Maybe wash it sometimes?
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Then what are you waiting for? Put it on!
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Don't worry! Any true athlete knows the importance of good hygiene.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Fair enough.
+    - '[Putting on the jersey] What do you think?'
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I LOVE IT! We match so well.
+    - Oh, now I'm going to be worried about ruining it if I wear it out all the time!
+    - But no, I wouldn't want to leave it at my house all day... that would be sad!
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - I couldn't even if I wanted to, haha.
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Wait, what do you mean?
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Oh, I don't actually have my own place... I've mostly been staying in the caves.
+    - I carry my stuff with me.
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - 'WHAT?! This whole time?! Why didn''t you say anything? '
+    - Come live with me! I've got enough space for your stuff.
+    - In fact, I might have too much space... Interior design is hard.
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - You're... asking me to move in?
+    - What? I love interior design!
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Oh- I mean, if you want to, obviously.
+    - Do you?
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Oh, good! You can tell me your ideas... I've been so lost.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Well, if you're sure about this! Thanks Pete. It'll definitely beat living
+      in the caves.
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - We can hang out every day!
+    - We should combine our assets.
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Wow, I didn't even think about it like that! You're right!
+    - This is going to be great!
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Oh, wow... that sounds big.
+    - Well, I don't have a lot of assets, but if I was going to share them with anyone
+      it would be you!
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - '[He points to the jerseys.]'
+    - You're on my team now.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - A fresh start...
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Come on, I'll show you the place!
+    - I hope you like it...
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - I'm sure I will.
+    - Well, we can fix it up.
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Then let's get going!
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Then let's get going!
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Come on, I see a sewer taxi!
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - '[You and Pete run towards the sewers together.]'
   other_story_1: {fileID: 2118377413}
   other_story_2: {fileID: 1998452937}
   other_story_3: {fileID: 821283628}
@@ -1346,8 +1553,8 @@ MonoBehaviour:
     is_npc: 0
     is_choice: 0
     sentences:
-    - '[He might be right. You spend the rest of the afternoon talking and playing
-      ball, and leave satisfied after a good day.]'
+    - '[You spend the rest of the afternoon talking and playing ball, and leave satisfied
+      after a good day.]'
   other_story_1: {fileID: 2118377413}
   other_story_2: {fileID: 1998452937}
   other_story_3: {fileID: 269407153}
