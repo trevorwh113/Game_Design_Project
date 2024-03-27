@@ -443,7 +443,168 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1231c40a69b69674e8ed32d989f02de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: []
+  conversation:
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - '[You find yourself at Avery''s place again.]'
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Hey Avery! I brought this game for us to play together.
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Wait omg you really brought it?!? That's great!!
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Of course, now we can play games together.
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - Obviously I'll carry you.
+    - We'll work together.
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Heyyyy, I'm not bad at games. I can hold my own.
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Of course since we have such great chemistry together.
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Wait ok. I'll set up the same for us. You can just get comfortable
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - '[The two of you chat a bit and start playing the game together. You both suck
+      at the game but are laughing the whole time.]'
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Wow!!! This is so much fun. I never realized games could be so much better
+      with other people.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Yeah it's great.
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - Now imagine if you were good.
+    - It's all about who you play with.
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Hey! You aren't good either.
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Yeah we just get along so well.
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - ...
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Hey, I just wanted to thank you for spending so much time with me. I was really
+      lonely before you came around.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Of course no problem. I've really enjoyed the time I've spent with you.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Speaking of lonely, how's work going. Maybe it could help at work if you play
+      games with someone there.
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Oh yeah!! It's actually going well! I got complimented on the scale polish
+      at work the other day. Thank you so much for helping me put that on.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - That's great to hear! I'm glad I could help.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Did you manage to make friends at work?
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Well I've been talking to my coworker a lot more recently and they introduced
+      me to some others as well. It seems to be going really well.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - I'm glad to head that. Since you have so many other friends now it seems like
+      I might have to compete for your attention.
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Whoa why would you be competing with my friends. I thought we were more than
+      that
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - About time you realized
+    - Wait omg really???
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Omg wait have you been thinking that for a while??
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Yes of course. We're together all the time now.
+  - name: Avery
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Anyways, I think I'm going to be carrying yo soon so let's get back on the
+      game pookie.
+  - name: You
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - '[So you and Avery continue to enjoy the game together, wondering where the
+      night will bring you]'
   other_story_1: {fileID: 2118377413}
   other_story_2: {fileID: 1998452937}
   other_story_3: {fileID: 821283628}
