@@ -16,6 +16,7 @@ public class PlayerInfo : MonoBehaviour
     public int stories_read_bird = 0;
     public int stories_read_croc = 0;
 
+    public List<string> tutLvl;
 
     public string currentScene = "lvl_1";
     
@@ -32,6 +33,7 @@ public class PlayerInfo : MonoBehaviour
         // Make sure it does not get unloaded.
         DontDestroyOnLoad(gameObject);
         lvlwin[0] = true;
+        tutLvl = new List<string>();
 
     }
 

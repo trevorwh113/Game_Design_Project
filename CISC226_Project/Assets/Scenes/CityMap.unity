@@ -877,7 +877,7 @@ GameObject:
   - component: {fileID: 487469623}
   - component: {fileID: 487469622}
   - component: {fileID: 487469621}
-  - component: {fileID: 487469620}
+  - component: {fileID: 487469624}
   m_Layer: 5
   m_Name: shop
   m_TagString: Untagged
@@ -904,19 +904,6 @@ RectTransform:
   m_AnchoredPosition: {x: -267, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &487469620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 487469618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53a86a68a32d2904ca27296eea3def16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destination: Shop
 --- !u!114 &487469621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -961,9 +948,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 487469620}
-        m_TargetAssemblyTypeName: ButtonGoToScene, Assembly-CSharp
-        m_MethodName: GoToScene
+      - m_Target: {fileID: 487469624}
+        m_TargetAssemblyTypeName: CondtionalGoTo, Assembly-CSharp
+        m_MethodName: chooseScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1011,6 +998,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 487469618}
   m_CullTransparentMesh: 1
+--- !u!114 &487469624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487469618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91a3564698a485242883e2875e274d51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regularDest: 
+  sometimesDest: 
 --- !u!1 &524806804
 GameObject:
   m_ObjectHideFlags: 0
@@ -2404,7 +2405,7 @@ GameObject:
   - component: {fileID: 1738483988}
   - component: {fileID: 1738483987}
   - component: {fileID: 1738483986}
-  - component: {fileID: 1738483985}
+  - component: {fileID: 1738483990}
   - component: {fileID: 1738483989}
   m_Layer: 5
   m_Name: lvl2
@@ -2432,19 +2433,6 @@ RectTransform:
   m_AnchoredPosition: {x: -299, y: -220}
   m_SizeDelta: {x: 55, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1738483985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1738483983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53a86a68a32d2904ca27296eea3def16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destination: lvl_2
 --- !u!114 &1738483986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2489,9 +2477,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1738483985}
-        m_TargetAssemblyTypeName: ButtonGoToScene, Assembly-CSharp
-        m_MethodName: GoToScene
+      - m_Target: {fileID: 1738483990}
+        m_TargetAssemblyTypeName: CondtionalGoTo, Assembly-CSharp
+        m_MethodName: chooseScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2552,6 +2540,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myPtr: 1
+--- !u!114 &1738483990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738483983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91a3564698a485242883e2875e274d51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regularDest: lvl_2
+  sometimesDest: lvl2_tut
 --- !u!1 &1817087212
 GameObject:
   m_ObjectHideFlags: 0
@@ -2564,8 +2566,8 @@ GameObject:
   - component: {fileID: 1817087217}
   - component: {fileID: 1817087216}
   - component: {fileID: 1817087215}
-  - component: {fileID: 1817087214}
   - component: {fileID: 1817087218}
+  - component: {fileID: 1817087219}
   m_Layer: 5
   m_Name: lvl1
   m_TagString: Untagged
@@ -2592,19 +2594,6 @@ RectTransform:
   m_AnchoredPosition: {x: -385, y: -198}
   m_SizeDelta: {x: 55, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1817087214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817087212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53a86a68a32d2904ca27296eea3def16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destination: lvl_1
 --- !u!114 &1817087215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2649,7 +2638,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1817087214}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonGoToScene, Assembly-CSharp
         m_MethodName: GoToScene
         m_Mode: 1
@@ -2712,6 +2701,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myPtr: 0
+--- !u!114 &1817087219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817087212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91a3564698a485242883e2875e274d51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regularDest: lvl1
+  sometimesDest: lvl1_tut
 --- !u!1 &1851498526
 GameObject:
   m_ObjectHideFlags: 0
