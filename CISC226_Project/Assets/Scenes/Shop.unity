@@ -2595,13 +2595,13 @@ MonoBehaviour:
     description: A keychain showing a game character. Could be used as emergency
       food?
     icon: {fileID: 21300000, guid: 59ab789139c19384683d36381b9870be, type: 3}
-  - name: Nail Polish
+  - name: Scale Polish
     cost: 6
-    description: Test
+    description: Several bottles of colourful scale polish. Hopefully tested on animals.
     icon: {fileID: 21300000, guid: aa16cc4fe0225684fbff1fd76058d369, type: 3}
   - name: 2P Game
     cost: 12
-    description: This is the description for item 3.
+    description: A game for the Wintend 4DS. It shows a really hungry looking character.
     icon: {fileID: 21300000, guid: ab45528a06ae852468d06fadd915fc9e, type: 3}
   state_index: 0
   npc: croc
