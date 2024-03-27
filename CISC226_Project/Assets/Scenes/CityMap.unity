@@ -1010,8 +1010,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91a3564698a485242883e2875e274d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regularDest: 
-  sometimesDest: 
+  regularDest: Shop
+  sometimesDest: shop_tut
 --- !u!1 &524806804
 GameObject:
   m_ObjectHideFlags: 0
@@ -1781,7 +1781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a86a68a32d2904ca27296eea3def16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: Wilhemina_Date
+  destination: lvl_4
 --- !u!114 &1214720728
 MonoBehaviour:
   m_ObjectHideFlags: 0
