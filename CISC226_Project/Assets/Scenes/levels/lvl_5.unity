@@ -955,7 +955,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level Goal: Kill Enemies'
+  m_text: 'Level Goal: Kill All Enemies'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41e6f20d2d0a2a74390a1caa6ccdbb66, type: 2}
   m_sharedMaterial: {fileID: -5743263954782639743, guid: 41e6f20d2d0a2a74390a1caa6ccdbb66, type: 2}
@@ -63662,7 +63662,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 7
+  m_text: 8
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41e6f20d2d0a2a74390a1caa6ccdbb66, type: 2}
   m_sharedMaterial: {fileID: -5743263954782639743, guid: 41e6f20d2d0a2a74390a1caa6ccdbb66, type: 2}
@@ -65149,9 +65149,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '25
-
-'
+  m_text: 10
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41e6f20d2d0a2a74390a1caa6ccdbb66, type: 2}
   m_sharedMaterial: {fileID: -5743263954782639743, guid: 41e6f20d2d0a2a74390a1caa6ccdbb66, type: 2}
