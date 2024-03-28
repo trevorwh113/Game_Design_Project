@@ -1392,6 +1392,11 @@ MonoBehaviour:
     is_choice: 0
     sentences:
     - '[Still focused on the ball] Huh? OK, sure.'
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - '[Still focused on the ball] Huh? OK, sure.'
   - name: You
     is_npc: 0
     is_choice: 0
@@ -1449,11 +1454,11 @@ MonoBehaviour:
     sentences:
     - A gift? ...Oh! The bottle caps!
     - You got hurt trying to get these... for me?
-  - name: Pete
-    is_npc: 1
+  - name: You
+    is_npc: 0
     is_choice: 1
     sentences:
-    - You got hurt trying to get these... for me?
+    - 
     - I mean, it's basically a papercut.
     - I'm surprised you care.
   - name: Pete
@@ -1470,11 +1475,11 @@ MonoBehaviour:
     - I guess I was so focused on beating my personal record I wasn't really paying
       attention to anything else... the bottle caps or your cut.
     - Here, let me bandage it for you. [He takes off his shirt.]
-  - name: Pete
-    is_npc: 1
+  - name: You
+    is_npc: 0
     is_choice: 1
     sentences:
-    - Here, let me bandage it for you. [He takes off his shirt.]
+    - 
     - Oh- Uh, you really don't have to...
     - Damn. OK, go on then.
   - name: Pete
@@ -1496,11 +1501,11 @@ MonoBehaviour:
     - I want to help! I was so focused on the ball earlier, I didn't appreciate your
       gift. But there are other things that are just as important as ball.
     - ...Are you mad at me?
-  - name: Pete
-    is_npc: 1
+  - name: You
+    is_npc: 0
     is_choice: 1
     sentences:
-    - ...Are you mad at me?
+    - 
     - Nah. Sorry I interrupted you.
     - A little. I wanted you to like it.
   - name: Pete
@@ -1527,11 +1532,11 @@ MonoBehaviour:
     - Oh yay!
     - I'm just worried because the caves sound scary!
     - I've never been... Are they dangerous?
-  - name: Pete
-    is_npc: 1
+  - name: You
+    is_npc: 0
     is_choice: 1
     sentences:
-    - I've never been... Are they dangerous?
+    - 
     - Very. But I can handle it.
     - Honestly no, it's pretty chill.
   - name: You

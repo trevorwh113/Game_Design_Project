@@ -485,7 +485,7 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - Wait ok. I'll set up the same for us. You can just get comfortable
+    - Wait ok. I'll set up the same for us. You can just get comfortable.
   - name: You
     is_npc: 0
     is_choice: 0
@@ -581,7 +581,7 @@ MonoBehaviour:
     is_choice: 1
     sentences:
     - 
-    - About time you realized
+    - About time you realized.
     - Wait omg really???
   - name: Avery
     is_npc: 1
@@ -604,7 +604,7 @@ MonoBehaviour:
     is_choice: 0
     sentences:
     - '[So you and Avery continue to enjoy the game together, wondering where the
-      night will bring you]'
+      night will bring you.]'
   other_story_1: {fileID: 2118377413}
   other_story_2: {fileID: 1998452937}
   other_story_3: {fileID: 821283628}
@@ -1326,7 +1326,7 @@ MonoBehaviour:
     is_choice: 0
     sentences:
     - '[You show up to Avery''s house with the scale polish. You knock and Avery
-      answers the door]'
+      answers the door.]'
   - name: Avery
     is_npc: 1
     is_choice: 0
@@ -1341,7 +1341,7 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - '[Avery brings you into their house]'
+    - '[Avery brings you into their house.]'
     - Well here it is. Its not very big but I like it. And don't worry, I made sure
       to clean before you got here.
   - name: You
@@ -1349,18 +1349,18 @@ MonoBehaviour:
     is_choice: 0
     sentences:
     - 
-    - Wow I really love how it looks
-    - Doesn't look like it
+    - Wow I really love how it looks.
+    - Doesn't look like it.
   - name: Avery
     is_npc: 1
     is_choice: 0
     sentences:
-    - Thanks, I really tried to make it cozy
+    - Thanks, I really tried to make it cozy.
   - name: Avery
     is_npc: 1
     is_choice: 0
     sentences:
-    - '[Playfully] omg I hate you'
+    - '[Playfully] omg I hate you.'
   - name: Avery
     is_npc: 1
     is_choice: 0
@@ -1382,7 +1382,7 @@ MonoBehaviour:
     is_npc: 0
     is_choice: 0
     sentences:
-    - '[The two of you chat for a bit as you play the game. Avery shortly falls quiet]'
+    - '[The two of you chat for a bit as you play the game. Avery shortly falls quiet.]'
   - name: Avery
     is_npc: 1
     is_choice: 0
@@ -1394,18 +1394,18 @@ MonoBehaviour:
     is_choice: 1
     sentences:
     - 
-    - YOU DIRTY DOG
+    - YOU DIRTY DOG!!!
     - Oh I would love to.
   - name: You
     is_npc: 0
     is_choice: 0
     sentences:
-    - Ok you play the game but sit still so I can put this on you
+    - Ok you play the game but sit still so I can put this on you.
   - name: 
     is_npc: 1
     is_choice: 0
     sentences:
-    - '[The two of you chat as you paint their scales]'
+    - '[The two of you chat as you paint their scales.]'
   - name: Avery
     is_npc: 1
     is_choice: 0
@@ -1427,8 +1427,8 @@ MonoBehaviour:
     is_choice: 1
     sentences:
     - 
-    - Womp womp
-    - Don't worry it's fine
+    - Womp womp.
+    - Don't worry it's fine.
   - name: You
     is_npc: 0
     is_choice: 0
@@ -1446,13 +1446,13 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - '[You agree with them before going back to painting their scales]'
+    - '[You agree with them before going back to painting their scales.]'
   - name: 
     is_npc: 1
     is_choice: 0
     sentences:
     - '[Eventually you finish painting their scales and find that it is almost time
-      to go]'
+      to go.]'
   - name: You
     is_npc: 0
     is_choice: 0
@@ -1470,8 +1470,8 @@ MonoBehaviour:
     is_choice: 1
     sentences:
     - 
-    - LMAO
-    - Thats valid. RGPs are sick
+    - LMAO!
+    - Thats valid. RGPs are sick.
   - name: You
     is_npc: 0
     is_choice: 0
@@ -3076,7 +3076,7 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - '[You are riding the sewer uber and run into Avery again]'
+    - '[You are riding the sewer uber and run into Avery again.]'
   - name: You
     is_npc: 0
     is_choice: 0
@@ -3087,19 +3087,19 @@ MonoBehaviour:
     is_choice: 1
     sentences:
     - 
-    - I got you a keychain of Pention
-    - I got you a keychain of Palmon
+    - I got you a keychain of Pention.
+    - I got you a keychain of Palmon.
   - name: Avery
     is_npc: 1
     is_choice: 0
     sentences:
-    - Oh uh yeah... wow thank you thats so nice
+    - Oh uh yeah... wow thank you thats so nice.
   - name: Avery
     is_npc: 1
     is_choice: 0
     sentences:
     - Omg you remembered what I said last time. Thank you so much for listening to
-      what I said. I thought I went on too much
+      what I said. I thought I went on too much.
   - name: You
     is_npc: 0
     is_choice: 0
@@ -3109,7 +3109,7 @@ MonoBehaviour:
     is_npc: 0
     is_choice: 0
     sentences:
-    - Plus now you'll think of me everytime you grab your keys
+    - Plus now you'll think of me everytime you grab your keys.
   - name: Avery
     is_npc: 1
     is_choice: 0
@@ -3121,8 +3121,8 @@ MonoBehaviour:
     is_choice: 1
     sentences:
     - 
-    - Well you did talk a lot
-    - Well you did captivate me
+    - Well you did talk a lot.
+    - Well you did captivate me.
   - name: Avery
     is_npc: 1
     is_choice: 0
@@ -3169,13 +3169,13 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - You really think so? I should definitely do that now
+    - You really think so? I should definitely do that now.
   - name: Avery
     is_npc: 1
     is_choice: 0
     sentences:
     - I'm so sorry I knew it was a bad idea... wait you're just asking what it is?
-      It's like nail polish but made to not damage my skin
+      It's like nail polish but made to not damage my scales.
   - name: Avery
     is_npc: 1
     is_choice: 0
@@ -3196,8 +3196,8 @@ MonoBehaviour:
     is_choice: 1
     sentences:
     - 
-    - For sure, I'll be there
-    - Your house? You seem messy
+    - For sure, I'll be there.
+    - Your house? You seem messy.
   - name: Avery
     is_npc: 1
     is_choice: 0
@@ -3207,12 +3207,12 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - OMG NO don't worry I'll make sure to clean before you show up
+    - OMG NO don't worry I'll make sure to clean before you show up.
   - name: Avery
     is_npc: 1
     is_choice: 0
     sentences:
-    - Anyways, I need to head out now but I'll see you soon
+    - Anyways, I need to head out now but I'll see you soon.
   other_story_1: {fileID: 2118377413}
   other_story_2: {fileID: 821283628}
   other_story_3: {fileID: 269407153}
@@ -3749,8 +3749,8 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 1
     sentences:
-    - '[In the sewer uber, you catch the alligator staring at you]'
-    - '[Stare back at them]'
+    - '[In the sewer uber, you catch the alligator staring at you.]'
+    - '[Stare back at them.]'
     - Hey can I help you???
   - name: Alligator
     is_npc: 1
@@ -3768,7 +3768,7 @@ MonoBehaviour:
     is_npc: 0
     is_choice: 0
     sentences:
-    - Oh alright, what did you want to talk to me about.
+    - Oh alright, what did you want to talk to me about?
   - name: Alligator
     is_npc: 1
     is_choice: 0
@@ -3790,28 +3790,28 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - Oh I just work some boring office job. I don't like it much
-    - I really can't get along with my coworkers
+    - Oh I just work some boring office job. I don't like it much.
+    - I really can't get along with my coworkers.
   - name: You
     is_npc: 0
     is_choice: 1
     sentences:
     - 
-    - Maybe because you stare
-    - Try talking about your interests
+    - Maybe because you stare.
+    - Try talking about your interests.
   - name: Avery
     is_npc: 1
     is_choice: 0
     sentences:
-    - OMG I'm so sorry!! I didn't mean to bother you with that
+    - OMG I'm so sorry!! I didn't mean to bother you with that.
     - Well one of my coworkers has been staring at me ever since they saw me playing
-      a game at work
+      a game at work.
   - name: Avery
     is_npc: 1
     is_choice: 0
     sentences:
     - Well one of my coworkers has been staring at me ever since they saw me playing
-      a game at work
+      a game at work.
   - name: You
     is_npc: 0
     is_choice: 0
@@ -3827,13 +3827,13 @@ MonoBehaviour:
     is_choice: 1
     sentences:
     - 
-    - Ew no not that game
-    - Interesting, tell me more
+    - Ew no not that game.
+    - Interesting, tell me more.
   - name: Avery
     is_npc: 1
     is_choice: 0
     sentences:
-    - Ok I get it, not everyone likes the game. Listen, it's still a decent game
+    - Ok I get it, not everyone likes the game. Listen, it's still a decent game.
   - name: Avery
     is_npc: 1
     is_choice: 0
@@ -3843,24 +3843,24 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - Actually, you remind of a character from the game
+    - Actually, you remind of a character from the game.
   - name: You
     is_npc: 0
     is_choice: 1
     sentences:
     - 
-    - I was NOT compared to Shengin
+    - I was NOT compared to Shengin.
     - What? How? Who?
   - name: Avery
     is_npc: 1
     is_choice: 0
     sentences:
-    - NO listen I'm sorry!!! I just think you're similar
+    - NO listen I'm sorry!!! I just think you're similar.
   - name: Avery
     is_npc: 1
     is_choice: 0
     sentences:
-    - I don't knowwww. I just think that you seem familiar
+    - I don't knowwww. I just think that you seem familiar.
   - name: Avery
     is_npc: 1
     is_choice: 0
