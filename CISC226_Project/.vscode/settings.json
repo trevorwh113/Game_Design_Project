@@ -57,5 +57,5 @@
         "Temp/": true
     },
     "dotnet.defaultSolution": "CISC226_Project.sln",
-    "workbench.colorTheme": "Nu Disco Dark"
+    "workbench.colorTheme": "Default Dark Modern"
 }
