@@ -282,7 +282,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -445.75, y: -313}
+  m_AnchoredPosition: {x: -445.5, y: -313.5}
   m_SizeDelta: {x: 1.5, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &104362872
@@ -443,6 +443,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!114 &148992539 stripped
 MonoBehaviour:
@@ -604,6 +605,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1 &183645158
 GameObject:
@@ -918,6 +920,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1 &235697492
 GameObject:
@@ -48658,11 +48661,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3586054887511817379, guid: f21ee0e0e0a7aa64aa6a9b69ecb4d39c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1.7379
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3586054887511817379, guid: f21ee0e0e0a7aa64aa6a9b69ecb4d39c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.9832
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3586054887511817379, guid: f21ee0e0e0a7aa64aa6a9b69ecb4d39c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -48694,11 +48697,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3586054887511817379, guid: f21ee0e0e0a7aa64aa6a9b69ecb4d39c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 20.04
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3586054887511817379, guid: f21ee0e0e0a7aa64aa6a9b69ecb4d39c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -37.01
+      value: -37.25
       objectReference: {fileID: 0}
     - target: {fileID: 3586054887511817379, guid: f21ee0e0e0a7aa64aa6a9b69ecb4d39c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -48762,6 +48765,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1 &334366817 stripped
 GameObject:
@@ -48787,6 +48791,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1 &341612542
 GameObject:
@@ -48814,7 +48819,7 @@ Transform:
   m_GameObject: {fileID: 341612542}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -448, y: -313, z: 0}
+  m_LocalPosition: {x: -447.75, y: -313.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -48896,6 +48901,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1001 &359988649
 PrefabInstance:
@@ -49089,7 +49095,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -447, y: -313}
+  m_AnchoredPosition: {x: -446.75, y: -313.5}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &432579325
@@ -49633,6 +49639,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1001 &757651909
 PrefabInstance:
@@ -50244,6 +50251,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1 &1006512538 stripped
 GameObject:
@@ -50269,6 +50277,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1001 &1011662459
 PrefabInstance:
@@ -50502,6 +50511,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1001 &1140850502
 PrefabInstance:
@@ -50593,6 +50603,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!212 &1166347078 stripped
 SpriteRenderer:
@@ -50623,6 +50634,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1001 &1199366584
 PrefabInstance:
@@ -50674,11 +50686,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6126817746142641866, guid: fa3e660fde8052346be2edf5408412bb, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1.7379
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6126817746142641866, guid: fa3e660fde8052346be2edf5408412bb, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1.0766
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6126817746142641866, guid: fa3e660fde8052346be2edf5408412bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -50710,11 +50722,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6126817746142641866, guid: fa3e660fde8052346be2edf5408412bb, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 20.04
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6126817746142641866, guid: fa3e660fde8052346be2edf5408412bb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -38.04
+      value: -38.25
       objectReference: {fileID: 0}
     - target: {fileID: 6126817746142641866, guid: fa3e660fde8052346be2edf5408412bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -50843,6 +50855,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!212 &1272545558 stripped
 SpriteRenderer:
@@ -50998,6 +51011,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1001 &1332378693
 PrefabInstance:
@@ -51093,7 +51107,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -445.75, y: -311}
+  m_AnchoredPosition: {x: -445.5, y: -311.5}
   m_SizeDelta: {x: 1.5, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1361668663
@@ -51395,6 +51409,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!114 &1418247822 stripped
 MonoBehaviour:
@@ -51502,7 +51517,7 @@ Transform:
   m_GameObject: {fileID: 1421240361}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.548, y: -40.524, z: 0}
+  m_LocalPosition: {x: 26.5, y: -40.524, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -51778,7 +51793,7 @@ Transform:
   m_GameObject: {fileID: 1489785302}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -448, y: -312, z: 0}
+  m_LocalPosition: {x: -447.75, y: -312.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -51870,7 +51885,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -445.75, y: -312}
+  m_AnchoredPosition: {x: -445.5, y: -312.5}
   m_SizeDelta: {x: 1.5, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1522259506
@@ -52091,6 +52106,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1001 &1546596594
 PrefabInstance:
@@ -52186,7 +52202,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -447, y: -312}
+  m_AnchoredPosition: {x: -446.75, y: -312.5}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1575669374
@@ -52453,7 +52469,7 @@ Transform:
   m_GameObject: {fileID: 1595053237}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -448, y: -311, z: 0}
+  m_LocalPosition: {x: -447.75, y: -311.5, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -53991,6 +54007,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1 &1635468911
 GameObject:
@@ -54084,6 +54101,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1001 &1671092892
 PrefabInstance:
@@ -54289,6 +54307,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1001 &1690705359
 PrefabInstance:
@@ -54530,6 +54549,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!212 &1756972419 stripped
 SpriteRenderer:
@@ -54560,6 +54580,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1 &1785987629
 GameObject:
@@ -54609,7 +54630,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 452.2, y: 309.75}
+  m_AnchoredPosition: {x: 452, y: 310}
   m_SizeDelta: {x: 957, y: 538.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1785987631
@@ -54724,7 +54745,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -452.25, y: -306.5}
+  m_AnchoredPosition: {x: -452, y: -306.75}
   m_SizeDelta: {x: 10, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1817162336
@@ -55055,6 +55076,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!212 &1938115492 stripped
 SpriteRenderer:
@@ -55161,6 +55183,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1001 &1972161036
 PrefabInstance:
@@ -55267,6 +55290,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1 &2024174694 stripped
 GameObject:
@@ -55292,6 +55316,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1001 &2028370688
 PrefabInstance:
@@ -55439,7 +55464,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -447, y: -311}
+  m_AnchoredPosition: {x: -446.75, y: -311.5}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2033586523
@@ -55614,6 +55639,7 @@ MonoBehaviour:
   enemySpawnTile: []
   enemiesSpawned: 0000000000
   crystals_remaining: 5
+  crystals_collected: 0
   coins_collected: 0
   win_scene: WinScreen
   exit_scene: CityMap

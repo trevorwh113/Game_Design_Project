@@ -387,11 +387,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6126817746142641866, guid: fa3e660fde8052346be2edf5408412bb, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1.7379
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6126817746142641866, guid: fa3e660fde8052346be2edf5408412bb, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1.0766
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6126817746142641866, guid: fa3e660fde8052346be2edf5408412bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -423,11 +423,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6126817746142641866, guid: fa3e660fde8052346be2edf5408412bb, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 20.08
+      value: 19.75
       objectReference: {fileID: 0}
     - target: {fileID: 6126817746142641866, guid: fa3e660fde8052346be2edf5408412bb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -38.173
+      value: -38
       objectReference: {fileID: 0}
     - target: {fileID: 6126817746142641866, guid: fa3e660fde8052346be2edf5408412bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -470,6 +470,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1 &183645158
 GameObject:
@@ -724,6 +725,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1 &235697492
 GameObject:
@@ -47349,6 +47351,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1 &999605186
 GameObject:
@@ -47503,6 +47506,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1001 &1011662459
 PrefabInstance:
@@ -48062,6 +48066,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!212 &1166347078 stripped
 SpriteRenderer:
@@ -48368,6 +48373,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1 &1265704001
 GameObject:
@@ -48577,6 +48583,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1001 &1383200339
 PrefabInstance:
@@ -48833,6 +48840,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1 &1421240361
 GameObject:
@@ -50712,6 +50720,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!1001 &1671092892
 PrefabInstance:
@@ -50968,6 +50977,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!212 &1756972419 stripped
 SpriteRenderer:
@@ -51008,11 +51018,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3586054887511817379, guid: f21ee0e0e0a7aa64aa6a9b69ecb4d39c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1.7379
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3586054887511817379, guid: f21ee0e0e0a7aa64aa6a9b69ecb4d39c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.9832
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3586054887511817379, guid: f21ee0e0e0a7aa64aa6a9b69ecb4d39c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51044,11 +51054,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3586054887511817379, guid: f21ee0e0e0a7aa64aa6a9b69ecb4d39c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 20.08
+      value: 19.75
       objectReference: {fileID: 0}
     - target: {fileID: 3586054887511817379, guid: f21ee0e0e0a7aa64aa6a9b69ecb4d39c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -37.143
+      value: -37
       objectReference: {fileID: 0}
     - target: {fileID: 3586054887511817379, guid: f21ee0e0e0a7aa64aa6a9b69ecb4d39c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -51453,6 +51463,7 @@ MonoBehaviour:
   - {fileID: 2143529032, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: 610636951, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
   - {fileID: -253697225, guid: c556a7529cd33344da4c6477a49ade93, type: 3}
+  og_num_enemies: 0
   cursor: {fileID: 150200120}
 --- !u!212 &1938115492 stripped
 SpriteRenderer:
@@ -51765,6 +51776,7 @@ MonoBehaviour:
   enemySpawnTile: []
   enemiesSpawned: 00000000
   crystals_remaining: 10
+  crystals_collected: 0
   coins_collected: 0
   win_scene: WinScreen
   exit_scene: CityMap
