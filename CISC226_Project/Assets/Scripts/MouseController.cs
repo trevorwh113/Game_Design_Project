@@ -22,6 +22,10 @@ public class MouseController : MonoBehaviour
     private OverlayTile prevTile;
     private bool spawned = false;
 
+    // Reference to the UI buttons.
+    public FindUIPosition exit;
+    public FindUIPosition reload;
+
     // Reference to the camera.
     private UnityEngine.Camera cam;
 
@@ -117,7 +121,10 @@ public class MouseController : MonoBehaviour
 
 
                     if (character != null){
-                        path = pathFinder.FindPath(character.onTile, tile);
+                        if (exit.onTile != null && reload.onTile != null &&
+                            tile != exit.onTile && tile != reload.onTile) {
+                            path = pathFinder.FindPath(character.onTile, tile);
+                        }
                     }
                 }
             }
