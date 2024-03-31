@@ -1159,7 +1159,165 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1231c40a69b69674e8ed32d989f02de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: []
+  conversation:
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - '[You once again find yourself looking for Wilhelmina in the park.]'
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Hello Darling!
+    - Oh what do you have there?
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - They're for you! I thought they suited you well.
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - That is so sweet of you!
+    - I've never had someone give me flowers before!
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - Really? That's crazy!
+    - Someone as pretty as you?
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Is it? I never thought so?
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Oh gosh me? [she blushes]
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I've always had flowers around the house but those were put there by the gardener.
+    - He said it was to lighten the room, so they weren't technically for me.
+    - My husband never gave me any... He said I could buy them myself.
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - That's so rude of him!
+    - That's not the point though.
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - He was just being realistic.
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Well, he never realized that.
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - He was right though, I had more than enough money to buy myself flowers.
+    - The only thing he cared about was my wealth.
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - Surely that's not true?
+    - He can't be that bad.
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I wish, darling.
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - If only you knew, darling.
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - After I was turned into a worm I was very vulnerable.
+    - He abandoned me and took all of my money since I no longer had any claim to
+      it.
+    - My husband never truly loved me, and he did not see me for who I am.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - I know this isn't the same, but when I was growing up I never felt seen by
+      those around me.
+    - I tried to fit in and get them to accept me but it was never worth it.
+    - I've gotten to a point where I know who I am and I won't let other people make
+      me feel bad about it.
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - You should try the same.
+    - You'll get there eventually.
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I think I will.
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I really hope so.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Hey... Can I call you Willie?
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Willie? Of course! May I ask why?
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - A new name for a new life.
+    - It's cute like you!
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - So a rebrand... What a good idea.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Aww thank you.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I want to go put these wonderful flowers on display right away!
+    - You have made my day better once again. Thank you, darling.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - No problem Willie. I'll see you soon!
   other_story_1: {fileID: 2118377413}
   other_story_2: {fileID: 1998452937}
   other_story_3: {fileID: 269407153}
