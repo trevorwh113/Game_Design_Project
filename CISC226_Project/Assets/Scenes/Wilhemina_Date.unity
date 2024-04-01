@@ -443,7 +443,200 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1231c40a69b69674e8ed32d989f02de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: []
+  conversation:
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - '[You just finish setting up a picnic blanket with candles when Wilhelmina
+      appears.]'
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Darling! What are you up to?
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Ah Willie! Just in time. I have dinner set up for us.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Oh my! You didn't have to do this for me.
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - I wanted to!
+    - Of course I did
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - How sweet!
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I don't deserve your kindness.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - So I'm not sure if you'll like it but I got you truffle mulch.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Why that specifically?
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Well I thought that maybe it would help you get used to your new life.
+    - Plus I heard it's pretty fancy.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I will give it a try then, just for you darling.
+    - '[Wilhelmina takes a bite of the mulch]'
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - How is it?
+    - Does it taste mulchy?
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I actually kind of like it!
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I suppose...?
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - You know, if this is what a worm eats, I think I can enjoy being one.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - That's good to hear!
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Well, seeing you just be yourself despite what you told me about not fitting
+      in has inspired me to accept my situation and start to come to terms with it.
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - You inspire me too.
+    - You did this by yourself.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - '[Wilhelmina blushes.]'
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - You helped more than you know, don't sell yourself short, darling.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Can I ask why?
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Why what?
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Why have you been so nice to me, right from the start nonetheless?
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Well for starters...
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - You're very pretty.
+    - You have a nice personality.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Oh gosh!
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Ah thank you.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - You also make me feel like I can be myself around you.
+    - Together we know our differences and accept each other for them, and I really
+      appreciate that we can have that type of relationship
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - You have such a way with words, darling.
+    - I'd like if we could continue what we have.
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - I would love that too.
+    - I wouldn't mind taking it further.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - That's lovely to hear
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - You're so straightforward, darling.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - We can take it slow for now and see where we end up.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Sounds perfect WIllie.
+    - Now enough talking, or this picnic will go to waste.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - '[Wilhelmina smiles at you and continues to eat more mulch.]'
   other_story_1: {fileID: 2118377413}
   other_story_2: {fileID: 1998452937}
   other_story_3: {fileID: 821283628}
