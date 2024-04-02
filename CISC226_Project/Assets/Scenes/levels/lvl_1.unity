@@ -46017,7 +46017,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: /8
+  m_text: /5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41e6f20d2d0a2a74390a1caa6ccdbb66, type: 2}
   m_sharedMaterial: {fileID: -5743263954782639743, guid: 41e6f20d2d0a2a74390a1caa6ccdbb66, type: 2}
@@ -49479,7 +49479,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '/15
+  m_text: '/12
 
 '
   m_isRightToLeft: 0
@@ -50140,8 +50140,8 @@ MonoBehaviour:
   - {fileID: 571749073}
   - {fileID: 808896721}
   enemySpawnTile: []
-  enemiesSpawned: 0000000000000000
-  crystals_remaining: 15
+  enemiesSpawned: 0000000000
+  crystals_remaining: 12
   crystals_collected: 0
   coins_collected: 0
   win_scene: WinScreen
