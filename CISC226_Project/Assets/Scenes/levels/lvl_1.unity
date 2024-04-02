@@ -46497,7 +46497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onTile: {fileID: 0}
-  spotlightSize: 1
+  spotlightSize: 2
 --- !u!212 &1421240363
 SpriteRenderer:
   m_ObjectHideFlags: 0

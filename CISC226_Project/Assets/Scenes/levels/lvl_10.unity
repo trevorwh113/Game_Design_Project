@@ -45482,7 +45482,7 @@ PrefabInstance:
     - target: {fileID: 3468837614527012203, guid: 0e160296a8ce8424b92123e7d319e1c4, type: 3}
       propertyPath: sparkle
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 916185316}
     - target: {fileID: 3468837614527012203, guid: 0e160296a8ce8424b92123e7d319e1c4, type: 3}
       propertyPath: spriteRenderer
       value: 
@@ -45831,6 +45831,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &396676128 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3585007502448679053, guid: 16337d9a737d7a848ae0da050c6f5c5b, type: 3}
+  m_PrefabInstance: {fileID: 396676124}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396676125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b09849253762d6b4e8331fbde6ca386f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &423036535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47062,6 +47073,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &859723821 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3585007502448679053, guid: 16337d9a737d7a848ae0da050c6f5c5b, type: 3}
+  m_PrefabInstance: {fileID: 859723817}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859723818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b09849253762d6b4e8331fbde6ca386f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &909457332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47267,6 +47289,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &916185316 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3585007502448679053, guid: 16337d9a737d7a848ae0da050c6f5c5b, type: 3}
+  m_PrefabInstance: {fileID: 916185312}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916185313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b09849253762d6b4e8331fbde6ca386f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &936422877 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -5831987494979798300, guid: 5e0c280f0882a8c4badc29c046b6862d, type: 3}
@@ -47784,7 +47817,7 @@ PrefabInstance:
     - target: {fileID: 3468837614527012203, guid: 0e160296a8ce8424b92123e7d319e1c4, type: 3}
       propertyPath: sparkle
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 396676128}
     - target: {fileID: 3468837614527012203, guid: 0e160296a8ce8424b92123e7d319e1c4, type: 3}
       propertyPath: spriteRenderer
       value: 
@@ -48762,6 +48795,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1254162918 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3585007502448679053, guid: 16337d9a737d7a848ae0da050c6f5c5b, type: 3}
+  m_PrefabInstance: {fileID: 1254162914}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254162915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b09849253762d6b4e8331fbde6ca386f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &1272545558 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 8453971919030231901, guid: 0e160296a8ce8424b92123e7d319e1c4, type: 3}
@@ -48987,7 +49031,7 @@ PrefabInstance:
     - target: {fileID: 3468837614527012203, guid: 0e160296a8ce8424b92123e7d319e1c4, type: 3}
       propertyPath: sparkle
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 859723821}
     - target: {fileID: 3468837614527012203, guid: 0e160296a8ce8424b92123e7d319e1c4, type: 3}
       propertyPath: spriteRenderer
       value: 
@@ -51737,7 +51781,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: /4
+  m_text: /7
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41e6f20d2d0a2a74390a1caa6ccdbb66, type: 2}
   m_sharedMaterial: {fileID: -5743263954782639743, guid: 41e6f20d2d0a2a74390a1caa6ccdbb66, type: 2}
@@ -52024,7 +52068,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '/10
+  m_text: '/9
 
 '
   m_isRightToLeft: 0
@@ -52499,7 +52543,7 @@ PrefabInstance:
     - target: {fileID: 3468837614527012203, guid: 0e160296a8ce8424b92123e7d319e1c4, type: 3}
       propertyPath: sparkle
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1254162918}
     - target: {fileID: 3468837614527012203, guid: 0e160296a8ce8424b92123e7d319e1c4, type: 3}
       propertyPath: spriteRenderer
       value: 
