@@ -77,20 +77,22 @@ public class DialogueManager : MonoBehaviour
     // Starts a single dialogue (1 character).
     public void StartDialogue(Dialogue dialogue) {
         
+        // Activate the player/NPC based on the dialogue.
+        if (dialogue.is_npc) {
+            player.SetActive(false);
+            npc.SetActive(true);
+        }
+        else {
+            npc.SetActive(false);
+            player.SetActive(true);
+        }
+        
         // Start a non-choice dialogue.
         if (!dialogue.is_choice) {
             // Set the name of the dialogue panel.
             name_text.text = dialogue.name;
 
-            // Activate the player/NPC based on the dialogue.
-            if (dialogue.is_npc) {
-                player.SetActive(false);
-                npc.SetActive(true);
-            }
-            else {
-                npc.SetActive(false);
-                player.SetActive(true);
-            }
+            
 
             // Hide the choice buttons.
             choice_a.SetActive(false);
