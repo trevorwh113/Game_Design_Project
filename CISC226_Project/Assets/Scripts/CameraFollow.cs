@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     // distance from player
-    private Vector3 offset = new Vector3(0f,0f, -10f);
+    private Vector3 offset = new Vector3(0f,1f, -10f);          // 1 tile up for the y position
     // defines approx time it takes for camera to reach the target
     private float smoothTime = 0.25f;
     private Vector3 velocity = Vector3.zero;

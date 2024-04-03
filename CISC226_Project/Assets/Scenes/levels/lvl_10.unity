@@ -51552,6 +51552,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -1, y: 11, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 0, y: 11, z: 0}
     second:
       serializedVersion: 2
@@ -51586,8 +51596,8 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: de44fe9baa236954ea0d0aff500a5bc2, type: 2}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: be707f5a78730fb44a966e08d98a72c3, type: 2}
   - m_RefCount: 6
     m_Data: {fileID: 11400000, guid: 65f32a31830815b4f87543515d5596f4, type: 2}
   - m_RefCount: 5
@@ -51615,8 +51625,8 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 4
     m_Data: {fileID: 2080079573, guid: 6fabbd2636739e943b6bb87457018e68, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 1328521712, guid: 6fabbd2636739e943b6bb87457018e68, type: 3}
   - m_RefCount: 6
     m_Data: {fileID: 1182274110, guid: 6fabbd2636739e943b6bb87457018e68, type: 3}
   - m_RefCount: 5
@@ -51642,7 +51652,7 @@ Tilemap:
   - m_RefCount: 29
     m_Data: {fileID: 1798115762, guid: 6fabbd2636739e943b6bb87457018e68, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 191
+  - m_RefCount: 192
     m_Data:
       e00: 1
       e01: 0
@@ -51661,7 +51671,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 191
+  - m_RefCount: 192
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -52869,7 +52879,7 @@ MonoBehaviour:
   - {fileID: 1456136027}
   enemySpawnTile: []
   enemiesSpawned: 00000000000000
-  crystals_remaining: 8
+  crystals_remaining: 9
   crystals_collected: 0
   coins_collected: 0
   win_scene: WinScreen
