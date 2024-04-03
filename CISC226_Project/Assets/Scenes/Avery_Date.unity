@@ -575,7 +575,7 @@ MonoBehaviour:
     is_choice: 0
     sentences:
     - Whoa why would you be competing with my friends. I thought we were more than
-      that
+      that.
   - name: You
     is_npc: 0
     is_choice: 1
@@ -597,7 +597,7 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - Anyways, I think I'm going to be carrying yo soon so let's get back on the
+    - Anyways, I think I'm going to be carrying you soon so let's get back on the
       game pookie.
   - name: You
     is_npc: 1
