@@ -1346,7 +1346,7 @@ MonoBehaviour:
       to clean before you got here.
   - name: You
     is_npc: 0
-    is_choice: 0
+    is_choice: 1
     sentences:
     - 
     - Wow I really love how it looks.
@@ -1370,7 +1370,7 @@ MonoBehaviour:
     is_npc: 0
     is_choice: 0
     sentences:
-    - Its a git for you. Remember how you mentioned getting scale polish? I figured
+    - Its a gift for you. Remember how you mentioned getting scale polish? I figured
       I should repay you for having me over.
   - name: Avery
     is_npc: 1
@@ -1410,7 +1410,7 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - So how is cave diving going for you. I'd imagine you;re good at it since you're
+    - So how is cave diving going for you. I'd imagine you're good at it since you're
       a bat.
   - name: You
     is_npc: 0
@@ -1458,7 +1458,7 @@ MonoBehaviour:
     is_choice: 0
     sentences:
     - Oh wow it's almost time for me to go. Thanks for having me over Avery. Next
-      time we should try a multiplayer game so we can both play at th same time.
+      time we should try a multiplayer game so we can both play at the same time.
   - name: Avery
     is_npc: 1
     is_choice: 0
