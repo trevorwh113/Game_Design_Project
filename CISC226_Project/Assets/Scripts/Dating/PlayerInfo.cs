@@ -27,6 +27,8 @@ public class PlayerInfo : MonoBehaviour
     // Tracks the coins that the player has.
     public int coins = 0;
 
+    public AudioSource map;
+
 
     private void Start() {
       
@@ -37,4 +39,20 @@ public class PlayerInfo : MonoBehaviour
 
     }
 
+    private void Update(){
+        string scene = SceneManager.GetActiveScene().name;
+        if (!map.isPlaying){
+            if ((scene == "PreloadScene") || (scene == "CityMap") || (scene == "shop_tut") || (scene == "start_tut") || (scene == "lvl1_tut") || (scene == "lvl2_tut") || (scene == "lvl8_tut")){
+                map.Play();
+                Debug.Log("play");
+            } else {
+                map.Stop();
+            }
+        } else {
+            if (!((scene == "PreloadScene") || (scene == "CityMap") || (scene == "shop_tut") || (scene == "start_tut") || (scene == "lvl1_tut") || (scene == "lvl2_tut") || (scene == "lvl8_tut"))){
+                map.Stop();
+            }
+        }
+
+    }
 }
