@@ -2714,7 +2714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91a3564698a485242883e2875e274d51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regularDest: lvl1
+  regularDest: lvl_1
   sometimesDest: lvl1_tut
 --- !u!1 &1851498526
 GameObject:
