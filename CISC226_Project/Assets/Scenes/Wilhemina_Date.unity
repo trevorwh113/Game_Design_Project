@@ -448,7 +448,7 @@ MonoBehaviour:
     is_npc: 0
     is_choice: 0
     sentences:
-    - '[You just finish setting up a picnic blanket with candles when Wilhelmina
+    - '[You''ve just finished setting up a picnic blanket with candles when Wilhelmina
       appears.]'
   - name: Willie
     is_npc: 1
@@ -471,7 +471,7 @@ MonoBehaviour:
     sentences:
     - 
     - I wanted to!
-    - Of course I did
+    - Of course I did.
   - name: Willie
     is_npc: 1
     is_choice: 0
@@ -597,7 +597,7 @@ MonoBehaviour:
     sentences:
     - You also make me feel like I can be myself around you.
     - Together we know our differences and accept each other for them, and I really
-      appreciate that we can have that type of relationship
+      appreciate that we can have that type of relationship.
   - name: Willie
     is_npc: 1
     is_choice: 0
@@ -615,7 +615,7 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - That's lovely to hear
+    - That's lovely to hear.
   - name: Willie
     is_npc: 1
     is_choice: 0
@@ -1391,7 +1391,7 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - Oh gosh me? [she blushes]
+    - Oh gosh, me? [She blushes.]
   - name: Wilhelmina
     is_npc: 1
     is_choice: 0
@@ -3226,14 +3226,14 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - '[The ladylike worm turns around startled]'
+    - '[The ladylike worm turns around, startled]'
     - Oh it's you! How unexpected.
   - name: You
     is_npc: 0
     is_choice: 1
     sentences:
     - "\r"
-    - "Sorry didn\u2019t mean to scare you.\r"
+    - "Sorry, didn\u2019t mean to scare you.\r"
     - "Aren\u2019t you happy to see me?\r"
   - name: Wilhelmina
     is_npc: 1
@@ -3264,7 +3264,7 @@ MonoBehaviour:
     is_npc: 0
     is_choice: 0
     sentences:
-    - " [You place the mascara on the ground in front of Wilhelmina]\r"
+    - "[You place the mascara on the ground in front of Wilhelmina]\r"
     - "This stuff! It took me a while because I had no clue what it was.\r"
   - name: Wilhelmina
     is_npc: 1
@@ -3302,6 +3302,13 @@ MonoBehaviour:
     is_choice: 0
     sentences:
     - "After all the effort you put in too\u2026\r"
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - "Why hadn\u2019t you realized before?"
+    - It was strange you wanted it...
   - name: Wilhelmina
     is_npc: 1
     is_choice: 0
@@ -3928,7 +3935,7 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - "I suppose I am.. My husband left me and it has left me quite shocked.\r\r"
+    - "I suppose I am... My husband left me and it has left me quite shocked.\r\r"
   - name: You
     is_npc: 0
     is_choice: 1
@@ -3945,12 +3952,12 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - "Yeah... Its bad.\r\r\r"
+    - "Yeah... It's bad.\r\r\r"
   - name: Worm
     is_npc: 1
     is_choice: 0
     sentences:
-    - "There\u2019s just a big gap in my life where he used to be, I feel so alone.\r\n\r\r\r"
+    - "There\u2019s just a big gap in my life where he used to be. I feel so alone.\r\n\r\r\r"
   - name: You
     is_npc: 0
     is_choice: 0
@@ -3966,7 +3973,7 @@ MonoBehaviour:
     is_npc: 0
     is_choice: 0
     sentences:
-    - "Time will fill the spot that he left and you\u2019ll move on so don\u2019t
+    - "Time will fill the spot that he left and you\u2019ll move on, so don\u2019t
       worry."
   - name: Worm
     is_npc: 1
@@ -3985,12 +3992,12 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - " I\u2019m choosing to ignore that because the question is irrelevant."
+    - "I\u2019m choosing to ignore that because the question is irrelevant."
   - name: Worm
     is_npc: 1
     is_choice: 0
     sentences:
-    - " I\u2019m choosing to ignore that because the question is irrelevant."
+    - "I\u2019m choosing to ignore that because the question is irrelevant."
   - name: Worm
     is_npc: 1
     is_choice: 0

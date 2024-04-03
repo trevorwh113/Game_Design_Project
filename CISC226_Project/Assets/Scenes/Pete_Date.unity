@@ -645,12 +645,12 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - Come on, I see a sewer taxi!
+    - Come on, I see a taxi!
   - name: You
     is_npc: 0
     is_choice: 0
     sentences:
-    - '[You and Pete run towards the sewers together.]'
+    - '[You and Pete run towards it together.]'
   other_story_1: {fileID: 2118377413}
   other_story_2: {fileID: 1998452937}
   other_story_3: {fileID: 821283628}
@@ -1520,11 +1520,6 @@ MonoBehaviour:
     is_choice: 0
     sentences:
     - '[Still focused on the ball] Huh? OK, sure.'
-  - name: Pete
-    is_npc: 1
-    is_choice: 0
-    sentences:
-    - '[Still focused on the ball] Huh? OK, sure.'
   - name: You
     is_npc: 0
     is_choice: 0
@@ -1544,7 +1539,7 @@ MonoBehaviour:
     is_npc: 0
     is_choice: 1
     sentences:
-    - Pete...
+    - 
     - ...Are they TOO shiny?
     - Did I do something to offend you?
   - name: Pete
@@ -1570,7 +1565,7 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - The CAVES?? What were you doing there?
+    - What?? How?? What were you doing?
   - name: You
     is_npc: 0
     is_choice: 0
@@ -1658,7 +1653,7 @@ MonoBehaviour:
     is_choice: 0
     sentences:
     - Oh yay!
-    - I'm just worried because the caves sound scary!
+    - I'm just worried now because the caves sound scary!
     - I've never been... Are they dangerous?
   - name: You
     is_npc: 0
@@ -3377,44 +3372,50 @@ MonoBehaviour:
     is_npc: 0
     is_choice: 0
     sentences:
-    - Different people have all sorts of diets. The last bats I lived with ate animals,
-      but I always preferred fruit.
+    - Different people have all sorts of diets. I've met some bats who eat animals,
+      but me and my family always preferred fruit.
   - name: You
     is_npc: 0
     is_choice: 0
     sentences:
-    - Different people have all sorts of diets. The last bats I lived with ate animals,
-      but I always preferred fruit.
+    - Different people have all sorts of diets. I've met some bats who eat animals,
+      but me and my family always preferred fruit.
   - name: Pete
     is_npc: 1
     is_choice: 0
     sentences:
-    - Oh wow! You were the only one who ate fruit?
+    - Oh wow! Do you usually eat with your family, then?
   - name: You
     is_npc: 0
     is_choice: 0
     sentences:
-    - In that group of bats. My first family ate fruit like me, but I got separated
-      from them in the caves and never found them again.
-    - "I ended up hanging around with these other bats, but they were different,
-      and they never really accepted me\u2026 so I went out on my own."
+    - Not anymore...
+    - "We're forest bats by nature, but I always wanted explore the caves. They put
+      up with it for a while, but they were never really accepting\u2026 so I went
+      out on my own."
   - name: Pete
     is_npc: 1
     is_choice: 0
     sentences:
-    - "Oh no! I can't imagine losing my team\u2026 That must have been so hard!"
+    - "Oh no! I can't imagine my team not being accepting of my interests\u2026 That
+      must have been so hard!"
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - It was.
   - name: You
     is_npc: 0
     is_choice: 1
     sentences:
-    - It was.
-    - "I still hope I\u2019ll find them again\u2026"
+    - 
+    - "I still wish they'd accepted me\u2026"
     - "I\u2019m looking for a fresh start now."
   - name: Pete
     is_npc: 1
     is_choice: 0
     sentences:
-    - Oh, I hope you do!
+    - Then I hope they do!
   - name: Pete
     is_npc: 1
     is_choice: 0
@@ -4002,7 +4003,7 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - Yes! I caught it! [He holds up the ball triumphantly]
+    - Yes! I caught it! [He holds up the ball triumphantly.]
   - name: You
     is_npc: 0
     is_choice: 0
@@ -4060,7 +4061,7 @@ MonoBehaviour:
     is_npc: 0
     is_choice: 0
     sentences:
-    - "\u2026you must do something other than play ball."
+    - "\u2026You must do something other than play ball."
   - name: Pigeon
     is_npc: 1
     is_choice: 0
@@ -4101,7 +4102,7 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - "\u2026oh wait! I never introduced myself, did I? Oh no, how rude! I\u2019m
+    - "\u2026Oh wait! I never introduced myself, did I? Oh no, how rude! I\u2019m
       Pete."
   - name: You
     is_npc: 0

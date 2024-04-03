@@ -458,7 +458,7 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - Wait omg you really brought it?!? That's great!!
+    - Wait OMG you really brought it?!? That's great!!
   - name: You
     is_npc: 0
     is_choice: 0
@@ -480,12 +480,12 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - Of course since we have such great chemistry together.
+    - Of course, since we have such great chemistry together.
   - name: Avery
     is_npc: 1
     is_choice: 0
     sentences:
-    - Wait ok. I'll set up the same for us. You can just get comfortable.
+    - Wait OK. I'll set up the same for us. You can just get comfortable.
   - name: You
     is_npc: 0
     is_choice: 0
@@ -519,7 +519,7 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - Yeah we just get along so well.
+    - Yeah, we just get along so well.
   - name: Avery
     is_npc: 1
     is_choice: 0
@@ -582,12 +582,12 @@ MonoBehaviour:
     sentences:
     - 
     - About time you realized.
-    - Wait omg really???
+    - Wait OMG really???
   - name: Avery
     is_npc: 1
     is_choice: 0
     sentences:
-    - Omg wait have you been thinking that for a while??
+    - OMG wait have you been thinking that for a while??
   - name: Avery
     is_npc: 1
     is_choice: 0
@@ -1360,7 +1360,7 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - '[Playfully] omg I hate you.'
+    - '[Playfully] OMG I hate you.'
   - name: Avery
     is_npc: 1
     is_choice: 0
@@ -1370,7 +1370,7 @@ MonoBehaviour:
     is_npc: 0
     is_choice: 0
     sentences:
-    - Its a gift for you. Remember how you mentioned getting scale polish? I figured
+    - It's a gift for you. Remember how you mentioned getting scale polish? I figured
       I should repay you for having me over.
   - name: Avery
     is_npc: 1
@@ -1436,6 +1436,13 @@ MonoBehaviour:
     - It actually caused problems with my family and friends. We're forest bats and
       so they all thought it was weird that I wanted to go explore caves. I ended
       up being left behind.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - It actually caused problems with my family and friends. We're forest bats and
+      so they all thought it was weird that I wanted to go explore caves. I ended
+      up being left behind.
   - name: Avery
     is_npc: 1
     is_choice: 0
@@ -1464,14 +1471,14 @@ MonoBehaviour:
     is_choice: 0
     sentences:
     - Oh uh sorry I don't really own any. I've never had anyone to play with so I
-      only really play solo rpgs.
+      only really play solo RPGs.
   - name: You
     is_npc: 0
     is_choice: 1
     sentences:
     - 
     - LMAO!
-    - Thats valid. RGPs are sick.
+    - Thats valid. RPGs are sick.
   - name: You
     is_npc: 0
     is_choice: 0
@@ -3262,9 +3269,9 @@ MonoBehaviour:
     sentences:
     - Did I really??? That's great I just love the game so much. They made such a
       cool world for people to explore and I love the characters so much.
-    - 'They could do some things better and theres some predatory monetization but
-      I still love it so much. The world is just crafted with so much love and the
-      characters are all so cool. '
+    - 'They could do some things better and there''s some predatory monetization
+      but I still love it so much. The world is just crafted with so much love and
+      the characters are all so cool. '
     - Personally, my favourite region is sunru because I just love the desert aesthetic
       so much. I also really like the character Alby because he looks so cool. The
       game is just... sorry I'm getting carried away.
@@ -3313,7 +3320,7 @@ MonoBehaviour:
     is_npc: 0
     is_choice: 0
     sentences:
-    - No problem, hey how about you show me some of your games some time.
+    - No problem. Hey, how about you show me some of your games some time.
   - name: Avery
     is_npc: 1
     is_choice: 0
@@ -3913,7 +3920,7 @@ MonoBehaviour:
     is_choice: 0
     sentences:
     - I guess I'm a freelancer. I kinda just go into these weird caves and grab money
-      thats just lying around. What about you?
+      that's just lying around. What about you?
   - name: Avery
     is_npc: 1
     is_choice: 0
@@ -3949,7 +3956,7 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - Its this cool game I found. Its called Shengin Bimpact.
+    - It's this cool game I found. Its called Shengin Bimpact.
   - name: You
     is_npc: 0
     is_choice: 1
@@ -3993,7 +4000,7 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - Its just that... the character is named Palmon and you just look like... I
+    - It's just that... the character is named Palmon and you just look like... I
       mean you and Palmon are... Wait!! We're at my stop I need to go I'm so sorry!!
   other_story_1: {fileID: 1998452937}
   other_story_2: {fileID: 821283628}
