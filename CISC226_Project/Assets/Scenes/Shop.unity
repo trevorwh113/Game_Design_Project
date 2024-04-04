@@ -2659,7 +2659,7 @@ MonoBehaviour:
   confirm_button: {fileID: 1155372925}
   coinsText: {fileID: 1825777855}
   greeting_message: Blorp goop? Oopi floopy!                                                             
-    [Need a gift for your favoroite person? Look no further!]
+    [Need a gift for your favorite person? Look no further!]
 --- !u!1 &1795442012
 GameObject:
   m_ObjectHideFlags: 0
