@@ -443,13 +443,207 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1231c40a69b69674e8ed32d989f02de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: []
+  conversation:
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - '[You''ve just finished setting up a picnic blanket with candles when Wilhelmina
+      appears.]'
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Darling! What are you up to?
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Ah Willie! Just in time. I have dinner set up for us.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Oh my! You didn't have to do this for me.
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - I wanted to!
+    - Of course I did.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - How sweet!
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I don't deserve your kindness.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - So I'm not sure if you'll like it but I got you truffle mulch.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Why that specifically?
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Well I thought that maybe it would help you get used to your new life.
+    - Plus I heard it's pretty fancy.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I will give it a try then, just for you darling.
+    - '[Wilhelmina takes a bite of the mulch]'
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - How is it?
+    - Does it taste mulchy?
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I actually kind of like it!
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I suppose...?
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - You know, if this is what a worm eats, I think I can enjoy being one.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - That's good to hear!
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Well, seeing you just be yourself despite what you told me about not fitting
+      in has inspired me to accept my situation and start to come to terms with it.
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - You inspire me too.
+    - You did this by yourself.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - '[Wilhelmina blushes.]'
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - You helped more than you know, don't sell yourself short, darling.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Can I ask why?
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Why what?
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Why have you been so nice to me, right from the start nonetheless?
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Well for starters...
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - You're very pretty.
+    - You have a nice personality.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Oh gosh!
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Ah thank you.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - You also make me feel like I can be myself around you.
+    - Together we know our differences and accept each other for them, and I really
+      appreciate that we can have that type of relationship.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - You have such a way with words, darling.
+    - I'd like if we could continue what we have.
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - I would love that too.
+    - I wouldn't mind taking it further.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - That's lovely to hear.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - You're so straightforward, darling.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - We can take it slow for now and see where we end up.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Sounds perfect WIllie.
+    - Now enough talking, or this picnic will go to waste.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - '[Wilhelmina smiles at you and continues to eat more mulch.]'
   other_story_1: {fileID: 2118377413}
   other_story_2: {fileID: 1998452937}
   other_story_3: {fileID: 821283628}
   continue_button: {fileID: 1344595559}
   playerInfo: {fileID: 0}
   affection_needed: 3
+  num_previous_stories: 3
 --- !u!114 &269407156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,6 +753,7 @@ MonoBehaviour:
   locked: {fileID: 1574119635, guid: a5b2d44ad022f0440bc818b5f2f50567, type: 3}
   unlocked: {fileID: -977891048, guid: ef285178fd769894293b19fdbd05ecba, type: 3}
   text_field: {fileID: 232452129}
+  message: Story 4
 --- !u!1 &344287723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1157,13 +1352,172 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1231c40a69b69674e8ed32d989f02de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: []
+  conversation:
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - '[You once again find yourself looking for Wilhelmina in the park.]'
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Hello Darling!
+    - Oh what do you have there?
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - They're for you! I thought they suited you well.
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - That is so sweet of you!
+    - I've never had someone give me flowers before!
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - Really? That's crazy!
+    - Someone as pretty as you?
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Is it? I never thought so?
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Oh gosh, me? [She blushes.]
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I've always had flowers around the house but those were put there by the gardener.
+    - He said it was to lighten the room, so they weren't technically for me.
+    - My husband never gave me any... He said I could buy them myself.
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - That's so rude of him!
+    - That's not the point though.
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - He was just being realistic.
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Well, he never realized that.
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - He was right though, I had more than enough money to buy myself flowers.
+    - The only thing he cared about was my wealth.
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - Surely that's not true?
+    - He can't be that bad.
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I wish, darling.
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - If only you knew, darling.
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - After I was turned into a worm I was very vulnerable.
+    - He abandoned me and took all of my money since I no longer had any claim to
+      it.
+    - My husband never truly loved me, and he did not see me for who I am.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - I know this isn't the same, but when I was growing up I never felt seen by
+      those around me.
+    - I tried to fit in and get them to accept me but it was never worth it.
+    - I've gotten to a point where I know who I am and I won't let other people make
+      me feel bad about it.
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - You should try the same.
+    - You'll get there eventually.
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I think I will.
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I really hope so.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Hey... Can I call you Willie?
+  - name: Wilhelmina
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Willie? Of course! May I ask why?
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - A new name for a new life.
+    - It's cute like you!
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - So a rebrand... What a good idea.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Aww thank you.
+  - name: Willie
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I want to go put these wonderful flowers on display right away!
+    - You have made my day better once again. Thank you, darling.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - No problem Willie. I'll see you soon!
   other_story_1: {fileID: 2118377413}
   other_story_2: {fileID: 1998452937}
   other_story_3: {fileID: 269407153}
   continue_button: {fileID: 1344595559}
   playerInfo: {fileID: 0}
   affection_needed: 2
+  num_previous_stories: 2
 --- !u!114 &821283631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1273,6 +1627,7 @@ MonoBehaviour:
   locked: {fileID: 1574119635, guid: a5b2d44ad022f0440bc818b5f2f50567, type: 3}
   unlocked: {fileID: -977891048, guid: ef285178fd769894293b19fdbd05ecba, type: 3}
   text_field: {fileID: 782914980}
+  message: Story 3
 --- !u!1 &1125615007
 GameObject:
   m_ObjectHideFlags: 0
@@ -2546,6 +2901,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1712929864}
   m_CullTransparentMesh: 1
+--- !u!1 &1787316907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1787316909}
+  - component: {fileID: 1787316908}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1787316908
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787316907}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a4f3a033565713249875cea7a8b10378, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.4
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1787316909
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787316907}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 225.41055, y: 65.60737, z: 1.734308}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1902551144
 GameObject:
   m_ObjectHideFlags: 0
@@ -2734,7 +3217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversation:
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
@@ -2743,14 +3226,14 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - '[The ladylike worm turns around startled]'
-    - Oh it's you! How unexpected
+    - '[The ladylike worm turns around, startled]'
+    - Oh it's you! How unexpected.
   - name: You
     is_npc: 0
     is_choice: 1
     sentences:
     - "\r"
-    - "Sorry didn\u2019t mean to scare you.\r"
+    - "Sorry, didn\u2019t mean to scare you.\r"
     - "Aren\u2019t you happy to see me?\r"
   - name: Wilhelmina
     is_npc: 1
@@ -2767,7 +3250,7 @@ MonoBehaviour:
     is_choice: 0
     sentences:
     - "To what do I owe the pleasure of your appearance?\r"
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
@@ -2777,11 +3260,11 @@ MonoBehaviour:
     is_choice: 0
     sentences:
     - "Pardon? I am not sure what you are referring to?\r"
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
-    - " **You place the mascara on the ground in front of Wilhelmina**\r"
+    - "[You place the mascara on the ground in front of Wilhelmina]\r"
     - "This stuff! It took me a while because I had no clue what it was.\r"
   - name: Wilhelmina
     is_npc: 1
@@ -2811,7 +3294,7 @@ MonoBehaviour:
     sentences:
     - This is wonderful, I cannot wait to put it on!
     - "[You watch Wilhelmina go to reach for the bottle, and then stops when she
-      realizes she can\u2019t because she doesn\u2019t have arms]"
+      realizes she can\u2019t because she doesn\u2019t have arms.]"
     - "This is embarrassing, it did not hit me until now that I would not be able
       to use it.\r"
   - name: Wilhelmina
@@ -2819,6 +3302,13 @@ MonoBehaviour:
     is_choice: 0
     sentences:
     - "After all the effort you put in too\u2026\r"
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - "Why hadn\u2019t you realized before?"
+    - It was strange you wanted it...
   - name: Wilhelmina
     is_npc: 1
     is_choice: 0
@@ -2837,7 +3327,7 @@ MonoBehaviour:
       a pretty successful one too.\r"
     - "I haven\u2019t quite adjusted to living like this yet, I do not feel like
       myself anymore. \r"
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
@@ -2869,7 +3359,7 @@ MonoBehaviour:
     is_choice: 0
     sentences:
     - "You\u2019ve given me a lot to think about, I should go ponder.\r"
-  - name: Player
+  - name: You
     is_npc: 0
     is_choice: 0
     sentences:
@@ -2880,6 +3370,7 @@ MonoBehaviour:
   continue_button: {fileID: 1344595559}
   playerInfo: {fileID: 0}
   affection_needed: 1
+  num_previous_stories: 1
 --- !u!114 &1998452940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2989,6 +3480,7 @@ MonoBehaviour:
   locked: {fileID: 1574119635, guid: a5b2d44ad022f0440bc818b5f2f50567, type: 3}
   unlocked: {fileID: -977891048, guid: ef285178fd769894293b19fdbd05ecba, type: 3}
   text_field: {fileID: 1170478756}
+  message: Story 2
 --- !u!1 &2072156286
 GameObject:
   m_ObjectHideFlags: 0
@@ -3409,30 +3901,30 @@ MonoBehaviour:
     is_choice: 0
     sentences:
     - "[As you\u2019re walking in the park you hear a woman sobbing. When you get
-      closer you see that she\u2019s\u2026 a worm]\r"
-    - "[sniff] I'll be alone forever [sniff]\r"
+      closer you see that she\u2019s\u2026 a worm.]\r"
+    - "[sniff] I'll be alone forever. [sniff]\r"
   - name: You
     is_npc: 0
     is_choice: 1
     sentences:
     - 
     - Hey there, you okay?
-    - uhh.. do you need a hug?
+    - Uhh.. do you need a hug?
   - name: Worm
     is_npc: 1
     is_choice: 0
     sentences:
-    - No but thank you for asking
+    - No but thank you for asking.
   - name: Worm
     is_npc: 1
     is_choice: 0
     sentences:
-    - " \u2026not from a stranger"
+    - " \u2026not from a stranger."
   - name: Worm
     is_npc: 1
     is_choice: 0
     sentences:
-    - "[the worm wipes away her tears] I\u2019m making such a scene, I apologize
+    - "[The worm wipes away her tears] I\u2019m making such a scene, I apologize
       darling.\r"
   - name: You
     is_npc: 0
@@ -3443,14 +3935,14 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - "I suppose I am.. My husband left me and it has left me quite shocked.\r\r"
+    - "I suppose I am... My husband left me and it has left me quite shocked.\r\r"
   - name: You
     is_npc: 0
     is_choice: 1
     sentences:
     - "\r\r"
     - "I'm so sorry!\r\r"
-    - "Ruh Roh\r\r"
+    - "Ruh Roh!\r\r"
   - name: Worm
     is_npc: 1
     is_choice: 0
@@ -3460,17 +3952,17 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - "yea.. Its bad.\r\r\r"
+    - "Yeah... It's bad.\r\r\r"
   - name: Worm
     is_npc: 1
     is_choice: 0
     sentences:
-    - "There\u2019s just a big gap in my life where he used to be, I feel so alone.\r\n\r\r\r"
+    - "There\u2019s just a big gap in my life where he used to be. I feel so alone.\r\n\r\r\r"
   - name: You
     is_npc: 0
     is_choice: 0
     sentences:
-    - "I understand that feeling, I felt alone for a long time before I came here\r\r\n\r\r\r"
+    - "I understand that feeling, I felt alone for a long time before I came here.\r\r\n\r\r\r"
   - name: Worm
     is_npc: 1
     is_choice: 0
@@ -3481,7 +3973,7 @@ MonoBehaviour:
     is_npc: 0
     is_choice: 0
     sentences:
-    - "Time will fill the spot that he left and you\u2019ll move on so don\u2019t
+    - "Time will fill the spot that he left and you\u2019ll move on, so don\u2019t
       worry."
   - name: Worm
     is_npc: 1
@@ -3500,12 +3992,12 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - " I\u2019m choosing to ignore that because the question is irrelevant."
+    - "I\u2019m choosing to ignore that because the question is irrelevant."
   - name: Worm
     is_npc: 1
     is_choice: 0
     sentences:
-    - " I\u2019m choosing to ignore that because the question is irrelevant."
+    - "I\u2019m choosing to ignore that because the question is irrelevant."
   - name: Worm
     is_npc: 1
     is_choice: 0
@@ -3539,6 +4031,7 @@ MonoBehaviour:
   continue_button: {fileID: 1344595559}
   playerInfo: {fileID: 0}
   affection_needed: 0
+  num_previous_stories: 0
 --- !u!114 &2118377419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3554,6 +4047,7 @@ MonoBehaviour:
   locked: {fileID: 1574119635, guid: a5b2d44ad022f0440bc818b5f2f50567, type: 3}
   unlocked: {fileID: -977891048, guid: ef285178fd769894293b19fdbd05ecba, type: 3}
   text_field: {fileID: 1523143833}
+  message: Story 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3563,3 +4057,4 @@ SceneRoots:
   - {fileID: 1619759832}
   - {fileID: 515956419}
   - {fileID: 1519289670}
+  - {fileID: 1787316909}

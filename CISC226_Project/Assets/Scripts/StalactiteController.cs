@@ -12,6 +12,8 @@ public class StalactiteController : MonoBehaviour
     public Sprite[] spriteArray;
     int currentSprite = 0;
 
+    public int og_num_enemies = 0; //set once at start and never again
+
     // Flag to only change sprite once per echolocation.
     bool wait = false;
 
@@ -41,6 +43,8 @@ public class StalactiteController : MonoBehaviour
         character = FindObjectOfType<CharacterInfo>();
         levelManager = FindObjectOfType<LevelManager>();
         canvasManager = FindObjectOfType<CanvasManager>();
+
+        og_num_enemies = levelManager.enemies.Count;
 
     }
 
@@ -82,10 +86,11 @@ public class StalactiteController : MonoBehaviour
                         // Remove it if necessary.
                         if (tile == foe.onTile) {
                             bool removed = levelManager.enemies.Remove(foe);
+
                             if (removed) {
                                 levelManager.enemiesSpawned.Remove(true);
                                 Destroy(foe.gameObject);
-                                canvasManager.enemiesText.SetText("" + levelManager.enemies.Count);
+                                canvasManager.enemiesText.SetText("" + (og_num_enemies - levelManager.enemies.Count));
                                 // Correct the indexing.
                                 i--;
                             }

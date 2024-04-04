@@ -49,11 +49,11 @@ public class CoinInfo : MonoBehaviour
                 {
                     levelManager.collectCoin();
                     isCollected = true;
-                    //disappear by toggling sprite renderers
+                    // disappear by toggling sprite renderers
                     spriteRenderer.enabled = false; 
                     sparkle.spriteRenderer.enabled = false;
 
-                    Debug.Log("Coins: " + levelManager.coins_collected);
+                    // Debug.Log("Coins: " + levelManager.coins_collected);
 
                 }
                     

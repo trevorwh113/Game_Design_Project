@@ -26,6 +26,9 @@ public class DialogueTrigger : MonoBehaviour
     // Affection level needed for the trigger to unlock.
     public int affection_needed;
 
+    // Number of previous stories
+    public int num_previous_stories;
+
 
     public void Start() {
         playerInfo = FindObjectOfType<PlayerInfo>();
@@ -40,7 +43,7 @@ public class DialogueTrigger : MonoBehaviour
             
             
             // Only trigger the dialogue if it should be unlocked.
-            if (doesStoryUnlock(dialogueManager)) {
+            if (doesStoryUnlock(dialogueManager) && previousStoriesRead(dialogueManager)) {
                 // Disactivate thisk game object (hide it).
                 gameObject.SetActive(false);
                 // Disactivate all the other buttons.
@@ -52,7 +55,7 @@ public class DialogueTrigger : MonoBehaviour
                 continue_button.SetActive(true);
 
                 // Start the whole conversation stored in 'dialogue'
-                dialogueManager.StartConversation(conversation);
+                dialogueManager.StartConversation(conversation, gameObject.GetComponent<DialogueTrigger>());
             }
 
         }
@@ -63,7 +66,7 @@ public class DialogueTrigger : MonoBehaviour
     }
 
 
-    // Decides whether the story should trigger or not.
+    // Decides whether the story should trigger or not based on affection (items).
     public bool doesStoryUnlock(DialogueManager dialogueManager) {
         if (playerInfo != null) {
             return (
@@ -75,6 +78,22 @@ public class DialogueTrigger : MonoBehaviour
                     && dialogueManager.npc_name == "croc")); 
         }
         
+        else {
+            return false;
+        }
+    }
+
+    // Decides whether the story should trigger or not based on stories read.
+    public bool previousStoriesRead(DialogueManager dialogueManager) {
+        if (playerInfo != null) {
+            return (
+                (playerInfo.stories_read_bird >= num_previous_stories
+                    && dialogueManager.npc_name == "bird") || 
+                (playerInfo.stories_read_worm >= num_previous_stories 
+                    && dialogueManager.npc_name == "worm") || 
+                (playerInfo.stories_read_croc >= num_previous_stories 
+                    && dialogueManager.npc_name == "croc")); 
+        } 
         else {
             return false;
         }

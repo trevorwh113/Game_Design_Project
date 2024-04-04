@@ -18,6 +18,7 @@ public class LevelManager : MonoBehaviour
     public List<bool> enemiesSpawned = new List<bool>();
 
     public int crystals_remaining;      // Set for the level.
+    public int crystals_collected = 0; 
     public int coins_collected = 0;     // Should default to 0 always.
 
     // Indicates the string to transition to on a win.
@@ -96,15 +97,18 @@ public class LevelManager : MonoBehaviour
         PlayerInfo playerInfo = FindObjectOfType<PlayerInfo>();
         if (playerInfo != null) {
             playerInfo.coins += coins_collected;
-
+            Debug.Log(SceneManager.GetActiveScene().name);
             // unlocks the next level if you are completing the current level you are on (aka doesn't unlock the thrid level if youve just replayed lvl 1)
             if (playerInfo.currentScene == SceneManager.GetActiveScene().name){
+                
                 // gets next scene only if the next scene is not exceeding lvl 10
                 if(SceneManager.GetActiveScene().buildIndex+1 < SceneUtility.GetBuildIndexByScenePath("Assets/Scenes/levels/lvl_10.unity")+1){
                     // unity is so stupid so instead of just using getscene by index, we have to do this 
                     string path = SceneUtility.GetScenePathByBuildIndex(SceneManager.GetActiveScene().buildIndex+1);
                     playerInfo.currentScene = System.IO.Path.GetFileNameWithoutExtension(path);
+                    
                     playerInfo.lvlPtr++;
+                    
                     playerInfo.lvlwin[playerInfo.lvlPtr] = true;
 
                 }
@@ -131,7 +135,8 @@ public class LevelManager : MonoBehaviour
     // Methods to decrease the crystals remaining.
     public void breakCrystal() {
         crystals_remaining -= 1;
-        canvasManager.crystalsText.SetText("" + crystals_remaining);
+        crystals_collected += 1;
+        canvasManager.crystalsText.SetText("" + crystals_collected);
         // Debug.Log(crystals_remaining);
     }
 

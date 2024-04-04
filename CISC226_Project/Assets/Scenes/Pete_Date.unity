@@ -443,13 +443,221 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1231c40a69b69674e8ed32d989f02de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: []
+  conversation:
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - '[Pete spots you as you''re walking towards him in the park and comes running
+      over.]'
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Hey! Guess what!
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - What?
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I finally beat my personal record for consecutive ball throws!
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - Congrats! You worked hard.
+    - Now go beat the new one!
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I did! And now I want to celebrate with you. We should do something fun!
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - You're right! The grind never stops!
+    - ...Well, maybe it can stop a little bit, right now. My wings are sore.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - We can celebrate. I've brought you something.
+    - '[You reveal the matching jerseys.]'
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Woah! For me? Thank you so much!
+    - '[He takes them both from you and unwraps them.]'
+    - Oh... um, these are really nice, but... I'm not sure they're both going to
+      fit me?
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - '[You take the smaller one from him.] No, Pete, this one''s for me. We each
+      get one, so we can match.'
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - OH! I see.
+    - So we can match... that's so cool!
+    - '[Putting it on] I''ll never take it off!'
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - Aw, me neither.
+    - Maybe wash it sometimes?
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Then what are you waiting for? Put it on!
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Don't worry! Any true athlete knows the importance of good hygiene.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Fair enough.
+    - '[Putting on the jersey] What do you think?'
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I LOVE IT! We match so well.
+    - Oh, now I'm going to be worried about ruining it if I wear it out all the time!
+    - But no, I wouldn't want to leave it at my house all day... that would be sad!
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - I couldn't even if I wanted to, haha.
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Wait, what do you mean?
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Oh, I don't actually have my own place... I've mostly been staying in the caves.
+    - I carry my stuff with me.
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - 'WHAT?! This whole time?! Why didn''t you say anything? '
+    - Come live with me! I've got enough space for your stuff.
+    - In fact, I might have too much space... Interior design is hard.
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - You're... asking me to move in?
+    - What? I love interior design!
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Oh- I mean, if you want to, obviously.
+    - Do you?
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Oh, good! You can tell me your ideas... I've been so lost.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Well, if you're sure about this! Thanks Pete. It'll definitely beat living
+      in the caves.
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - We can hang out every day!
+    - We should combine our assets.
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Wow, I didn't even think about it like that! You're right!
+    - This is going to be great!
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Oh, wow... that sounds big.
+    - Well, I don't have a lot of assets, but if I was going to share them with anyone
+      it would be you!
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - '[He points to the jerseys.]'
+    - You're on my team now.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - A fresh start...
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Come on, I'll show you the place!
+    - I hope you like it...
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - I'm sure I will.
+    - Well, we can fix it up.
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Then let's get going!
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Then let's get going!
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Come on, I see a taxi!
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - '[You and Pete run towards it together.]'
   other_story_1: {fileID: 2118377413}
   other_story_2: {fileID: 1998452937}
   other_story_3: {fileID: 821283628}
   continue_button: {fileID: 1344595559}
   playerInfo: {fileID: 0}
   affection_needed: 3
+  num_previous_stories: 3
 --- !u!114 &269407156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,6 +767,135 @@ MonoBehaviour:
   locked: {fileID: 1574119635, guid: a5b2d44ad022f0440bc818b5f2f50567, type: 3}
   unlocked: {fileID: -977891048, guid: ef285178fd769894293b19fdbd05ecba, type: 3}
   text_field: {fileID: 232452129}
+  message: Story 4
+--- !u!1 &271716008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 271716010}
+  - component: {fileID: 271716009}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &271716009
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271716008}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a4f3a033565713249875cea7a8b10378, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.4
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &271716010
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271716008}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 225.41055, y: 65.60737, z: 1.734308}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &344287723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1157,13 +1494,202 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1231c40a69b69674e8ed32d989f02de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversation: []
+  conversation:
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Pete! Hey, Pete!
+    - '[Pete is in the park, throwing the ball.]'
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - '[Focused on the ball] Oh hey!'
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - You wanted to learn more about how other people live their lives, right? I
+      got you something.
+    - '[You reveal the bottle caps] They''re bottle caps! People take them off their
+      drinks and leave them around.'
+    - I thought you might like them... they're shiny.
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - '[Still focused on the ball] Huh? OK, sure.'
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - You're not looking...
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - What? Hold on, I'm trying to beat my personal record for consecutive ball throws.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Pete...
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - ...Are they TOO shiny?
+    - Did I do something to offend you?
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Wait, shiny?
+    - '[He finally looks up at you, and suddenly drops the ball, shocked.] Hold on,
+      are you bleeding?'
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Sorry, what was that?
+    - '[He finally looks up at you, and suddenly drops the ball, shocked.] Wait,
+      are you bleeding?'
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - What? Oh, I hadn't noticed. I must have gotten a scratch in the caves.
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - What?? How?? What were you doing?
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - I was just trying to get you a gift.
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - A gift? ...Oh! The bottle caps!
+    - You got hurt trying to get these... for me?
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - I mean, it's basically a papercut.
+    - I'm surprised you care.
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - But what if it gets worse?
+    - Here, let me bandage it for you. [He takes off his shirt.]
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Don't be silly! Of course I do!
+    - I guess I was so focused on beating my personal record I wasn't really paying
+      attention to anything else... the bottle caps or your cut.
+    - Here, let me bandage it for you. [He takes off his shirt.]
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - Oh- Uh, you really don't have to...
+    - Damn. OK, go on then.
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Are you sure? Well, let me know if you change your mind! [He puts his shirt
+      back on.]
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - '[He begins covering your tiny scratch with his shirt. There is way more fabric
+      than necessary and he struggles to tie it off.]'
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I want to help! I was so focused on the ball earlier, I didn't appreciate your
+      gift. But there are other things that are just as important as ball.
+    - ...Are you mad at me?
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - Nah. Sorry I interrupted you.
+    - A little. I wanted you to like it.
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - It's OK! I can work on my personal record for consecutive ball-throwing any
+      other time. I think I want to hang with you now, while you're here!
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - I do like the bottle caps! I like them because you got them for me.
+    - Hanging out with you is better than any gift!
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - Aw... I like hanging out with you too.
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Oh yay!
+    - I'm just worried now because the caves sound scary!
+    - I've never been... Are they dangerous?
+  - name: You
+    is_npc: 0
+    is_choice: 1
+    sentences:
+    - 
+    - Very. But I can handle it.
+    - Honestly no, it's pretty chill.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - We can throw the ball back and forth while I tell you about it, if you want.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - We can throw the ball back and forth while I tell you about it, if you want.
+  - name: Pete
+    is_npc: 1
+    is_choice: 0
+    sentences:
+    - Yahoo! That sounds like the greatest way to pass the time ever.
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - '[You spend the rest of the afternoon talking and playing ball, and leave satisfied
+      after a good day.]'
   other_story_1: {fileID: 2118377413}
   other_story_2: {fileID: 1998452937}
   other_story_3: {fileID: 269407153}
   continue_button: {fileID: 1344595559}
   playerInfo: {fileID: 0}
   affection_needed: 2
+  num_previous_stories: 2
 --- !u!114 &821283631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1273,6 +1799,7 @@ MonoBehaviour:
   locked: {fileID: 1574119635, guid: a5b2d44ad022f0440bc818b5f2f50567, type: 3}
   unlocked: {fileID: -977891048, guid: ef285178fd769894293b19fdbd05ecba, type: 3}
   text_field: {fileID: 782914980}
+  message: Story 3
 --- !u!1 &1125615007
 GameObject:
   m_ObjectHideFlags: 0
@@ -2845,44 +3372,50 @@ MonoBehaviour:
     is_npc: 0
     is_choice: 0
     sentences:
-    - Different people have all sorts of diets. The last bats I lived with ate animals,
-      but I always preferred fruit.
+    - Different people have all sorts of diets. I've met some bats who eat animals,
+      but me and my family always preferred fruit.
   - name: You
     is_npc: 0
     is_choice: 0
     sentences:
-    - Different people have all sorts of diets. The last bats I lived with ate animals,
-      but I always preferred fruit.
+    - Different people have all sorts of diets. I've met some bats who eat animals,
+      but me and my family always preferred fruit.
   - name: Pete
     is_npc: 1
     is_choice: 0
     sentences:
-    - Oh wow! You were the only one who ate fruit?
+    - Oh wow! Do you usually eat with your family, then?
   - name: You
     is_npc: 0
     is_choice: 0
     sentences:
-    - In that group of bats. My first family ate fruit like me, but I got separated
-      from them in the caves and never found them again.
-    - "I ended up hanging around with these other bats, but they were different,
-      and they never really accepted me\u2026 so I went out on my own."
+    - Not anymore...
+    - "We're forest bats by nature, but I always wanted explore the caves. They put
+      up with it for a while, but they were never really accepting\u2026 so I went
+      out on my own."
   - name: Pete
     is_npc: 1
     is_choice: 0
     sentences:
-    - "Oh no! I can't imagine losing my team\u2026 That must have been so hard!"
+    - "Oh no! I can't imagine my team not being accepting of my interests\u2026 That
+      must have been so hard!"
+  - name: You
+    is_npc: 0
+    is_choice: 0
+    sentences:
+    - It was.
   - name: You
     is_npc: 0
     is_choice: 1
     sentences:
-    - It was.
-    - "I still hope I\u2019ll find them again\u2026"
+    - 
+    - "I still wish they'd accepted me\u2026"
     - "I\u2019m looking for a fresh start now."
   - name: Pete
     is_npc: 1
     is_choice: 0
     sentences:
-    - Oh, I hope you do!
+    - Then I hope they do!
   - name: Pete
     is_npc: 1
     is_choice: 0
@@ -2932,6 +3465,7 @@ MonoBehaviour:
   continue_button: {fileID: 1344595559}
   playerInfo: {fileID: 0}
   affection_needed: 1
+  num_previous_stories: 1
 --- !u!114 &1998452940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3041,6 +3575,7 @@ MonoBehaviour:
   locked: {fileID: 1574119635, guid: a5b2d44ad022f0440bc818b5f2f50567, type: 3}
   unlocked: {fileID: -977891048, guid: ef285178fd769894293b19fdbd05ecba, type: 3}
   text_field: {fileID: 1170478756}
+  message: Story 2
 --- !u!1 &2072156286
 GameObject:
   m_ObjectHideFlags: 0
@@ -3468,7 +4003,7 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - Yes! I caught it! [He holds up the ball triumphantly]
+    - Yes! I caught it! [He holds up the ball triumphantly.]
   - name: You
     is_npc: 0
     is_choice: 0
@@ -3526,7 +4061,7 @@ MonoBehaviour:
     is_npc: 0
     is_choice: 0
     sentences:
-    - "\u2026you must do something other than play ball."
+    - "\u2026You must do something other than play ball."
   - name: Pigeon
     is_npc: 1
     is_choice: 0
@@ -3567,7 +4102,7 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - "\u2026oh wait! I never introduced myself, did I? Oh no, how rude! I\u2019m
+    - "\u2026Oh wait! I never introduced myself, did I? Oh no, how rude! I\u2019m
       Pete."
   - name: You
     is_npc: 0
@@ -3601,6 +4136,7 @@ MonoBehaviour:
   continue_button: {fileID: 1344595559}
   playerInfo: {fileID: 0}
   affection_needed: 0
+  num_previous_stories: 0
 --- !u!114 &2118377419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3616,6 +4152,7 @@ MonoBehaviour:
   locked: {fileID: 1574119635, guid: a5b2d44ad022f0440bc818b5f2f50567, type: 3}
   unlocked: {fileID: -977891048, guid: ef285178fd769894293b19fdbd05ecba, type: 3}
   text_field: {fileID: 1523143833}
+  message: Story 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3625,3 +4162,4 @@ SceneRoots:
   - {fileID: 1619759832}
   - {fileID: 515956419}
   - {fileID: 1519289670}
+  - {fileID: 271716010}

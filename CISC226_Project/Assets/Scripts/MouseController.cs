@@ -22,6 +22,10 @@ public class MouseController : MonoBehaviour
     private OverlayTile prevTile;
     private bool spawned = false;
 
+    // Reference to the UI buttons.
+    public FindUIPosition exit;
+    public FindUIPosition reload;
+
     // Reference to the camera.
     private UnityEngine.Camera cam;
 
@@ -117,7 +121,10 @@ public class MouseController : MonoBehaviour
 
 
                     if (character != null){
-                        path = pathFinder.FindPath(character.onTile, tile);
+                        if (exit.onTile != null && reload.onTile != null &&
+                            tile != exit.onTile && tile != reload.onTile) {
+                            path = pathFinder.FindPath(character.onTile, tile);
+                        }
                     }
                 }
             }
@@ -166,8 +173,9 @@ public class MouseController : MonoBehaviour
         for (int i = 0; i < levelManager.enemies.Count; i++)
             {
                 // Requires the enemy to be onscreen to move   ----------------------------------
+                // Extend the range down 1/8 = 0.125 of the screen (approx 1 tile I think)
                 Vector3 viewPos = cam.WorldToViewportPoint(levelManager.enemies[i].transform.position);
-                if (viewPos.x >= 0 && viewPos.x <= 1 && viewPos.y >= 0 && viewPos.y <= 1 && viewPos.z > 0) {
+                if (viewPos.x >= 0 && viewPos.x <= 1 && viewPos.y >= -0.125f && viewPos.y <= 1 && viewPos.z > 0) {
 
                     var enemyHit = GetTileAtPos(levelManager.enemies[i].transform.position);
                     OverlayTile enemy1Tile = enemyHit.Value.collider.gameObject.GetComponent<OverlayTile>();
