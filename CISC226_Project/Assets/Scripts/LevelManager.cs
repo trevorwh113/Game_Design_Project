@@ -97,15 +97,18 @@ public class LevelManager : MonoBehaviour
         PlayerInfo playerInfo = FindObjectOfType<PlayerInfo>();
         if (playerInfo != null) {
             playerInfo.coins += coins_collected;
-
+            Debug.Log(SceneManager.GetActiveScene().name);
             // unlocks the next level if you are completing the current level you are on (aka doesn't unlock the thrid level if youve just replayed lvl 1)
             if (playerInfo.currentScene == SceneManager.GetActiveScene().name){
+                
                 // gets next scene only if the next scene is not exceeding lvl 10
                 if(SceneManager.GetActiveScene().buildIndex+1 < SceneUtility.GetBuildIndexByScenePath("Assets/Scenes/levels/lvl_10.unity")+1){
                     // unity is so stupid so instead of just using getscene by index, we have to do this 
                     string path = SceneUtility.GetScenePathByBuildIndex(SceneManager.GetActiveScene().buildIndex+1);
                     playerInfo.currentScene = System.IO.Path.GetFileNameWithoutExtension(path);
+                    
                     playerInfo.lvlPtr++;
+                    
                     playerInfo.lvlwin[playerInfo.lvlPtr] = true;
 
                 }

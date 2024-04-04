@@ -1993,7 +1993,7 @@ GameObject:
   - component: {fileID: 1402348875}
   - component: {fileID: 1402348874}
   - component: {fileID: 1402348873}
-  - component: {fileID: 1402348872}
+  - component: {fileID: 1402348877}
   - component: {fileID: 1402348876}
   m_Layer: 5
   m_Name: lvl9
@@ -2021,19 +2021,6 @@ RectTransform:
   m_AnchoredPosition: {x: 294, y: -175}
   m_SizeDelta: {x: 55, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1402348872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1402348870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53a86a68a32d2904ca27296eea3def16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destination: lvl_9
 --- !u!114 &1402348873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2078,9 +2065,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1402348872}
-        m_TargetAssemblyTypeName: ButtonGoToScene, Assembly-CSharp
-        m_MethodName: GoToScene
+      - m_Target: {fileID: 1402348877}
+        m_TargetAssemblyTypeName: CondtionalGoTo, Assembly-CSharp
+        m_MethodName: chooseScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2141,6 +2128,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myPtr: 8
+--- !u!114 &1402348877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402348870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91a3564698a485242883e2875e274d51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regularDest: lvl_9
+  sometimesDest: lvl9_tut
 --- !u!1 &1680967545
 GameObject:
   m_ObjectHideFlags: 0
@@ -2226,8 +2227,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1680967552}
-        m_TargetAssemblyTypeName: CondtionalGoTo, Assembly-CSharp
-        m_MethodName: chooseScene
+        m_TargetAssemblyTypeName: ButtonGoToScene, Assembly-CSharp
+        m_MethodName: GoToScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2297,11 +2298,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1680967545}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91a3564698a485242883e2875e274d51, type: 3}
+  m_Script: {fileID: 11500000, guid: 53a86a68a32d2904ca27296eea3def16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regularDest: lvl_8
-  sometimesDest: lvl8_tut
+  destination: lvl_8
 --- !u!1 &1722893925
 GameObject:
   m_ObjectHideFlags: 0

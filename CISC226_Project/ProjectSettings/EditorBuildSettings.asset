@@ -37,31 +37,34 @@ EditorBuildSettings:
     guid: b6f8e664ffacc2e43b9b27fb31523989
   - enabled: 1
     path: Assets/Scenes/levels/lvl_4.unity
-    guid: 92576be1987398246b5b37aff03eaf69
+    guid: fb7f428a70b491940b37a25b0723bd55
   - enabled: 1
     path: Assets/Scenes/levels/lvl_5.unity
     guid: 873ab2a2d0e71ef4cab2b5876ac4aa2a
   - enabled: 1
     path: Assets/Scenes/levels/lvl_6.unity
-    guid: 88b89a9ef4213974d98eb12630c14c64
+    guid: 6ed648f33abf4034082aa3c60f03f46b
   - enabled: 1
     path: Assets/Scenes/levels/lvl_7.unity
-    guid: fb7f428a70b491940b37a25b0723bd55
-  - enabled: 1
-    path: Assets/Scenes/levels/lvl_8.unity
-    guid: 2e8d3f8f363c2d84b8bcf8845b292142
-  - enabled: 1
-    path: Assets/Scenes/levels/lvl_9.unity
     guid: d98c5f43e4d469847bab9a2dedf6d56e
   - enabled: 1
+    path: Assets/Scenes/levels/lvl_8.unity
+    guid: 88b89a9ef4213974d98eb12630c14c64
+  - enabled: 1
+    path: Assets/Scenes/levels/lvl_9.unity
+    guid: b86c7e3bfb620f8429f526de4c31afb0
+  - enabled: 1
     path: Assets/Scenes/levels/lvl_10.unity
-    guid: 6ed648f33abf4034082aa3c60f03f46b
+    guid: 92576be1987398246b5b37aff03eaf69
   - enabled: 1
     path: Assets/Scenes/tutorials/lvl1_tut.unity
     guid: 8dd33edf02b8edd4a9e20d760c558c21
   - enabled: 1
     path: Assets/Scenes/tutorials/lvl2_tut.unity
     guid: 68d0dfbedc5aaa64fbb4424a02f062e4
+  - enabled: 1
+    path: Assets/Scenes/tutorials/lvl9_tut.unity
+    guid: 488df56fa4815f04d89c1bdf031be427
   - enabled: 1
     path: Assets/Scenes/tutorials/shop_tut.unity
     guid: 2a7524862304f174daf0cd029f28e0a3
