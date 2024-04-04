@@ -485,7 +485,7 @@ MonoBehaviour:
     is_npc: 1
     is_choice: 0
     sentences:
-    - Wait OK. I'll set up the same for us. You can just get comfortable.
+    - Wait OK. I'll set up the game for us. You can just get comfortable.
   - name: You
     is_npc: 0
     is_choice: 0
@@ -568,7 +568,7 @@ MonoBehaviour:
     is_npc: 0
     is_choice: 0
     sentences:
-    - I'm glad to head that. Since you have so many other friends now it seems like
+    - I'm glad to hear that. Since you have so many other friends now it seems like
       I might have to compete for your attention.
   - name: Avery
     is_npc: 1
